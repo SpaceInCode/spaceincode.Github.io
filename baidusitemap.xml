@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://example.com/2021/06/15/2020-11-17-Listening1/</loc>
+    <lastmod>2021-06-15</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2020/11/04/2020-11-15-%E8%A7%84%E8%AE%AD%E4%B8%8E%E6%83%A9%E7%BD%9A/</loc>
+    <lastmod>2021-06-15</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2021/06/15/2020-11-05-linear%20algebra%201/</loc>
+    <lastmod>2021-06-15</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2021/06/15/2020-11-06-%E5%88%AB%E6%83%B3%E6%91%86%E8%84%B1%E4%B9%A6/</loc>
+    <lastmod>2021-06-15</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2021/06/15/2020-11-14-Writing1/</loc>
+    <lastmod>2021-06-15</lastmod>
+  </url>
+  <url>
     <loc>http://example.com/2021/06/15/2021-6-14-machine%20learning%20in%20python%20/</loc>
     <lastmod>2021-06-15</lastmod>
   </url>
@@ -10,26 +30,6 @@
   </url>
   <url>
     <loc>http://example.com/2021/06/15/hello-world/</loc>
-    <lastmod>2021-06-15</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2021/06/15/2020-11-17-Listening1/</loc>
-    <lastmod>2021-06-15</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2021/06/15/2020-11-15-%E8%A7%84%E8%AE%AD%E4%B8%8E%E6%83%A9%E7%BD%9A/</loc>
-    <lastmod>2021-06-15</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2021/06/15/2020-11-14-Writing1/</loc>
-    <lastmod>2021-06-15</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2021/06/15/2020-11-05-linear%20algebra%201/</loc>
-    <lastmod>2021-06-15</lastmod>
-  </url>
-  <url>
-    <loc>http://example.com/2021/06/15/2020-11-06-%E5%88%AB%E6%83%B3%E6%91%86%E8%84%B1%E4%B9%A6/</loc>
     <lastmod>2021-06-15</lastmod>
   </url>
   <url>

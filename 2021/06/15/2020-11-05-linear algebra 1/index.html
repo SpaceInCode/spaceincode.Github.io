@@ -22,13 +22,13 @@
 
   <meta name="description" content="If the columns of $ A$ are linearly independent, then \(Ax&#x3D;b\) has exactly one solution for every \(b\). It’s false. That is because there may be a case that \(rank(A)&lt;m\) , which means the vector">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Wang Jinghui&#39;s Blog">
+<meta property="og:title" content="linear algebra notes">
 <meta property="og:url" content="http://example.com/2021/06/15/2020-11-05-linear%20algebra%201/index.html">
 <meta property="og:site_name" content="Wang Jinghui&#39;s Blog">
 <meta property="og:description" content="If the columns of $ A$ are linearly independent, then \(Ax&#x3D;b\) has exactly one solution for every \(b\). It’s false. That is because there may be a case that \(rank(A)&lt;m\) , which means the vector">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-15T01:11:30.151Z">
-<meta property="article:modified_time" content="2021-06-15T09:36:17.779Z">
+<meta property="article:modified_time" content="2021-06-15T09:48:12.432Z">
 <meta property="article:author" content="Wang Jinghui">
 <meta name="twitter:card" content="summary">
 
@@ -45,8 +45,7 @@
   };
 </script>
 
-  <title> | Wang Jinghui's Blog
-</title>
+  <title>linear algebra notes | Wang Jinghui's Blog</title>
   
 
 
@@ -165,38 +164,61 @@
         <div class="content-wrap">
           
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="en">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">
-</h1>
-
-<div class="post-meta">
   
-  <ul class="breadcrumb">
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/15/2020-11-05-linear%20algebra%201/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          linear algebra notes
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-06-15 09:11:30 / Modified: 17:48:12" itemprop="dateCreated datePublished" datetime="2021-06-15T09:11:30+08:00">2021-06-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linear-Algebra/" itemprop="url" rel="index"><span itemprop="name">Linear Algebra</span></a>
+                </span>
+            </span>
+
           
-            <li><a href="/2021/">2021</a></li>
-            <li><a href="/2021/06/">06</a></li>
-            <li><a href="/2021/06/15/">15</a></li>
-            <li><a href="/2021/06/15/2020-11-05-linear%20algebra%201/">2020-11-05-LINEAR ALGEBRA 1</a></li>
-            <li><a href="/2021/06/15/2020-11-05-linear%20algebra%201//"></a></li>
-  </ul>
 
-</div>
+        </div>
+      </header>
 
-</header>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-      
-      
-      <div class="post-body">
-          <p>If the columns of $ A$ are linearly independent, then <span class="math inline">\(Ax=b\)</span> has exactly one solution for every <span class="math inline">\(b\)</span>.</p>
+        <p>If the columns of $ A$ are linearly independent, then <span class="math inline">\(Ax=b\)</span> has exactly one solution for every <span class="math inline">\(b\)</span>.</p>
 <p>It’s false. That is because there may be a case that <span class="math inline">\(rank(A)&lt;m\)</span> , which means the vector <span class="math inline">\(b\)</span> couldn’t be expressed by <span class="math inline">\(A\)</span>.</p>
 <p>Given <span class="math inline">\(n\)</span> vectors <span class="math inline">\(a_i\)</span> with <span class="math inline">\(m\)</span> components, what are the shapes of <span class="math inline">\(A,Q,R\)</span> ?</p>
 <p>The expression is <span class="math display">\[A_{m\times n} = Q_{m\times n}R_{n\times n}\]</span></p>
@@ -458,24 +480,32 @@ Diagonalization can fail only if there are repeated eigenvalues.</p>
 <p><span class="math display">\[L ( x , y ) = P ( x ) + y ^ { \mathrm { T } } ( C x - d ) = \frac { 1 } { 2 } x ^ { \mathrm { T } } A x - x ^ { \mathrm { T } } b + x ^ { \mathrm { T } } C ^ { \mathrm { T } } y - y ^ { \mathrm { T } } d\]</span></p>
 <p><span class="math display">\[\quad P _ { C / \min } = P _ { \min } + \frac { 1 } { 2 } y ^ { \mathrm { T } } \left( C A ^ { - 1 } b - d \right) \geq P _ { \min }\]</span></p>
 
-      </div>
-      
-      
-      
     </div>
-    
-  <ul class="breadcrumb">
-          
-            <li><a href="/2021/">2021</a></li>
-            <li><a href="/2021/06/">06</a></li>
-            <li><a href="/2021/06/15/">15</a></li>
-            <li><a href="/2021/06/15/2020-11-05-linear%20algebra%201/">2020-11-05-LINEAR ALGEBRA 1</a></li>
-            <li><a href="/2021/06/15/2020-11-05-linear%20algebra%201//"></a></li>
-  </ul>
 
     
     
     
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/15/2020-11-06-%E5%88%AB%E6%83%B3%E6%91%86%E8%84%B1%E4%B9%A6/" rel="prev" title="别想摆脱书——艾柯卡里埃尔对话录">
+      <i class="fa fa-chevron-left"></i> 别想摆脱书——艾柯卡里埃尔对话录
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
 
 
           </div>
