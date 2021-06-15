@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://spaceincode.github.io/tag/index.html</loc>
+    
+    <lastmod>2021-06-15</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://spaceincode.github.io/tags/index.html</loc>
+    
+    <lastmod>2021-06-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://spaceincode.github.io/README.html</loc>
     
     <lastmod>2021-06-15</lastmod>
@@ -108,13 +122,6 @@
   
   <url>
     <loc>https://spaceincode.github.io/categories/index.html</loc>
-    
-    <lastmod>2018-01-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://spaceincode.github.io/tags/index.html</loc>
     
     <lastmod>2018-01-26</lastmod>
     
