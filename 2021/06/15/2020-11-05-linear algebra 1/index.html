@@ -28,7 +28,7 @@
 <meta property="og:description" content="If the columns of $ A$ are linearly independent, then \(Ax&#x3D;b\) has exactly one solution for every \(b\). It’s false. That is because there may be a case that \(rank(A)&lt;m\) , which means the vector">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-15T01:11:30.151Z">
-<meta property="article:modified_time" content="2021-06-14T09:39:48.000Z">
+<meta property="article:modified_time" content="2021-06-15T09:36:17.779Z">
 <meta property="article:author" content="Wang Jinghui">
 <meta name="twitter:card" content="summary">
 
@@ -200,24 +200,28 @@
 <p>It’s false. That is because there may be a case that <span class="math inline">\(rank(A)&lt;m\)</span> , which means the vector <span class="math inline">\(b\)</span> couldn’t be expressed by <span class="math inline">\(A\)</span>.</p>
 <p>Given <span class="math inline">\(n\)</span> vectors <span class="math inline">\(a_i\)</span> with <span class="math inline">\(m\)</span> components, what are the shapes of <span class="math inline">\(A,Q,R\)</span> ?</p>
 <p>The expression is <span class="math display">\[A_{m\times n} = Q_{m\times n}R_{n\times n}\]</span></p>
-<p>Suppose that <span class="math inline">\(A=A_{m\times n}\)</span>, <span class="math inline">\(B=B_{s\times t}\)</span>, <span class="math inline">\(C=C_{s\times t}\)</span> are matrices, then <span class="math display">\[rank \left[
+<p>Suppose that <span class="math inline">\(A=A_{m\times n}\)</span>, <span class="math inline">\(B=B_{s\times t}\)</span>, <span class="math inline">\(C=C_{s\times t}\)</span> are matrices, then <span class="math display">\[
+rank \left[
     \begin{array}{cc}
     A &amp; O \\
     C &amp; B \\
     \end{array}
     \right]
-    \geq rank(A)+rank(B)\]</span></p>
-<p>It’s true. Because if the rank of <span class="math inline">\(A\)</span> equals <span class="math inline">\(1\)</span> , the rank of <span class="math inline">\(B\)</span> equals <span class="math inline">\(2\)</span>, this satisfies the expression.</p>
-<p>(Assume that <span class="math inline">\(m=n=s=t=2\)</span>)</p>
+    \geq rank(A)+rank(B)
+\]</span></p>
+<p>It’s true. Because if the rank of <span class="math inline">\(A\)</span> equals <span class="math inline">\(1\)</span> , the rank of <span class="math inline">\(B\)</span> equals <span class="math inline">\(2\)</span>, this satisfies the expression. (Assume that <span class="math inline">\(m=n=s=t=2\)</span>)</p>
 <p>Give transformation to find the transform matrix.</p>
 <p>We know that <span class="math inline">\(\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)=(\eta_1 \eta_2 \cdots \eta_n)\)</span></p>
 <p>Hence <span class="math display">\[A=(\eta_1 \eta_2 \cdots \eta_n)^{-1} (\mathscr{A}\varepsilon_1 \mathscr{A}\varepsilon_2 \cdots \mathscr{A}\varepsilon_n)\]</span> Therefore, we got <span class="math inline">\(A\)</span>.</p>
-<p>If <span class="math inline">\(A\)</span> is an <span class="math inline">\(m\)</span> by <span class="math inline">\(n\)</span> matrix and <span class="math inline">\(rank(A)=n\)</span>, show that <span class="math inline">\(A^{T}A\)</span> is invertible. Is $P=A(A<sup>{T}A)</sup>{-1}A^T $ invertible? Explain why.</p>
+<p>If <span class="math inline">\(A\)</span> is an <span class="math inline">\(m\)</span> by <span class="math inline">\(n\)</span> matrix and <span class="math inline">\(rank(A)=n\)</span>, show that <span class="math inline">\(A^{T}A\)</span> is invertible. Is <span class="math inline">\(P=A(A^{T}A)^{-1}A^T\)</span> invertible? Explain why.</p>
 <p>Since <span class="math inline">\(N(A^T A)=N(A), dimC(A^T)+dimN(A)=n\)</span>, also we have <span class="math inline">\(rankA=dimC(A^T)\)</span>,</p>
 <p>Since <span class="math inline">\(rankA=0,\Rightarrow dimN(A)=0, \Rightarrow dimN(A^T A)=0\)</span>,</p>
 <p>Therefore, <span class="math inline">\(A^T A\)</span> is invertible.</p>
-<p>Suppose <span class="math inline">\(A\)</span> is <span class="math inline">\(m\)</span> by <span class="math inline">\(n\)</span>, <span class="math inline">\(B\)</span> is <span class="math inline">\(n\)</span> by <span class="math inline">\(p\)</span>, and <span class="math inline">\(AB = 0\)</span> . Prove <span class="math inline">\(rankA+rankB\leq n\)</span></p>
-<p>We have <span class="math inline">\(dimA=n\)</span>, and also <span class="math inline">\(dim(C(A^T))+dim(N(A))=n, rankA=dimC(A^T)\)</span> And <span class="math display">\[AB=0, C(B)\subset N(A), \Rightarrow dimC(B)\leq dimN(A)\]</span></p>
+<p>Suppose <span class="math inline">\(A\)</span> is <span class="math inline">\(m\)</span> by <span class="math inline">\(n\)</span>, <span class="math inline">\(B\)</span> is <span class="math inline">\(n\)</span> by <span class="math inline">\(p\)</span>, and <span class="math inline">\(AB = 0\)</span>. Prove <span class="math inline">\(rankA+rankB\leq n\)</span></p>
+<p>We have <span class="math inline">\(dimA=n\)</span>, and also <span class="math inline">\(dim(C(A^T))+dim(N(A))=n, rankA=dimC(A^T)\)</span> And</p>
+<p><span class="math display">\[
+AB=0, C(B)\subset N(A), \Rightarrow dimC(B)\leq dimN(A)
+\]</span></p>
 <p>Therefore, we have <span class="math inline">\(rankA+rankB\leq n\)</span>.</p>
 <p>Show that an upper triangular matrix multipling another gives an upper triangular matrix.</p>
 <p><span class="math display">\[\begin{aligned}
@@ -226,7 +230,8 @@
 (\eta_1 \eta_2 \cdots \eta_n)&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)X\end{aligned}\]</span></p>
 <p>It can be proved that: <span class="math display">\[\begin{aligned}
 \mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)
-&amp;=[\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)]X\\&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)AX \\&amp;=(\eta_1 \eta_2 \cdots \eta_n)X^{-1}AX\end{aligned}\]</span> We get <span class="math inline">\(B=X^{-1}AX\)</span></p>
+&amp;=[\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)]X\\&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)AX \\&amp;=(\eta_1 \eta_2 \cdots \eta_n)X^{-1}AX\end{aligned}\]</span></p>
+<p>We get <span class="math inline">\(B=X^{-1}AX\)</span></p>
 <p>Additionally, we add <span class="math display">\[\mathscr{A}([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]x)=\mathscr{A}(\alpha)=[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]Ax\]</span> <span class="math display">\[\mathscr{A}(\alpha)=Ax\]</span> If we let <span class="math inline">\([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]=I\)</span>, <span class="math inline">\(A\)</span> is transforming effect. <span class="math inline">\(x\)</span> is the cofficient corrospond to the basis. <span class="math inline">\([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]\)</span> is the basis before transformation.</p>
 <p>When we do some proves, it is easy to use the basis reprensenting all the matrices or vectors in space, which means we have to introduce the normal expression of them. Basis elements <span class="math display">\[A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j=1}^{n}\limits a_{ij}\alpha_i\beta_j  \Rightarrow A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j=1}^{n}\limits a_{ij} e_i e_j^T\]</span> After we choose the basis as identity basis. If <span class="math inline">\(A=\pm A^T\)</span>, we have</p>
 <p><span class="math display">\[A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j&gt;i}^{n}\limits a_{ij}( e_i e_j^T \pm e_j e_i^T)\]</span></p>
@@ -273,7 +278,10 @@
 <p>If eigenvectors <span class="math inline">\(x_1, x_2, \cdots x_k\)</span> correspond to different eigenvalues <span class="math inline">\(\lambda_1, \lambda_2 \cdots \lambda_k\)</span> , then <span class="math inline">\(x_1, x_2, \cdots x_k\)</span> is linearly independent.</p>
 <p>Suppose <span class="math inline">\(x_1, x_2, \cdots x_k\)</span> is linearly dependent. Let <span class="math inline">\(n\)</span> be the smallest positive integer such that <span class="math inline">\(x_1, x_2, \cdots x_n\)</span> is independent.</p>
 <p><span class="math inline">\(\exists a_1,a_2 \cdots a_n\)</span> not all <span class="math inline">\(0\)</span>, such that <span class="math display">\[\begin{aligned}
- a_1x_1+a_2x_2+\cdots a_nx_n=0\end{aligned}\]</span> Apply both sides ,<span class="math inline">\(a_1\lambda_1 x_1+a_2 \lambda_2 x_2+\cdots +a_n\lambda_nx_n=0\)</span>, which minus <span class="math inline">\(\lambda_n \cdot (1)\)</span> <span class="math display">\[\Rightarrow a_1(\lambda_1-\lambda_n) x_1+a_2 (\lambda_2-\lambda_n) x_2+\cdots +a_n(\lambda_{n-1}-\lambda_n)x_n=0\]</span> $x_1 , x_2, x_n $ is independent <span class="math inline">\(\Rightarrow a_1=a_2=\cdots=a_{n-1}=0\)</span>.</p>
+ a_1x_1+a_2x_2+\cdots a_nx_n=0\end{aligned}\]</span></p>
+<p>Apply both sides ,<span class="math inline">\(a_1\lambda_1 x_1+a_2 \lambda_2 x_2+\cdots +a_n\lambda_nx_n=0\)</span>, which minus <span class="math inline">\(\lambda_n \cdot (1)\)</span></p>
+<p><span class="math display">\[\Rightarrow a_1(\lambda_1-\lambda_n) x_1+a_2 (\lambda_2-\lambda_n) x_2+\cdots +a_n(\lambda_{n-1}-\lambda_n)x_n=0\]</span></p>
+<p><span class="math inline">\(x_1 , x_2, \cdots x_n\)</span> is independent <span class="math inline">\(\Rightarrow a_1=a_2=\cdots=a_{n-1}=0\)</span>.</p>
 <p>Back to the (1), <span class="math inline">\(a_nx_n=0\Rightarrow a_n=0\)</span> <span class="math display">\[\Rightarrow a_1=a_2=\cdots=a_{n-1}=a_n=0 \Rightarrow\]</span> A Contradiction$$</p>
 <p>Different Expressions: <span class="math display">\[|A|=\sum\limits_{j=1}^{n}(-1)^{i+1}a_{ij}|M_{ij}|
 =\sum_{j} (-1)^{\tau (j_1j_2\cdots j_n)} a_{1 j_1} a_{2 j_2} \cdots  a_{n j_n}\]</span> There is a big fomula: <span class="math display">\[|A|=\sum_{j} det(P)  a_{1 j_1} a_{2 j_2} \cdots  a_{n j_n}\]</span> Also we have a relation:<span class="math inline">\(\displaystyle A^{-1}=\frac{ C^T}{|A|}\)</span>$</p>
@@ -282,7 +290,8 @@
 <p>When <span class="math inline">\(Ax=b\)</span>, for any <span class="math inline">\(y\in {\mathbb{R}}\)</span>, we have <span class="math display">\[p(y)-p(x)=\frac{1}{2} y^T Ay-b^Ty-(\frac{1}{2} x^T Ax-b^Tx)=
  \frac{1}{2} (y-x)^T A(y-x)\geqslant 0 \]</span></p>
 <p>if and only if <span class="math inline">\(A\)</span> is positive definite.</p>
-<p><span class="math display">\[L(x,y)=p(x)+y^T(Cx-d)=\frac{1}{2} x^T Ax-b^Tx+x^T C^Ty-y^T d,\]</span> and <span class="math inline">\(y=(y_1, y_2, \cdots y_n) \in {\mathbb{R}}\)</span> is given vector(<em>Lagrange multipliers</em>). So, it get the minimum value if and only if : <span class="math display">\[\begin{aligned}
+<p><span class="math display">\[L(x,y)=p(x)+y^T(Cx-d)=\frac{1}{2} x^T Ax-b^Tx+x^T C^Ty-y^T d,\]</span> and <span class="math inline">\(y=(y_1, y_2, \cdots y_n) \in {\mathbb{R}}\)</span> is given vector(<em>Lagrange multipliers</em>). So, it get the minimum value if and only if :</p>
+<p><span class="math display">\[\begin{aligned}
 \frac{\partial L}{\partial x}=0 : Ax+C^T y=b \qquad
 \frac{\partial L}{\partial y}=0 : Cx=d\end{aligned}\]</span></p>
 <p>Consider <span class="math inline">\(\displaystyle R(x)=\frac{x^TAx}{x^Tx}\)</span>, and we will solve <span class="math inline">\(\min R(x)\)</span>. So we have : <span class="math display">\[\lambda_{\min}(A)\leqslant R(x)=\frac{x^TAx}{x^Tx}=\frac{(Qy)^TA(Qy)}{(Qy)^T(Qy)}=
@@ -305,7 +314,9 @@ rank
     A &amp; I \\
     O &amp; B
     \end{bmatrix}\]</span>
-<p>$. Also we have elementary transformations: <span class="math display">\[\begin{bmatrix}
+<p>$.</p>
+<pre><code>Also we have elementary transformations:</code></pre>
+<p><span class="math display">\[\begin{bmatrix}
         A &amp; I \\
         O &amp; B
     \end{bmatrix}\longrightarrow\begin{bmatrix}
@@ -316,7 +327,7 @@ rank
     -AB &amp; O
     \end{bmatrix}\]</span> Therefore, <span class="math inline">\(rank\begin{bmatrix}  A &amp; I \\  O &amp; B  \end{bmatrix}=rank\begin{bmatrix}  O&amp; I \\  -AB &amp; O  \end{bmatrix}=rank(AB)+rank(I)=rank(AB)+n\)</span>$</p>
 <p>Let <span class="math inline">\(R(A)=r_1, R(B)=r_2, R(AB)=r,\)</span> We assume that <span class="math inline">\(b_1, b_2 \cdots b_{r_2}\)</span> is the basic solutions of the column vectors of <span class="math inline">\(B\)</span>, so there must exists the largest number which satisfies <span class="math inline">\(Ab_j=0, j\in \{1,2\cdots r_2\}\)</span> where <span class="math inline">\(b_1, b_2 \cdots b_{r_2}\)</span> is <span class="math inline">\(r_2-r\)</span>. Otherwise, it is contradictary to <span class="math inline">\(R(AB)=r\)</span>.</p>
-<p>It also means the <span class="math inline">\(b_j\)</span> of <span class="math inline">\(Ab_j=0\)</span> is in the <span class="math inline">\(N(A)\)</span>, which means <span class="math inline">\(dim(N(A))=n-r_1\)</span>. Therefore, <span class="math inline">\(r_2-r\leqslant n-r_1 \Rightarrow  rank(AB)\geqslant rank(A)+rank(B)-n\)</span>.</p>
+<p>It also means the <span class="math inline">\(b_j\)</span> of <span class="math inline">\(Ab_j=0\)</span> is in the <span class="math inline">\(N(A)\)</span>, which means <span class="math inline">\(dim(N(A))=n-r_1\)</span>. Therefore, <span class="math inline">\(r_2-r\leqslant n-r_1 \Rightarrow rank(AB)\geqslant rank(A)+rank(B)-n\)</span>.</p>
 <h1 id="linear-calculation">Linear Calculation</h1>
 <p>A <span class="math inline">\(n\)</span> by <span class="math inline">\(n\)</span> matrix multiplies an <span class="math inline">\(n\)</span> -dimensional vector and produces an <span class="math inline">\(m\)</span> -dimensional vector.</p>
 <p><span class="math inline">\(( E A\)</span> times <span class="math inline">\(x )\)</span> equals <span class="math inline">\(( E \operatorname { times } A x ) .\)</span> We just write <span class="math inline">\(E A x\)</span> <span class="math display">\[A B = A \left[ \begin{array} { l } { b _ { 1 } } \\ { b _ { 2 } } \\ { b _ { 3 } } \end{array} \right] = \left[ \begin{array} { c } { A b _ { 1 } } \\ { A b _ { 2 } } \\ { A b _ { 3 } } \end{array} \right]\]</span> the number of columns in A has to equal the number of rows in <span class="math inline">\(B .\)</span> Then <span class="math inline">\(A\)</span> can be multiplied into each column of <span class="math inline">\(B .\)</span></p>
@@ -531,13 +542,17 @@ Diagonalization can fail only if there are repeated eigenvalues.</p>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
