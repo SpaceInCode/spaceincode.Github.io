@@ -1,568 +1,817 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Helvetica:300,300italic,400,400italic,700,700italic|Consola:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Wang Jinghui&#39;s Blog">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Wang Jinghui&#39;s Blog">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Wang Jinghui">
 <meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Wang Jinghui's Blog</title>
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Wang Jinghui's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Ideas, Notes and Self-development</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
 
-  
-<meta name="generator" content="Hexo 5.4.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+          <div class="content index posts-expand">
+            
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
   
-    <article id="post-2020-11-04-经济学第三章" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/15/2020-11-04-%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%AC%E4%B8%89%E7%AB%A0/" class="article-date">
-  <time class="dt-published" datetime="2021-06-15T01:11:30.155Z" itemprop="datePublished">2021-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Economics/">Economics</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/06/15/2020-11-04-%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%AC%E4%B8%89%E7%AB%A0/">经济学第三章</a>
-    </h1>
-  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/15/2020-11-04-%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%AC%E4%B8%89%E7%AB%A0/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/15/2020-11-04-%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%AC%E4%B8%89%E7%AB%A0/" class="post-title-link" itemprop="url">经济学第三章</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-15 09:11:30" itemprop="dateCreated datePublished" datetime="2021-06-15T09:11:30+08:00">2021-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-14 17:39:48" itemprop="dateModified" datetime="2021-06-14T17:39:48+08:00">2021-06-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Economics/" itemprop="url" rel="index"><span itemprop="name">Economics</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="供需基本原理"><a href="#供需基本原理" class="headerlink" title="供需基本原理"></a>供需基本原理</h2><h3 id="需求曲线"><a href="#需求曲线" class="headerlink" title="需求曲线"></a>需求曲线</h3><p>需求向下倾向规律：一般而言，商品的价格越高，需求越低<br>市场需求：每一价格水平下的所有个人需求的总和<br>影响因素：</p>
-<ol>
-<li><p>平均收入</p>
-</li>
-<li><p>人口</p>
-</li>
-<li><p>其他商品价格</p>
-</li>
-<li><p>偏好</p>
-</li>
-<li><p>特殊影响</p>
-<h3 id="供给曲线"><a href="#供给曲线" class="headerlink" title="供给曲线"></a>供给曲线</h3><p>在其他条件不变的情况下，该商品的市场价格与生产者愿意生产和出售的数量（供给量）之间的关系。<br>价格越高，生产者更愿意生产出售商品<br>生产者提供商品为的是利润，决定供给的关键是<strong>生产成本</strong><br>影响因素：</p>
-<h3 id="供给与需求的均衡"><a href="#供给与需求的均衡" class="headerlink" title="供给与需求的均衡"></a>供给与需求的均衡</h3><p>均衡点，市场出清价格<br>需求移动，供给移动</p>
-</li>
-<li><p>区分供给与需求的变动（曲线移动）与供给量与需求量的变动（沿着曲线变动）</p>
-</li>
-<li><p>保持其他条件不变，这就要求将物品价格的变化的影响与其他因素变化的影响区别开来</p>
-</li>
-<li><p>识别供求均衡，它位于各种力量的平衡点上</p>
-</li>
+          <h2 id="供需基本原理">供需基本原理</h2>
+<h3 id="需求曲线">需求曲线</h3>
+<p>需求向下倾向规律：一般而言，商品的价格越高，需求越低 市场需求：每一价格水平下的所有个人需求的总和 影响因素： 1. 平均收入 2. 人口 3. 其他商品价格 4. 偏好 5. 特殊影响 ### 供给曲线 在其他条件不变的情况下，该商品的市场价格与生产者愿意生产和出售的数量（供给量）之间的关系。 价格越高，生产者更愿意生产出售商品 生产者提供商品为的是利润，决定供给的关键是<strong>生产成本</strong> 影响因素： ### 供给与需求的均衡 均衡点，市场出清价格 需求移动，供给移动</p>
+<ol style="list-style-type: decimal">
+<li>区分供给与需求的变动（曲线移动）与供给量与需求量的变动（沿着曲线变动）</li>
+<li>保持其他条件不变，这就要求将物品价格的变化的影响与其他因素变化的影响区别开来</li>
+<li>识别供求均衡，它位于各种力量的平衡点上</li>
 </ol>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/15/2020-11-04-%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%AC%E4%B8%89%E7%AB%A0/" data-id="ckpxcsx3j0003m4uq4nkx3vd8" data-title="经济学第三章" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
   
-    <article id="page-2020-11-05-linear algebra 1" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/15/2020-11-05-linear%20algebra%201/" class="article-date">
-  <time class="dt-published" datetime="2021-06-15T01:11:30.151Z" itemprop="datePublished">2021-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Linear-Algebra/">Linear_Algebra</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>If the columns of $ A$ are linearly independent, then $Ax=b$ has exactly<br>one solution for every $b$.</p>
-<p>It’s false. That is because there may be a case that $rank(A)&lt;m$ , which<br>means the vector $b$ couldn’t be expressed by $A$.</p>
-<p>Given $n$ vectors $a_i$ with $m$ components, what are the shapes of<br>$A,Q,R$ ?</p>
-<p>The expression is $$A_{m\times n} = Q_{m\times n}R_{n\times n}$$</p>
-<p>Suppose that $A=A_{m\times n}$, $B=B_{s\times t}$, $C=C_{s\times t}$ are<br>matrices, then $$rank \left[<br>    \begin{array}{cc}<br>    A &amp; O \<br>    C &amp; B \<br>    \end{array}<br>    \right]<br>    \geq rank(A)+rank(B)$$</p>
-<p>It’s true. Because if the rank of $A$ equals $1$ , the rank of $B$<br>equals $2$, this satisfies the expression.</p>
-<p>(Assume that $m=n=s=t=2$)</p>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/15/2020-11-05-linear%20algebra%201/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/15/2020-11-05-linear%20algebra%201/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-15 09:11:30" itemprop="dateCreated datePublished" datetime="2021-06-15T09:11:30+08:00">2021-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-14 17:39:48" itemprop="dateModified" datetime="2021-06-14T17:39:48+08:00">2021-06-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linear-Algebra/" itemprop="url" rel="index"><span itemprop="name">Linear_Algebra</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>If the columns of $ A$ are linearly independent, then <span class="math inline">\(Ax=b\)</span> has exactly one solution for every <span class="math inline">\(b\)</span>.</p>
+<p>It’s false. That is because there may be a case that <span class="math inline">\(rank(A)&lt;m\)</span> , which means the vector <span class="math inline">\(b\)</span> couldn’t be expressed by <span class="math inline">\(A\)</span>.</p>
+<p>Given <span class="math inline">\(n\)</span> vectors <span class="math inline">\(a_i\)</span> with <span class="math inline">\(m\)</span> components, what are the shapes of <span class="math inline">\(A,Q,R\)</span> ?</p>
+<p>The expression is <span class="math display">\[A_{m\times n} = Q_{m\times n}R_{n\times n}\]</span></p>
+<p>Suppose that <span class="math inline">\(A=A_{m\times n}\)</span>, <span class="math inline">\(B=B_{s\times t}\)</span>, <span class="math inline">\(C=C_{s\times t}\)</span> are matrices, then <span class="math display">\[rank \left[
+    \begin{array}{cc}
+    A &amp; O \\
+    C &amp; B \\
+    \end{array}
+    \right]
+    \geq rank(A)+rank(B)\]</span></p>
+<p>It’s true. Because if the rank of <span class="math inline">\(A\)</span> equals <span class="math inline">\(1\)</span> , the rank of <span class="math inline">\(B\)</span> equals <span class="math inline">\(2\)</span>, this satisfies the expression.</p>
+<p>(Assume that <span class="math inline">\(m=n=s=t=2\)</span>)</p>
 <p>Give transformation to find the transform matrix.</p>
-<p>We know that<br>$\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)=(\eta_1 \eta_2 \cdots \eta_n)$</p>
-<p>Hence<br>$$A=(\eta_1 \eta_2 \cdots \eta_n)^{-1} (\mathscr{A}\varepsilon_1 \mathscr{A}\varepsilon_2 \cdots \mathscr{A}\varepsilon_n)$$<br>Therefore, we got $A$.</p>
-<p>If $A$ is an $m$ by $n$ matrix and $rank(A)=n$, show that $A^{T}A$ is<br>invertible. Is $P=A(A^{T}A)^{-1}A^T $ invertible? Explain why.</p>
-<p>Since $N(A^T A)=N(A), dimC(A^T)+dimN(A)=n$, also we have<br>$rankA=dimC(A^T)$,</p>
-<p>Since $rankA=0,\Rightarrow dimN(A)=0, \Rightarrow dimN(A^T A)=0$,</p>
-<p>Therefore, $A^T A$ is invertible.</p>
-<p>Suppose $A$ is $m$ by $n$, $B$ is $n$ by $p$, and $AB = 0$ . Prove<br>$rankA+rankB\leq n$</p>
-<p>We have $dimA=n$, and also $dim(C(A^T))+dim(N(A))=n, rankA=dimC(A^T)$<br>And $$AB=0, C(B)\subset N(A), \Rightarrow dimC(B)\leq dimN(A)$$</p>
-<p>Therefore, we have $rankA+rankB\leq n$.</p>
-<p>Show that an upper triangular matrix multipling another gives an upper<br>triangular matrix.</p>
-<p>$$\begin{aligned}<br>\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)A\<br>\mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)&amp;=(\eta_1 \eta_2 \cdots \eta_n)B\<br>(\eta_1 \eta_2 \cdots \eta_n)&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)X\end{aligned}$$</p>
-<p>It can be proved that: $$\begin{aligned}<br>\mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)<br>&amp;=[\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)]X\&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)AX \&amp;=(\eta_1 \eta_2 \cdots \eta_n)X^{-1}AX\end{aligned}$$<br>We get $B=X^{-1}AX$</p>
-<p>Additionally, we add<br>$$\mathscr{A}([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]x)=\mathscr{A}(\alpha)=[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]Ax$$<br>$$\mathscr{A}(\alpha)=Ax$$<br>If we let<br>$[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]=I$, $A$ is<br>transforming effect. $x$ is the cofficient corrospond to the basis.<br>$[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]$ is the basis before<br>transformation.</p>
-<p>When we do some proves, it is easy to use the basis reprensenting all<br>the matrices or vectors in space, which means we have to introduce the<br>normal expression of them. Basis elements<br>$$A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j=1}^{n}\limits a_{ij}\alpha_i\beta_j  \Rightarrow A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j=1}^{n}\limits a_{ij} e_i e_j^T$$<br>After we choose the basis as identity basis. If $A=\pm A^T$, we have</p>
-<p>$$A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j&gt;i}^{n}\limits a_{ij}( e_i e_j^T \pm e_j e_i^T)$$</p>
+<p>We know that <span class="math inline">\(\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)=(\eta_1 \eta_2 \cdots \eta_n)\)</span></p>
+<p>Hence <span class="math display">\[A=(\eta_1 \eta_2 \cdots \eta_n)^{-1} (\mathscr{A}\varepsilon_1 \mathscr{A}\varepsilon_2 \cdots \mathscr{A}\varepsilon_n)\]</span> Therefore, we got <span class="math inline">\(A\)</span>.</p>
+<p>If <span class="math inline">\(A\)</span> is an <span class="math inline">\(m\)</span> by <span class="math inline">\(n\)</span> matrix and <span class="math inline">\(rank(A)=n\)</span>, show that <span class="math inline">\(A^{T}A\)</span> is invertible. Is $P=A(A<sup>{T}A)</sup>{-1}A^T $ invertible? Explain why.</p>
+<p>Since <span class="math inline">\(N(A^T A)=N(A), dimC(A^T)+dimN(A)=n\)</span>, also we have <span class="math inline">\(rankA=dimC(A^T)\)</span>,</p>
+<p>Since <span class="math inline">\(rankA=0,\Rightarrow dimN(A)=0, \Rightarrow dimN(A^T A)=0\)</span>,</p>
+<p>Therefore, <span class="math inline">\(A^T A\)</span> is invertible.</p>
+<p>Suppose <span class="math inline">\(A\)</span> is <span class="math inline">\(m\)</span> by <span class="math inline">\(n\)</span>, <span class="math inline">\(B\)</span> is <span class="math inline">\(n\)</span> by <span class="math inline">\(p\)</span>, and <span class="math inline">\(AB = 0\)</span> . Prove <span class="math inline">\(rankA+rankB\leq n\)</span></p>
+<p>We have <span class="math inline">\(dimA=n\)</span>, and also <span class="math inline">\(dim(C(A^T))+dim(N(A))=n, rankA=dimC(A^T)\)</span> And <span class="math display">\[AB=0, C(B)\subset N(A), \Rightarrow dimC(B)\leq dimN(A)\]</span></p>
+<p>Therefore, we have <span class="math inline">\(rankA+rankB\leq n\)</span>.</p>
+<p>Show that an upper triangular matrix multipling another gives an upper triangular matrix.</p>
+<p><span class="math display">\[\begin{aligned}
+\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)A\\
+\mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)&amp;=(\eta_1 \eta_2 \cdots \eta_n)B\\
+(\eta_1 \eta_2 \cdots \eta_n)&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)X\end{aligned}\]</span></p>
+<p>It can be proved that: <span class="math display">\[\begin{aligned}
+\mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)
+&amp;=[\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)]X\\&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)AX \\&amp;=(\eta_1 \eta_2 \cdots \eta_n)X^{-1}AX\end{aligned}\]</span> We get <span class="math inline">\(B=X^{-1}AX\)</span></p>
+<p>Additionally, we add <span class="math display">\[\mathscr{A}([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]x)=\mathscr{A}(\alpha)=[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]Ax\]</span> <span class="math display">\[\mathscr{A}(\alpha)=Ax\]</span> If we let <span class="math inline">\([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]=I\)</span>, <span class="math inline">\(A\)</span> is transforming effect. <span class="math inline">\(x\)</span> is the cofficient corrospond to the basis. <span class="math inline">\([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]\)</span> is the basis before transformation.</p>
+<p>When we do some proves, it is easy to use the basis reprensenting all the matrices or vectors in space, which means we have to introduce the normal expression of them. Basis elements <span class="math display">\[A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j=1}^{n}\limits a_{ij}\alpha_i\beta_j  \Rightarrow A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j=1}^{n}\limits a_{ij} e_i e_j^T\]</span> After we choose the basis as identity basis. If <span class="math inline">\(A=\pm A^T\)</span>, we have</p>
+<p><span class="math display">\[A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j&gt;i}^{n}\limits a_{ij}( e_i e_j^T \pm e_j e_i^T)\]</span></p>
 <p>The four possibilities for linear equations depend on the rank.</p>
-<hr>
-<p>   $r=m$   and   $r=n$   Square and invertible   $Ax=b$         $1$ solution<br>   $r=m$   and   $r&lt;n$      Short and wide       $Ax=b$      $\infty$ solutions<br>   $r&lt;m$   and   $r=n$       Tall and thin       $Ax=b$      $0$ or $1$ solution<br>   $r&lt;m$   and   $r&lt;n$       Not full rank       $Ax=b$   $0$ or $\infty$ solutions</p>
-<hr>
-<p>$ Ax=b $ is solvable if and only if $ y^T b=0 $ whenever $y^T A=0  $</p>
-<p>$Ax=b$ is solvable if and only if $b\in C(A)$. Also $C(A)\perp N(A^T)$,<br>and $b\in N(A^T)$ if and only if $ y^T b=0 $ whenever $y^T A=0  $</p>
-<p>$$P_Q(b)=Q(Q^TQ)^{-1}Q^T=(\sum\limits_{i=1}^{n} \frac{q_iq_i^T}{q_i^Tq_i})b$$</p>
-<p>If eigenvectors $x_1, x_2, \cdots x_k$ correspond to different<br>eigenvalues $\lambda_1, \lambda_2 \cdots \lambda_k$ , then<br>$x_1, x_2, \cdots x_k$ is linearly independent.</p>
-<p>Suppose $x_1, x_2, \cdots x_k$ is linearly dependent. Let $n$ be the<br>smallest positive integer such that $x_1, x_2, \cdots x_n$ is<br>independent.</p>
-<p>$\exists a_1,a_2 \cdots a_n$ not all $0$, such that $$\begin{aligned}<br> a_1x_1+a_2x_2+\cdots a_nx_n=0\end{aligned}$$ Apply both sides<br>,$a_1\lambda_1 x_1+a_2 \lambda_2 x_2+\cdots +a_n\lambda_nx_n=0$, which<br>minus $\lambda_n \cdot (1)$<br>$$\Rightarrow a_1(\lambda_1-\lambda_n) x_1+a_2 (\lambda_2-\lambda_n) x_2+\cdots +a_n(\lambda_{n-1}-\lambda_n)x_n=0$$<br>$x_1 , x_2, \cdots x_n $ is independent<br>$\Rightarrow a_1=a_2=\cdots=a_{n-1}=0$.</p>
-<p>Back to the (1), $a_nx_n=0\Rightarrow a_n=0$<br>$$\Rightarrow a_1=a_2=\cdots=a_{n-1}=a_n=0 \Rightarrow$$ A Contradiction$$</p>
-<p>Different Expressions:<br>$$|A|=\sum\limits_{j=1}^{n}(-1)^{i+1}a_{ij}|M_{ij}|<br>=\sum_{j} (-1)^{\tau (j_1j_2\cdots j_n)} a_{1 j_1} a_{2 j_2} \cdots  a_{n j_n}$$<br>There is a big fomula:<br>$$|A|=\sum_{j} det(P)  a_{1 j_1} a_{2 j_2} \cdots  a_{n j_n}$$ Also we<br>have a relation:$\displaystyle A^{-1}=\frac{ C^T}{|A|}$$</p>
-<p>For a difference equation, connected to eigenvalues:<br>$$A=Q\Lambda Q^T \Rightarrow A^k = Q\Lambda ^k Q^T$$</p>
-<p>$p(x)=\frac{1}{2} x^T Ax-b^Tx$, so we<br>have$\nabla p_1(x)=Ax, \nabla p_2(x)=b.$ Therefore,<br>$$\nabla p(x)=Ax-b=0 \Rightarrow Ax=b$$</p>
-<p>When $Ax=b$, for any $y\in {\mathbb{R}}$, we have<br>$$p(y)-p(x)=\frac{1}{2} y^T Ay-b^Ty-(\frac{1}{2} x^T Ax-b^Tx)=<br> \frac{1}{2} (y-x)^T A(y-x)\geqslant 0 $$ </p>
-<p> if and only if $A$ is positive<br>definite.</p>
-<p>$$L(x,y)=p(x)+y^T(Cx-d)=\frac{1}{2} x^T Ax-b^Tx+x^T C^Ty-y^T d,$$<br>and<br>$y=(y_1, y_2, \cdots y_n) \in {\mathbb{R}}$ is given vector(<em>Lagrange<br>multipliers</em>). So, it get the minimum value if and only if :<br>$$\begin{aligned}<br>\frac{\partial L}{\partial x}=0 : Ax+C^T y=b \qquad<br>\frac{\partial L}{\partial y}=0 : Cx=d\end{aligned}$$</p>
-<p>Consider $\displaystyle R(x)=\frac{x^TAx}{x^Tx}$, and we will solve<br>$\min R(x)$. So we have :<br>$$\lambda_{\min}(A)\leqslant R(x)=\frac{x^TAx}{x^Tx}=\frac{(Qy)^TA(Qy)}{(Qy)^T(Qy)}=<br>    \frac{y^T \Lambda y}{y^Ty}\leqslant \lambda_{\max}(A)$$ Therefore,<br>we have<br>$$\lambda_{\min}(A)\leqslant R(x)={ x^TAx|  |x|=1 } \leqslant \lambda_{\max}(A)$$</p>
-<p>$A_{m\times n}=U_{m\times m}\Sigma_{m\times n} V_{n\times n}^T$, and<br>$AV=U\Sigma$, is called SVD. We also have:<br>$$\begin{aligned}<br>A^TA=(V\Sigma^T U^T)U\Sigma V^T=V\Sigma^T \Sigma U &amp;\qquad<br>AA^T=(U\Sigma V^T)V\Sigma^T U^T=U\Sigma\Sigma^T U^T\<br>A[V_r|V_{n-r}]=[U_r|U_{n-r}]\Sigma&amp;= [\sigma_1u_1, \sigma_2u_2 \cdots \sigma_ru_r , 0 \cdots 0]\end{aligned}$$<br>and from this, we also have:<br>$$\begin{aligned}<br>V_{n-r} \rightarrow N(A) &amp;\qquad U_{m-r}\rightarrow N(A^T) \qquad<br>A^+ = U\Sigma^+ V^T\<br>V_r \rightarrow C(A^T)&amp;\qquad U_r \rightarrow C(A) \qquad x^+=A^+ b\end{aligned}$$</p>
-<p>If $A_{s\times n}, B_{n\times m}$, show that<br>$rank(AB)\geqslant rank(A)+rank(B)-n$.</p>
-<p>Since<br>$rank(A)+rank(B)=rank\begin{bmatrix}<br>    A &amp; O \<br>    O &amp; B<br>    \end{bmatrix}\geqslant rank\begin{bmatrix}<br>    A &amp; I \<br>    O &amp; B<br>    \end{bmatrix} $.<br>    Also we have elementary transformations:<br>$$\begin{bmatrix}<br>        A &amp; I \<br>        O &amp; B<br>    \end{bmatrix}\longrightarrow\begin{bmatrix}<br>    A &amp; I \<br>    -AB &amp; O<br>    \end{bmatrix}\longrightarrow\begin{bmatrix}<br>    O&amp; I \<br>    -AB &amp; O<br>    \end{bmatrix}$$ Therefore, $rank\begin{bmatrix}<br>    A &amp; I \<br>    O &amp; B<br>    \end{bmatrix}=rank\begin{bmatrix}<br>    O&amp; I \<br>    -AB &amp; O<br>    \end{bmatrix}=rank(AB)+rank(I)=rank(AB)+n$$</p>
-<p>Let $R(A)=r_1, R(B)=r_2, R(AB)=r,$ We assume that<br>$b_1, b_2 \cdots b_{r_2}$ is the basic solutions of the column vectors<br>of $B$, so there must exists the largest number which satisfies<br>$Ab_j=0, j\in {1,2\cdots r_2}$ where $b_1, b_2 \cdots b_{r_2}$ is<br>$r_2-r$. Otherwise, it is contradictary to $R(AB)=r$.</p>
-<p>It also means the $b_j$ of $Ab_j=0$ is in the $N(A)$, which means<br>$dim(N(A))=n-r_1$. Therefore, $r_2-r\leqslant n-r_1 \Rightarrow<br>    rank(AB)\geqslant rank(A)+rank(B)-n$.</p>
-<h1 id="Linear-Calculation"><a href="#Linear-Calculation" class="headerlink" title="Linear Calculation"></a>Linear Calculation</h1><p>A $n$ by $n$ matrix multiplies an $n$ -dimensional vector and produces<br>an $m$ -dimensional vector.</p>
-<p>$( E A$ times $x )$ equals $( E \operatorname { times } A x ) .$ We just<br>write $E A x$<br>$$A B = A \left[ \begin{array} { l } { b _ { 1 } } \ { b _ { 2 } } \ { b _ { 3 } } \end{array} \right] = \left[ \begin{array} { c } { A b _ { 1 } } \ { A b _ { 2 } } \ { A b _ { 3 } } \end{array} \right]$$<br>the number of columns in A has to equal the number of rows in $B .$ Then<br>$A$ can be multiplied into each column of $B .$</p>
-<p>Each column of $A B$ is the product of a matrix and a column: column $j$<br>of $A B = A$ times (column $j$ of $B )$</p>
-<p>Each row of $A B$ is the product of a row and a matrix: row $i$ of<br>$A B = ($ row $i$ of $A )$ times $B$</p>
-<p>Matrix multiplication is associative: $( A B ) C = A ( B C ) .$ Just<br>write $A B C .$</p>
-<p>Triangular factorization $A = L U$ with no exchanges of rows. $L$ is<br>lower triangular, with 1’s on the diagonal. The multipliers<br>$\ell _ { i j } ($ taken from elimination $)$ are below the diagonal.<br>$U$ is the upper triangular matrix which appeats after forward<br>elimination, The diagonal entries of $U$ are the pivots.</p>
-<p>$$\left[ \begin{array} { c c c } { 1 } &amp; { 0 } &amp; { 0 } \ { \ell _ { 21 } } &amp; { 1 } &amp; { 0 } \ { \ell _ { 31 } } &amp; { \ell _ { 32 } } &amp; { 1 } \end{array} \right] \left[ \begin{array} { l l } { \text { row } 1 \text { of } U } \ { \text { row } 2 \text { of } U } \ { \text { row } 3 \text { of } U } \end{array} \right] =\mathrm{ original }A$$</p>
-<p>$P A = L U$ $P ^ { - 1 }$ is always the same as<br>$P ^ { \mathrm { T } }$. With the rows reordered in advance, $P A$ can<br>be factored into $L U$</p>
-<p>The inverse exists if and only if elimination produces n pivots (row<br>exchanges allowed). Elimination solves $A x = b$ without explicitly<br>finding $A ^ { - 1 } .$</p>
-<p>Suppose there is a nonzero vector $x$ such that $A x = 0 .$ Then $A$<br>cannot have an inverse. To repeat: No matrix can bring 0 back to $x$ .<br>If $A$ is invertible, then $A x = 0$ can only have the zero solution<br>$x = 0$</p>
-<p>$$\left[ \begin{array} { l l } { a } &amp; { b } \ { c } &amp; { d } \end{array} \right] ^ { - 1 } = \frac { 1 } { a d - b c } \left[ \begin{array} { c c } { d } &amp; { - b } \ { - c } &amp; { a } \end{array} \right]$$</p>
-<p>$x = A ^ { - 1 } b$ separates into $L c = b $ and $ U x = c$ Invertible<br>$=$ Nonsingular ($n$ pivots)</p>
-<p>The transpose of $A ^ { - 1 }$ is<br>$\left( A ^ { - 1 } \right) ^ { \mathrm { T } } = \left( A ^ { \mathrm { T } } \right) ^ { - 1 }$</p>
-<p>Suppose $A = A ^ {T }$ can be factored into $A = L D U$ without row<br>exchanges. Then $U$ is the transpose of $L$ . The symmetric<br>factorization becomes $A = L D L ^ { T }$</p>
-<p>The number of free variables consist of the basic solutions of $N(A)$.<br>The expression is normally:<br>$$N(A)= \left\lbrace x|x=k_1x_1+k_2x_2+k_3x_3 \right\rbrace$$</p>
-<p>For a rectangular matrix, there dosen’t exist full inverse matrix.<br>However, there exist one-side matrix.</p>
-<ol>
-<li><p>Full row rank. $r=m\leqslant n$. There exists a right-side inverse<br> matrix.</p>
-</li>
-<li><p>Full column rank. $r=n\leqslant m$. There exists a left-side inverse<br> matrix.</p>
-</li>
+<table>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(r=m\)</span></td>
+<td align="center">and</td>
+<td align="center"><span class="math inline">\(r=n\)</span></td>
+<td align="center">Square and invertible</td>
+<td align="center"><span class="math inline">\(Ax=b\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span> solution</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(r=m\)</span></td>
+<td align="center">and</td>
+<td align="center"><span class="math inline">\(r&lt;n\)</span></td>
+<td align="center">Short and wide</td>
+<td align="center"><span class="math inline">\(Ax=b\)</span></td>
+<td align="center"><span class="math inline">\(\infty\)</span> solutions</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(r&lt;m\)</span></td>
+<td align="center">and</td>
+<td align="center"><span class="math inline">\(r=n\)</span></td>
+<td align="center">Tall and thin</td>
+<td align="center"><span class="math inline">\(Ax=b\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span> solution</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(r&lt;m\)</span></td>
+<td align="center">and</td>
+<td align="center"><span class="math inline">\(r&lt;n\)</span></td>
+<td align="center">Not full rank</td>
+<td align="center"><span class="math inline">\(Ax=b\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span> or <span class="math inline">\(\infty\)</span> solutions</td>
+</tr>
+</tbody>
+</table>
+<p>$ Ax=b $ is solvable if and only if $ y^T b=0 $ whenever $y^T A=0 $</p>
+<p><span class="math inline">\(Ax=b\)</span> is solvable if and only if <span class="math inline">\(b\in C(A)\)</span>. Also <span class="math inline">\(C(A)\perp N(A^T)\)</span>, and <span class="math inline">\(b\in N(A^T)\)</span> if and only if $ y^T b=0 $ whenever $y^T A=0 $</p>
+<p><span class="math display">\[P_Q(b)=Q(Q^TQ)^{-1}Q^T=(\sum\limits_{i=1}^{n} \frac{q_iq_i^T}{q_i^Tq_i})b\]</span></p>
+<p>If eigenvectors <span class="math inline">\(x_1, x_2, \cdots x_k\)</span> correspond to different eigenvalues <span class="math inline">\(\lambda_1, \lambda_2 \cdots \lambda_k\)</span> , then <span class="math inline">\(x_1, x_2, \cdots x_k\)</span> is linearly independent.</p>
+<p>Suppose <span class="math inline">\(x_1, x_2, \cdots x_k\)</span> is linearly dependent. Let <span class="math inline">\(n\)</span> be the smallest positive integer such that <span class="math inline">\(x_1, x_2, \cdots x_n\)</span> is independent.</p>
+<p><span class="math inline">\(\exists a_1,a_2 \cdots a_n\)</span> not all <span class="math inline">\(0\)</span>, such that <span class="math display">\[\begin{aligned}
+ a_1x_1+a_2x_2+\cdots a_nx_n=0\end{aligned}\]</span> Apply both sides ,<span class="math inline">\(a_1\lambda_1 x_1+a_2 \lambda_2 x_2+\cdots +a_n\lambda_nx_n=0\)</span>, which minus <span class="math inline">\(\lambda_n \cdot (1)\)</span> <span class="math display">\[\Rightarrow a_1(\lambda_1-\lambda_n) x_1+a_2 (\lambda_2-\lambda_n) x_2+\cdots +a_n(\lambda_{n-1}-\lambda_n)x_n=0\]</span> $x_1 , x_2, x_n $ is independent <span class="math inline">\(\Rightarrow a_1=a_2=\cdots=a_{n-1}=0\)</span>.</p>
+<p>Back to the (1), <span class="math inline">\(a_nx_n=0\Rightarrow a_n=0\)</span> <span class="math display">\[\Rightarrow a_1=a_2=\cdots=a_{n-1}=a_n=0 \Rightarrow\]</span> A Contradiction$$</p>
+<p>Different Expressions: <span class="math display">\[|A|=\sum\limits_{j=1}^{n}(-1)^{i+1}a_{ij}|M_{ij}|
+=\sum_{j} (-1)^{\tau (j_1j_2\cdots j_n)} a_{1 j_1} a_{2 j_2} \cdots  a_{n j_n}\]</span> There is a big fomula: <span class="math display">\[|A|=\sum_{j} det(P)  a_{1 j_1} a_{2 j_2} \cdots  a_{n j_n}\]</span> Also we have a relation:<span class="math inline">\(\displaystyle A^{-1}=\frac{ C^T}{|A|}\)</span>$</p>
+<p>For a difference equation, connected to eigenvalues: <span class="math display">\[A=Q\Lambda Q^T \Rightarrow A^k = Q\Lambda ^k Q^T\]</span></p>
+<p><span class="math inline">\(p(x)=\frac{1}{2} x^T Ax-b^Tx\)</span>, so we have<span class="math inline">\(\nabla p_1(x)=Ax, \nabla p_2(x)=b.\)</span> Therefore, <span class="math display">\[\nabla p(x)=Ax-b=0 \Rightarrow Ax=b\]</span></p>
+<p>When <span class="math inline">\(Ax=b\)</span>, for any <span class="math inline">\(y\in {\mathbb{R}}\)</span>, we have <span class="math display">\[p(y)-p(x)=\frac{1}{2} y^T Ay-b^Ty-(\frac{1}{2} x^T Ax-b^Tx)=
+ \frac{1}{2} (y-x)^T A(y-x)\geqslant 0 \]</span></p>
+<p>if and only if <span class="math inline">\(A\)</span> is positive definite.</p>
+<p><span class="math display">\[L(x,y)=p(x)+y^T(Cx-d)=\frac{1}{2} x^T Ax-b^Tx+x^T C^Ty-y^T d,\]</span> and <span class="math inline">\(y=(y_1, y_2, \cdots y_n) \in {\mathbb{R}}\)</span> is given vector(<em>Lagrange multipliers</em>). So, it get the minimum value if and only if : <span class="math display">\[\begin{aligned}
+\frac{\partial L}{\partial x}=0 : Ax+C^T y=b \qquad
+\frac{\partial L}{\partial y}=0 : Cx=d\end{aligned}\]</span></p>
+<p>Consider <span class="math inline">\(\displaystyle R(x)=\frac{x^TAx}{x^Tx}\)</span>, and we will solve <span class="math inline">\(\min R(x)\)</span>. So we have : <span class="math display">\[\lambda_{\min}(A)\leqslant R(x)=\frac{x^TAx}{x^Tx}=\frac{(Qy)^TA(Qy)}{(Qy)^T(Qy)}=
+    \frac{y^T \Lambda y}{y^Ty}\leqslant \lambda_{\max}(A)\]</span> Therefore, we have <span class="math display">\[\lambda_{\min}(A)\leqslant R(x)=\{ x^TAx|  \|x\|=1 \} \leqslant \lambda_{\max}(A)\]</span></p>
+<p><span class="math inline">\(A_{m\times n}=U_{m\times m}\Sigma_{m\times n} V_{n\times n}^T\)</span>, and <span class="math inline">\(AV=U\Sigma\)</span>, is called SVD. We also have: <span class="math display">\[\begin{aligned}
+A^TA=(V\Sigma^T U^T)U\Sigma V^T=V\Sigma^T \Sigma U &amp;\qquad
+AA^T=(U\Sigma V^T)V\Sigma^T U^T=U\Sigma\Sigma^T U^T\\
+A[V_r|V_{n-r}]=[U_r|U_{n-r}]\Sigma&amp;= [\sigma_1u_1, \sigma_2u_2 \cdots \sigma_ru_r , 0 \cdots 0]\end{aligned}\]</span> and from this, we also have: <span class="math display">\[\begin{aligned}
+V_{n-r} \rightarrow N(A) &amp;\qquad U_{m-r}\rightarrow N(A^T) \qquad
+A^+ = U\Sigma^+ V^T\\
+V_r \rightarrow C(A^T)&amp;\qquad U_r \rightarrow C(A) \qquad x^+=A^+ b\end{aligned}\]</span></p>
+<p>If <span class="math inline">\(A_{s\times n}, B_{n\times m}\)</span>, show that <span class="math inline">\(rank(AB)\geqslant rank(A)+rank(B)-n\)</span>.</p>
+Since $rank(A)+rank(B)=rank
+<span class="math display">\[\begin{bmatrix}
+    A &amp; O \\
+    O &amp; B
+    \end{bmatrix}\]</span>
+rank
+<span class="math display">\[\begin{bmatrix}
+    A &amp; I \\
+    O &amp; B
+    \end{bmatrix}\]</span>
+<p>$. Also we have elementary transformations: <span class="math display">\[\begin{bmatrix}
+        A &amp; I \\
+        O &amp; B
+    \end{bmatrix}\longrightarrow\begin{bmatrix}
+    A &amp; I \\
+    -AB &amp; O
+    \end{bmatrix}\longrightarrow\begin{bmatrix}
+    O&amp; I \\
+    -AB &amp; O
+    \end{bmatrix}\]</span> Therefore, <span class="math inline">\(rank\begin{bmatrix}  A &amp; I \\  O &amp; B  \end{bmatrix}=rank\begin{bmatrix}  O&amp; I \\  -AB &amp; O  \end{bmatrix}=rank(AB)+rank(I)=rank(AB)+n\)</span>$</p>
+<p>Let <span class="math inline">\(R(A)=r_1, R(B)=r_2, R(AB)=r,\)</span> We assume that <span class="math inline">\(b_1, b_2 \cdots b_{r_2}\)</span> is the basic solutions of the column vectors of <span class="math inline">\(B\)</span>, so there must exists the largest number which satisfies <span class="math inline">\(Ab_j=0, j\in \{1,2\cdots r_2\}\)</span> where <span class="math inline">\(b_1, b_2 \cdots b_{r_2}\)</span> is <span class="math inline">\(r_2-r\)</span>. Otherwise, it is contradictary to <span class="math inline">\(R(AB)=r\)</span>.</p>
+<p>It also means the <span class="math inline">\(b_j\)</span> of <span class="math inline">\(Ab_j=0\)</span> is in the <span class="math inline">\(N(A)\)</span>, which means <span class="math inline">\(dim(N(A))=n-r_1\)</span>. Therefore, <span class="math inline">\(r_2-r\leqslant n-r_1 \Rightarrow  rank(AB)\geqslant rank(A)+rank(B)-n\)</span>.</p>
+<h1 id="linear-calculation">Linear Calculation</h1>
+<p>A <span class="math inline">\(n\)</span> by <span class="math inline">\(n\)</span> matrix multiplies an <span class="math inline">\(n\)</span> -dimensional vector and produces an <span class="math inline">\(m\)</span> -dimensional vector.</p>
+<p><span class="math inline">\(( E A\)</span> times <span class="math inline">\(x )\)</span> equals <span class="math inline">\(( E \operatorname { times } A x ) .\)</span> We just write <span class="math inline">\(E A x\)</span> <span class="math display">\[A B = A \left[ \begin{array} { l } { b _ { 1 } } \\ { b _ { 2 } } \\ { b _ { 3 } } \end{array} \right] = \left[ \begin{array} { c } { A b _ { 1 } } \\ { A b _ { 2 } } \\ { A b _ { 3 } } \end{array} \right]\]</span> the number of columns in A has to equal the number of rows in <span class="math inline">\(B .\)</span> Then <span class="math inline">\(A\)</span> can be multiplied into each column of <span class="math inline">\(B .\)</span></p>
+<p>Each column of <span class="math inline">\(A B\)</span> is the product of a matrix and a column: column <span class="math inline">\(j\)</span> of <span class="math inline">\(A B = A\)</span> times (column <span class="math inline">\(j\)</span> of <span class="math inline">\(B )\)</span></p>
+<p>Each row of <span class="math inline">\(A B\)</span> is the product of a row and a matrix: row <span class="math inline">\(i\)</span> of <span class="math inline">\(A B = (\)</span> row <span class="math inline">\(i\)</span> of <span class="math inline">\(A )\)</span> times <span class="math inline">\(B\)</span></p>
+<p>Matrix multiplication is associative: <span class="math inline">\(( A B ) C = A ( B C ) .\)</span> Just write <span class="math inline">\(A B C .\)</span></p>
+<p>Triangular factorization <span class="math inline">\(A = L U\)</span> with no exchanges of rows. <span class="math inline">\(L\)</span> is lower triangular, with 1’s on the diagonal. The multipliers <span class="math inline">\(\ell _ { i j } (\)</span> taken from elimination <span class="math inline">\()\)</span> are below the diagonal. <span class="math inline">\(U\)</span> is the upper triangular matrix which appeats after forward elimination, The diagonal entries of <span class="math inline">\(U\)</span> are the pivots.</p>
+<p><span class="math display">\[\left[ \begin{array} { c c c } { 1 } &amp; { 0 } &amp; { 0 } \\ { \ell _ { 21 } } &amp; { 1 } &amp; { 0 } \\ { \ell _ { 31 } } &amp; { \ell _ { 32 } } &amp; { 1 } \end{array} \right] \left[ \begin{array} { l l } { \text { row } 1 \text { of } U } \\ { \text { row } 2 \text { of } U } \\ { \text { row } 3 \text { of } U } \end{array} \right] =\mathrm{ original }A\]</span></p>
+<p><span class="math inline">\(P A = L U\)</span> <span class="math inline">\(P ^ { - 1 }\)</span> is always the same as <span class="math inline">\(P ^ { \mathrm { T } }\)</span>. With the rows reordered in advance, <span class="math inline">\(P A\)</span> can be factored into <span class="math inline">\(L U\)</span></p>
+<p>The inverse exists if and only if elimination produces n pivots (row exchanges allowed). Elimination solves <span class="math inline">\(A x = b\)</span> without explicitly finding <span class="math inline">\(A ^ { - 1 } .\)</span></p>
+<p>Suppose there is a nonzero vector <span class="math inline">\(x\)</span> such that <span class="math inline">\(A x = 0 .\)</span> Then <span class="math inline">\(A\)</span> cannot have an inverse. To repeat: No matrix can bring 0 back to <span class="math inline">\(x\)</span> . If <span class="math inline">\(A\)</span> is invertible, then <span class="math inline">\(A x = 0\)</span> can only have the zero solution <span class="math inline">\(x = 0\)</span></p>
+<p><span class="math display">\[\left[ \begin{array} { l l } { a } &amp; { b } \\ { c } &amp; { d } \end{array} \right] ^ { - 1 } = \frac { 1 } { a d - b c } \left[ \begin{array} { c c } { d } &amp; { - b } \\ { - c } &amp; { a } \end{array} \right]\]</span></p>
+<p><span class="math inline">\(x = A ^ { - 1 } b\)</span> separates into $L c = b $ and $ U x = c$ Invertible <span class="math inline">\(=\)</span> Nonsingular (<span class="math inline">\(n\)</span> pivots)</p>
+<p>The transpose of <span class="math inline">\(A ^ { - 1 }\)</span> is <span class="math inline">\(\left( A ^ { - 1 } \right) ^ { \mathrm { T } } = \left( A ^ { \mathrm { T } } \right) ^ { - 1 }\)</span></p>
+<p>Suppose <span class="math inline">\(A = A ^ {T }\)</span> can be factored into <span class="math inline">\(A = L D U\)</span> without row exchanges. Then <span class="math inline">\(U\)</span> is the transpose of <span class="math inline">\(L\)</span> . The symmetric factorization becomes <span class="math inline">\(A = L D L ^ { T }\)</span></p>
+<p>The number of free variables consist of the basic solutions of <span class="math inline">\(N(A)\)</span>. The expression is normally: <span class="math display">\[N(A)= \left\lbrace x|x=k_1x_1+k_2x_2+k_3x_3 \right\rbrace\]</span></p>
+<p>For a rectangular matrix, there dosen’t exist full inverse matrix. However, there exist one-side matrix.</p>
+<ol style="list-style-type: decimal">
+<li><p>Full row rank. <span class="math inline">\(r=m\leqslant n\)</span>. There exists a right-side inverse matrix.</p></li>
+<li><p>Full column rank. <span class="math inline">\(r=n\leqslant m\)</span>. There exists a left-side inverse matrix.</p></li>
 </ol>
-<h1 id="Linear-Space"><a href="#Linear-Space" class="headerlink" title="Linear Space"></a>Linear Space</h1><p>A <em>Vector space</em> is a set $V$ along with an additiont on $V$ and a<br>scalar multiplication on $V$ such that the following properties hold:</p>
-<ol>
-<li><p><strong>commutativity</strong><br> $u+v=v+u$ for all $u,v \in V$ ;</p>
-</li>
-<li><p><strong>associativity</strong><br> $(u+v)+w=u+(v+w) $ and $(ab)v=a(bv)$ for all $u,v,w  \in V $ and all<br> $a,b \in \textbf{F}$;</p>
-</li>
-<li><p><strong>addictive identity</strong><br> there exists an element $0\in V$ such that $v+0=v$ for all $v\in V$;</p>
-</li>
-<li><p><strong>addicyive inverse</strong><br> for every $v\in V$ ,there exists $w \in V$ such that $v+w=0$;</p>
-</li>
-<li><p> <strong>multiplicative identity</strong> $1v=v$ for all $v \in V$</p>
-</li>
-<li><p><strong>distributive properties</strong> $a(u+v)=au+av$ and $(a+b)v=av+bv$ for<br> all $a,b\in \textbf{F}$ and all $u,v\in V$.</p>
-</li>
+<h1 id="linear-space">Linear Space</h1>
+<p>A <em>Vector space</em> is a set <span class="math inline">\(V\)</span> along with an additiont on <span class="math inline">\(V\)</span> and a scalar multiplication on <span class="math inline">\(V\)</span> such that the following properties hold:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>commutativity</strong><br />
+<span class="math inline">\(u+v=v+u\)</span> for all <span class="math inline">\(u,v \in V\)</span> ;</p></li>
+<li><p><strong>associativity</strong><br />
+$(u+v)+w=u+(v+w) $ and <span class="math inline">\((ab)v=a(bv)\)</span> for all $u,v,w V $ and all <span class="math inline">\(a,b \in \textbf{F}\)</span>;</p></li>
+<li><p><strong>addictive identity</strong><br />
+there exists an element <span class="math inline">\(0\in V\)</span> such that <span class="math inline">\(v+0=v\)</span> for all <span class="math inline">\(v\in V\)</span>;</p></li>
+<li><p><strong>addicyive inverse</strong><br />
+for every <span class="math inline">\(v\in V\)</span> ,there exists <span class="math inline">\(w \in V\)</span> such that <span class="math inline">\(v+w=0\)</span>;</p></li>
+<li><p><strong>multiplicative identity</strong> <span class="math inline">\(1v=v\)</span> for all <span class="math inline">\(v \in V\)</span></p></li>
+<li><p><strong>distributive properties</strong> <span class="math inline">\(a(u+v)=au+av\)</span> and <span class="math inline">\((a+b)v=av+bv\)</span> for all <span class="math inline">\(a,b\in \textbf{F}\)</span> and all <span class="math inline">\(u,v\in V\)</span>.</p></li>
 </ol>
-<p>A subset $U$ of $V$ is called a <em>subspace</em> of $V$ if $U$ is also a<br>vector space (using the same addition and scalar multiplication as on<br>$V$).</p>
-<p>A <em>subspace</em> of a vector space is a nonempty subset that satisfies the<br>requirements for a vector space: Linear combinations stay in the<br>subspace.</p>
-<p>The system $A x = b$ is solvable if and only if the vector $b$ can be<br>expressed as a combination of the columns of $A .$ Then $b$ is in the<br>column space. We can describe all combinations of the two columns<br>geometrically: $A x = b$ can be solved if and only if b lies in the<br>plane that is spanned by the two column vectors.</p>
-<p>The nullspace of a matrix consists of all vectors $x$ such that<br>$A x = 0 .$ It is denoted by $N ( A ) .$ It is a subspace of<br>$\mathbf { R } ^ { n } ,$ just as the column space was a subspace of<br>$\mathbf { R } ^ { m } .$</p>
-<p>$A x _ { p } = b$ and $A x _ { n } = 0 \quad$ produce<br>$\quad A \left( x _ { p } + x _ { n } \right) = b$</p>
-<p>$$R x = \left[ \begin{array} { l l l l } { 1 } &amp; { 3 } &amp; { 0 } &amp; { - 1 } \ { 0 } &amp; { 0 } &amp; { 1 } &amp; { 1 } \ { 0 } &amp; { 0 } &amp; { 0 } &amp; { 0 } \end{array} \right] \left[ \begin{array} { l } { u } \ { v } \ { w } \ { y } \end{array} \right] = \left[ \begin{array} { l } { 0 } \ { 0 } \ { 0 } \end{array} \right]$$<br>The unknowns $u , v , w , y$ go into two groups. One group contains the<br>pivot variables, those that correspond to columns with pivots.</p>
-<p>If $A x = 0$ has more unknowns than equations $( n &gt; m ) ,$ it has at<br>least one special solution: There are more solutions than the trivial<br>$x = 0$</p>
-<p>$x _ { \mathrm{complete} } = x _ { \mathrm{particular} } + x _ {\mathrm{  nullspace }}$</p>
-<p>The columns of A are independent exactly when $N ( A ) = {$ zero vector<br>$}$</p>
-<h2 id="Basis"><a href="#Basis" class="headerlink" title="Basis"></a>Basis</h2><p>Suppose $c _ { 1 } v _ { 1 } + \cdots + c _ { k } v _ { k } = 0$ only<br>happens when $c _ { 1 } = \cdots = c _ { k } = 0 .$ Then the vectors<br>$v _ { 1 } , \ldots , v _ { k }$ are linearly independent. If any<br>$c ^ { \prime }$ are nonzero, the $v ^ { \prime } \mathrm { s }$ are<br>linearly dependent. One vector is a combination of the others.</p>
-<p>To check any set of vectors $v _ { 1 } , \ldots , v _ { n }$ for<br>independence, put them in the columns of $A .$ Then solve the system<br>$A c = 0 ;$ the vectors are dependent if there is a solution other than<br>$c = 0 .$ With no free variables ( rank is $n$) , there is no nullspace<br>except $c = 0 ;$ the vectors are independent. If the rank is less than<br>$n ,$ at least one free variable can be nonzero and the columns are<br>dependent.</p>
-<p>A set of n vectors in $\mathbf { R } ^ { m }$ must be linearly dependent<br>if $n &gt; m$</p>
-<p>A basis for $\mathrm { V }$ is a sequence of vectors having two<br>properties at once:</p>
-<ol>
-<li><p> The vectors are linearly independent (not too many vectors).</p>
-</li>
-<li><p> They span the space V (not too few vectors).</p>
-</li>
+<p>A subset <span class="math inline">\(U\)</span> of <span class="math inline">\(V\)</span> is called a <em>subspace</em> of <span class="math inline">\(V\)</span> if <span class="math inline">\(U\)</span> is also a vector space (using the same addition and scalar multiplication as on <span class="math inline">\(V\)</span>).</p>
+<p>A <em>subspace</em> of a vector space is a nonempty subset that satisfies the requirements for a vector space: Linear combinations stay in the subspace.</p>
+<p>The system <span class="math inline">\(A x = b\)</span> is solvable if and only if the vector <span class="math inline">\(b\)</span> can be expressed as a combination of the columns of <span class="math inline">\(A .\)</span> Then <span class="math inline">\(b\)</span> is in the column space. We can describe all combinations of the two columns geometrically: <span class="math inline">\(A x = b\)</span> can be solved if and only if b lies in the plane that is spanned by the two column vectors.</p>
+<p>The nullspace of a matrix consists of all vectors <span class="math inline">\(x\)</span> such that <span class="math inline">\(A x = 0 .\)</span> It is denoted by <span class="math inline">\(N ( A ) .\)</span> It is a subspace of <span class="math inline">\(\mathbf { R } ^ { n } ,\)</span> just as the column space was a subspace of <span class="math inline">\(\mathbf { R } ^ { m } .\)</span></p>
+<p><span class="math inline">\(A x _ { p } = b\)</span> and <span class="math inline">\(A x _ { n } = 0 \quad\)</span> produce <span class="math inline">\(\quad A \left( x _ { p } + x _ { n } \right) = b\)</span></p>
+<p><span class="math display">\[R x = \left[ \begin{array} { l l l l } { 1 } &amp; { 3 } &amp; { 0 } &amp; { - 1 } \\ { 0 } &amp; { 0 } &amp; { 1 } &amp; { 1 } \\ { 0 } &amp; { 0 } &amp; { 0 } &amp; { 0 } \end{array} \right] \left[ \begin{array} { l } { u } \\ { v } \\ { w } \\ { y } \end{array} \right] = \left[ \begin{array} { l } { 0 } \\ { 0 } \\ { 0 } \end{array} \right]\]</span> The unknowns <span class="math inline">\(u , v , w , y\)</span> go into two groups. One group contains the pivot variables, those that correspond to columns with pivots.</p>
+<p>If <span class="math inline">\(A x = 0\)</span> has more unknowns than equations <span class="math inline">\(( n &gt; m ) ,\)</span> it has at least one special solution: There are more solutions than the trivial <span class="math inline">\(x = 0\)</span></p>
+<p><span class="math inline">\(x _ { \mathrm{complete} } = x _ { \mathrm{particular} } + x _ {\mathrm{ nullspace }}\)</span></p>
+<p>The columns of A are independent exactly when <span class="math inline">\(N ( A ) = \{\)</span> zero vector <span class="math inline">\(\}\)</span></p>
+<h2 id="basis">Basis</h2>
+<p>Suppose <span class="math inline">\(c _ { 1 } v _ { 1 } + \cdots + c _ { k } v _ { k } = 0\)</span> only happens when <span class="math inline">\(c _ { 1 } = \cdots = c _ { k } = 0 .\)</span> Then the vectors <span class="math inline">\(v _ { 1 } , \ldots , v _ { k }\)</span> are linearly independent. If any <span class="math inline">\(c ^ { \prime }\)</span> are nonzero, the <span class="math inline">\(v ^ { \prime } \mathrm { s }\)</span> are linearly dependent. One vector is a combination of the others.</p>
+<p>To check any set of vectors <span class="math inline">\(v _ { 1 } , \ldots , v _ { n }\)</span> for independence, put them in the columns of <span class="math inline">\(A .\)</span> Then solve the system <span class="math inline">\(A c = 0 ;\)</span> the vectors are dependent if there is a solution other than <span class="math inline">\(c = 0 .\)</span> With no free variables ( rank is <span class="math inline">\(n\)</span>) , there is no nullspace except <span class="math inline">\(c = 0 ;\)</span> the vectors are independent. If the rank is less than <span class="math inline">\(n ,\)</span> at least one free variable can be nonzero and the columns are dependent.</p>
+<p>A set of n vectors in <span class="math inline">\(\mathbf { R } ^ { m }\)</span> must be linearly dependent if <span class="math inline">\(n &gt; m\)</span></p>
+<p>A basis for <span class="math inline">\(\mathrm { V }\)</span> is a sequence of vectors having two properties at once:</p>
+<ol style="list-style-type: decimal">
+<li><p>The vectors are linearly independent (not too many vectors).</p></li>
+<li><p>They span the space V (not too few vectors).</p></li>
 </ol>
-<p>Any two bases for a vector space $\mathbf { V }$ contain the same number<br>of vec- tors. This number, which is shared by all bases and expresses<br>the number of $\cdot$ degrees of freedom” of the space, is the dimension<br>of $\mathbf { V } .$</p>
-<p>If $v _ { 1 } , \ldots , v _ { m }$ and $w _ { 1 } , \ldots , w _ { n }$<br>are both bases for the same vector space, then $m = n .$ The number of<br>vectors is the same.</p>
-<p>Suppose there are more $w ^ { \prime }$ s than<br>$v ^ { \prime } \mathrm { s } ( n &gt; m ) .$ We will arrive at a<br>contradiction. Since the $v ^ { \prime }$ s form a basis, they must span<br>the space. Every $w _ { j }$ can be written as a combination of the v’s:<br>If $w _ { 1 } = a _ { 11 } v _ { 1 } + \cdots + a _ { m 1 } v _ { m } ,$<br>this is the first column of a matrix multiplication $V A :$<br>$$W = \left[ \begin{array} { l l l l } { w _ { 1 } } &amp; { w _ { 2 } } &amp; { \cdots } &amp; { w _ { n } } \end{array} \right] = \left[ \begin{array} { c c c } { v _ { 1 } } &amp; { \cdots } &amp; { v _ { m } } \end{array} \right] \left[ \begin{array} { c } { a _ { 11 } } \ { \vdots } \ { a _ { m 1 } } \end{array} \right] = V A$$<br>We don’t know each $a _ { i j } ,$ but we know the shape of $A$ (it is<br>$m$ by $n ) .$ The second vector $w _ { 2 }$ is also a combination of<br>the $v ^ { \prime }$ . The coefficients in that combination fill the<br>second column of $A .$ The key is that $A$ has a row for every $v$ and a<br>column for every $w . A$ is a short, wide matrix, since $n &gt; m .$ There<br>is a nonzero solution to $A x = 0 .$ Then $VA x = 0$ which is $Wx = 0 .$<br>A combination of the $w$ ’s gives zero! The $w ^ { \prime }$ s could not<br>be a basis $-$ so we cannot have $n &gt; m$</p>
-<p>If $m &gt; n$ we exchange the $v ^ { \prime }$ s and $w ^ { \prime }$ and<br>repeat the same steps. The only way to avoid a contradiction is to have<br>$m = n .$ This completes the proof that $m = n .$ To repeat: The<br>dimension of a space is the number of vectors in every basis.</p>
-<p>The row space of $A$ has the same dimension $r$ as the row space of<br>$U ,$ and it has the same bases, because the row spaces of $A$ and $U ($<br>and $R )$ are the same.</p>
-<p>The dimension of the column space $C ( A )$ equals the rank $r ,$ which<br>also equals the dimension of the row space: The number of independent<br>columns equals the number of independent rows. A basis for $C ( A )$ is<br>formed by the $r$ columns of $A$ that correspond, in $U ,$ to the<br>columns containing pivots.</p>
-<p>Roughly speaking, an inverse exists only when the rank is as large as<br>possible.</p>
-<h1 id="Important"><a href="#Important" class="headerlink" title="Important"></a>Important</h1><h2 id="Eigenvalues"><a href="#Eigenvalues" class="headerlink" title="Eigenvalues"></a>Eigenvalues</h2><p>Suppose the $n$ by $n$ matrix $A$ has $n$ linearly independent<br>eigenvectors. If these eigenvectors are the columns of a matrix $S ,$<br>then $S ^ { - 1 } A S$ is a diagonal matrix $\Lambda .$ The eigenvalues<br>of $A$ are on the diagonal of $\Lambda $</p>
+<p>Any two bases for a vector space <span class="math inline">\(\mathbf { V }\)</span> contain the same number of vec- tors. This number, which is shared by all bases and expresses the number of <span class="math inline">\(\cdot\)</span> degrees of freedom&quot; of the space, is the dimension of <span class="math inline">\(\mathbf { V } .\)</span></p>
+<p>If <span class="math inline">\(v _ { 1 } , \ldots , v _ { m }\)</span> and <span class="math inline">\(w _ { 1 } , \ldots , w _ { n }\)</span> are both bases for the same vector space, then <span class="math inline">\(m = n .\)</span> The number of vectors is the same.</p>
+<p>Suppose there are more <span class="math inline">\(w ^ { \prime }\)</span> s than <span class="math inline">\(v ^ { \prime } \mathrm { s } ( n &gt; m ) .\)</span> We will arrive at a contradiction. Since the <span class="math inline">\(v ^ { \prime }\)</span> s form a basis, they must span the space. Every <span class="math inline">\(w _ { j }\)</span> can be written as a combination of the v’s: If <span class="math inline">\(w _ { 1 } = a _ { 11 } v _ { 1 } + \cdots + a _ { m 1 } v _ { m } ,\)</span> this is the first column of a matrix multiplication <span class="math inline">\(V A :\)</span> <span class="math display">\[W = \left[ \begin{array} { l l l l } { w _ { 1 } } &amp; { w _ { 2 } } &amp; { \cdots } &amp; { w _ { n } } \end{array} \right] = \left[ \begin{array} { c c c } { v _ { 1 } } &amp; { \cdots } &amp; { v _ { m } } \end{array} \right] \left[ \begin{array} { c } { a _ { 11 } } \\ { \vdots } \\ { a _ { m 1 } } \end{array} \right] = V A\]</span> We don’t know each <span class="math inline">\(a _ { i j } ,\)</span> but we know the shape of <span class="math inline">\(A\)</span> (it is <span class="math inline">\(m\)</span> by <span class="math inline">\(n ) .\)</span> The second vector <span class="math inline">\(w _ { 2 }\)</span> is also a combination of the <span class="math inline">\(v ^ { \prime }\)</span> . The coefficients in that combination fill the second column of <span class="math inline">\(A .\)</span> The key is that <span class="math inline">\(A\)</span> has a row for every <span class="math inline">\(v\)</span> and a column for every <span class="math inline">\(w . A\)</span> is a short, wide matrix, since <span class="math inline">\(n &gt; m .\)</span> There is a nonzero solution to <span class="math inline">\(A x = 0 .\)</span> Then <span class="math inline">\(VA x = 0\)</span> which is <span class="math inline">\(Wx = 0 .\)</span> A combination of the <span class="math inline">\(w\)</span> ’s gives zero! The <span class="math inline">\(w ^ { \prime }\)</span> s could not be a basis <span class="math inline">\(-\)</span> so we cannot have <span class="math inline">\(n &gt; m\)</span></p>
+<p>If <span class="math inline">\(m &gt; n\)</span> we exchange the <span class="math inline">\(v ^ { \prime }\)</span> s and <span class="math inline">\(w ^ { \prime }\)</span> and repeat the same steps. The only way to avoid a contradiction is to have <span class="math inline">\(m = n .\)</span> This completes the proof that <span class="math inline">\(m = n .\)</span> To repeat: The dimension of a space is the number of vectors in every basis.</p>
+<p>The row space of <span class="math inline">\(A\)</span> has the same dimension <span class="math inline">\(r\)</span> as the row space of <span class="math inline">\(U ,\)</span> and it has the same bases, because the row spaces of <span class="math inline">\(A\)</span> and <span class="math inline">\(U (\)</span> and <span class="math inline">\(R )\)</span> are the same.</p>
+<p>The dimension of the column space <span class="math inline">\(C ( A )\)</span> equals the rank <span class="math inline">\(r ,\)</span> which also equals the dimension of the row space: The number of independent columns equals the number of independent rows. A basis for <span class="math inline">\(C ( A )\)</span> is formed by the <span class="math inline">\(r\)</span> columns of <span class="math inline">\(A\)</span> that correspond, in <span class="math inline">\(U ,\)</span> to the columns containing pivots.</p>
+<p>Roughly speaking, an inverse exists only when the rank is as large as possible.</p>
+<h1 id="important">Important</h1>
+<h2 id="eigenvalues">Eigenvalues</h2>
+<p>Suppose the <span class="math inline">\(n\)</span> by <span class="math inline">\(n\)</span> matrix <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> linearly independent eigenvectors. If these eigenvectors are the columns of a matrix <span class="math inline">\(S ,\)</span> then <span class="math inline">\(S ^ { - 1 } A S\)</span> is a diagonal matrix <span class="math inline">\(\Lambda .\)</span> The eigenvalues of <span class="math inline">\(A\)</span> are on the diagonal of $$</p>
 <p><strong>Any matrix with distinct eigenvalues can be diagonalized.</strong></p>
-<p>Not all matrices possess $n$ linearly independent eigenvectors, so not<br>all matrices are diagonalizable.</p>
-<p>Diagonalizability of A depends on enough eigenvectors.<br>Invertibility of A depends on nonzero eigenvalues.<br>Diagonalization can fail only if there are repeated eigenvalues.</p>
-<p>Diagonalizable matrices share the same eigenvector matrix $S$ if and<br>only if $A B = B A$</p>
-<ol>
-<li><p> Every symmetric matrix (and Hermitian matrix) has real eigenvalues.</p>
-</li>
-<li><p> Its eigenvectors can be chosen to be orthonormal.</p>
-</li>
+<p>Not all matrices possess <span class="math inline">\(n\)</span> linearly independent eigenvectors, so not all matrices are diagonalizable.</p>
+<p>Diagonalizability of A depends on enough eigenvectors.<br />
+Invertibility of A depends on nonzero eigenvalues.<br />
+Diagonalization can fail only if there are repeated eigenvalues.</p>
+<p>Diagonalizable matrices share the same eigenvector matrix <span class="math inline">\(S\)</span> if and only if <span class="math inline">\(A B = B A\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Every symmetric matrix (and Hermitian matrix) has real eigenvalues.</p></li>
+<li><p>Its eigenvectors can be chosen to be orthonormal.</p></li>
 </ol>
-<h2 id="complex"><a href="#complex" class="headerlink" title="complex"></a>complex</h2><p>A real symmetric matrix can be factored into<br>$A = Q \Lambda Q ^ { \mathrm { T } } .$ Its orthonormal eigenvectors are<br>in the orthogonal matrix $Q$ and its eigenvalues are in $\Lambda .$</p>
+<h2 id="complex">complex</h2>
+<p>A real symmetric matrix can be factored into <span class="math inline">\(A = Q \Lambda Q ^ { \mathrm { T } } .\)</span> Its orthonormal eigenvectors are in the orthogonal matrix <span class="math inline">\(Q\)</span> and its eigenvalues are in <span class="math inline">\(\Lambda .\)</span></p>
 <p>A complex matrix with orthonormal columns is called a unitary matrix.</p>
-<p>If $A$ is Hermitian then $K = i A$ is skew-Hermitian.</p>
-<p>Suppose that $B = M ^ { - 1 } A M .$ Then $A$ and $B$ have the same<br>eigenvalues. Every eigenvector $x$ of $A$ corresponds to an eigenvector<br>$M ^ { - 1 } x$ of $B .$</p>
-<p>The matrices $A$ and $B$ that represent the same linear transformation<br>$T$ with respect to two different bases (the $v ^ { \prime }$ s and the<br>$V ^ { \prime }$ s) are similar:</p>
-<p>There is a unitary matrix $M = U$ such that $U ^ { - 1 } A U = T$ is<br>triangular. The eigenvalues of $A$ appear along the diagonal of this<br>similar matrix $T .$</p>
-<p><strong>Spectral Theorem</strong> Every real symmetric $A$ can be diagonalized by an<br>orthogonal matrix $Q .$ Every Hermitian matrix can be diagonalized by a<br>unitary $U :$<br>$$\begin{aligned} Q ^ { - 1 } A Q = \Lambda \quad&amp; \text { or } \quad A = Q \Lambda Q ^ { \mathrm { T } } \ U ^ { - 1 } A U = \Lambda\quad &amp; \text { or } \quad A = U \Lambda U ^ { \mathrm { H } } \end{aligned}$$<br>The columns of $Q ($ or $U )$ contain orthonormal eigenvectors of $A$</p>
-<h2 id="Normal"><a href="#Normal" class="headerlink" title="Normal"></a>Normal</h2><p>The matrix $N$ is normal if it commutes with<br>$$N N ^ { \mathrm { H } } = N ^ { \mathrm { H } } N .$$<br> For such matrices, and no others, the triangular $T = U ^ { - 1 } N U$ is the<br>diagonal $\Lambda$ Normal matrices are exactly those that have a<br>complete set of orthonormal eigenvectors.</p>
-<ol>
-<li><p>$A$ is diagonalizable: The columns of $S$ are eigenvectors and<br> $S ^ { - 1 } A S = \Lambda$</p>
-</li>
-<li><p>$A$ is arbitrary: The columns of M include “generalized<br> eigenvectors” of $A ,$ and the Jordan form $M ^ { - 1 } A M = J$ is<br> block diagonal.</p>
-</li>
-<li><p>$A$ is arbitrary: The unitary $U$ can be chosen so that<br> $U ^ { - 1 } A U = T$ is triangular.</p>
-</li>
-<li><p>$A$ is normal, $A A ^ { \mathrm { H } } = A ^ { \mathrm { H } } A :$<br> then $U$ can be chosen so that $U ^ { - 1 } A U = \Lambda$ <em>Special<br> cases of normal matrices, all with orthonormal eigenvectors:</em></p>
-<ol>
-<li><p>If $A = A ^ { H }$ is Hermitian, then all $\lambda _ { i }$ are<br> real.</p>
-</li>
-<li><p>If $A = A ^ { T }$ is real symmetric, then $\Lambda$ is real and<br> $U = Q$ is orthogonal.</p>
-</li>
-<li><p>If $A = - A ^ { H }$ is skew-Hermitian, then all<br> $\lambda _ { i }$ are purely imaginary.</p>
-</li>
-<li><p>If $A$ is orthogonal or unitary, then all<br> $\left| \lambda _ { i } \right| = 1$ are on the unit circle.</p>
-</li>
+<p>If <span class="math inline">\(A\)</span> is Hermitian then <span class="math inline">\(K = i A\)</span> is skew-Hermitian.</p>
+<p>Suppose that <span class="math inline">\(B = M ^ { - 1 } A M .\)</span> Then <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same eigenvalues. Every eigenvector <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> corresponds to an eigenvector <span class="math inline">\(M ^ { - 1 } x\)</span> of <span class="math inline">\(B .\)</span></p>
+<p>The matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> that represent the same linear transformation <span class="math inline">\(T\)</span> with respect to two different bases (the <span class="math inline">\(v ^ { \prime }\)</span> s and the <span class="math inline">\(V ^ { \prime }\)</span> s) are similar:</p>
+<p>There is a unitary matrix <span class="math inline">\(M = U\)</span> such that <span class="math inline">\(U ^ { - 1 } A U = T\)</span> is triangular. The eigenvalues of <span class="math inline">\(A\)</span> appear along the diagonal of this similar matrix <span class="math inline">\(T .\)</span></p>
+<p><strong>Spectral Theorem</strong> Every real symmetric <span class="math inline">\(A\)</span> can be diagonalized by an orthogonal matrix <span class="math inline">\(Q .\)</span> Every Hermitian matrix can be diagonalized by a unitary <span class="math inline">\(U :\)</span> <span class="math display">\[\begin{aligned} Q ^ { - 1 } A Q = \Lambda \quad&amp; \text { or } \quad A = Q \Lambda Q ^ { \mathrm { T } } \\ U ^ { - 1 } A U = \Lambda\quad &amp; \text { or } \quad A = U \Lambda U ^ { \mathrm { H } } \end{aligned}\]</span> The columns of <span class="math inline">\(Q (\)</span> or <span class="math inline">\(U )\)</span> contain orthonormal eigenvectors of <span class="math inline">\(A\)</span></p>
+<h2 id="normal">Normal</h2>
+<p>The matrix <span class="math inline">\(N\)</span> is normal if it commutes with <span class="math display">\[N N ^ { \mathrm { H } } = N ^ { \mathrm { H } } N .\]</span> For such matrices, and no others, the triangular <span class="math inline">\(T = U ^ { - 1 } N U\)</span> is the diagonal <span class="math inline">\(\Lambda\)</span> Normal matrices are exactly those that have a complete set of orthonormal eigenvectors.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(A\)</span> is diagonalizable: The columns of <span class="math inline">\(S\)</span> are eigenvectors and <span class="math inline">\(S ^ { - 1 } A S = \Lambda\)</span></p></li>
+<li><p><span class="math inline">\(A\)</span> is arbitrary: The columns of M include “generalized eigenvectors” of <span class="math inline">\(A ,\)</span> and the Jordan form <span class="math inline">\(M ^ { - 1 } A M = J\)</span> is block diagonal.</p></li>
+<li><p><span class="math inline">\(A\)</span> is arbitrary: The unitary <span class="math inline">\(U\)</span> can be chosen so that <span class="math inline">\(U ^ { - 1 } A U = T\)</span> is triangular.</p></li>
+<li><p><span class="math inline">\(A\)</span> is normal, <span class="math inline">\(A A ^ { \mathrm { H } } = A ^ { \mathrm { H } } A :\)</span> then <span class="math inline">\(U\)</span> can be chosen so that <span class="math inline">\(U ^ { - 1 } A U = \Lambda\)</span> <em>Special cases of normal matrices, all with orthonormal eigenvectors:</em></p>
+<ol style="list-style-type: decimal">
+<li><p>If <span class="math inline">\(A = A ^ { H }\)</span> is Hermitian, then all <span class="math inline">\(\lambda _ { i }\)</span> are real.</p></li>
+<li><p>If <span class="math inline">\(A = A ^ { T }\)</span> is real symmetric, then <span class="math inline">\(\Lambda\)</span> is real and <span class="math inline">\(U = Q\)</span> is orthogonal.</p></li>
+<li><p>If <span class="math inline">\(A = - A ^ { H }\)</span> is skew-Hermitian, then all <span class="math inline">\(\lambda _ { i }\)</span> are purely imaginary.</p></li>
+<li><p>If <span class="math inline">\(A\)</span> is orthogonal or unitary, then all <span class="math inline">\(\left| \lambda _ { i } \right| = 1\)</span> are on the unit circle.</p></li>
+</ol></li>
 </ol>
-</li>
+<h1 id="positive-definite">Positive definite</h1>
+<p>$ a x ^ { 2 } + 2 b x y + c y ^ { 2 }$ is positive definite if and only if <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(a c &gt; b ^ { 2 } .\)</span> Any <span class="math inline">\(f ( x , y )\)</span> has a minimum at a point where <span class="math inline">\(\partial F / \partial x = \partial F / \partial y = 0\)</span> with</p>
+<p><span class="math display">\[\frac { \partial ^ { 2 } F } { \partial x ^ { 2 } } &gt; 0 \quad \qquad \left[ \frac { \partial ^ { 2 }F  } { \partial x ^ { 2 } } \right] \left[ \frac { \partial  ^ { 2 }F } { \partial y ^ { 2 } } \right] &gt; \left[ \frac { \partial ^ { 2 } F } { \partial x \partial y } \right] ^ { 2 }\]</span></p>
+<p><span class="math display">\[F ( x ) = F ( 0 ) + x ^ { \mathrm { T } } ( \text{ grad } F ) + \frac { 1 } { 2 } x ^ { \mathrm { T } } A x +\text{higher order terms}\]</span></p>
+<p>At a stationary point, <span class="math inline">\(\nabla F = \left( \partial F / \partial x _ { 1 } , \ldots , \partial F / \partial x _ { n } \right)\)</span> is a vector of zeros.</p>
+<p><span class="math display">\[a x ^ { 2 } + 2 b x y + c y ^ { 2 } = a \left( x + \frac { b } { a } y \right) ^ { 2 } + \frac { a c - b ^ { 2 } } { a } y ^ { 2 }\]</span></p>
+<p>Each of the following tests is a necessary and sufficient condition for the real symmetric matrix <span class="math inline">\(A\)</span> to be positive definite:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(x ^ { \mathrm { T } } k x &gt; 0\)</span> for all nonzero real vectors <span class="math inline">\(x\)</span> .</p></li>
+<li><p>All the eigenvalues of <span class="math inline">\(A\)</span> satisfy <span class="math inline">\(\lambda _ { i } &gt; 0\)</span></p></li>
+<li><p>All the upper left submatrices <span class="math inline">\(A _ { k }\)</span> have positive determinants.</p></li>
+<li><p>All the pivots (without row exchanges) satisfy <span class="math inline">\(d _ { k } &gt; 0 .\)</span></p></li>
+<li><p>There is a matrix <span class="math inline">\(R\)</span> with independent columns such that <span class="math inline">\(A = R ^ { \mathrm { T } } R .\)</span></p></li>
 </ol>
-<h1 id="Positive-definite"><a href="#Positive-definite" class="headerlink" title="Positive definite"></a>Positive definite</h1><p>$ a x ^ { 2 } + 2 b x y + c y ^ { 2 }$ is positive definite if and only<br>if $a &gt; 0$ and $a c &gt; b ^ { 2 } .$ Any $f ( x , y )$ has a minimum at a<br>point where $\partial F / \partial x = \partial F / \partial y = 0$ with</p>
-<p>$$\frac { \partial ^ { 2 } F } { \partial x ^ { 2 } } &gt; 0 \quad \qquad \left[ \frac { \partial ^ { 2 }F  } { \partial x ^ { 2 } } \right] \left[ \frac { \partial  ^ { 2 }F } { \partial y ^ { 2 } } \right] &gt; \left[ \frac { \partial ^ { 2 } F } { \partial x \partial y } \right] ^ { 2 }$$</p>
-<p>$$F ( x ) = F ( 0 ) + x ^ { \mathrm { T } } ( \text{ grad } F ) + \frac { 1 } { 2 } x ^ { \mathrm { T } } A x +\text{higher order terms}$$</p>
-<p>At a stationary point,<br>$\nabla F = \left( \partial F / \partial x _ { 1 } , \ldots , \partial F / \partial x _ { n } \right)$<br>is a vector of zeros.</p>
-<p>$$a x ^ { 2 } + 2 b x y + c y ^ { 2 } = a \left( x + \frac { b } { a } y \right) ^ { 2 } + \frac { a c - b ^ { 2 } } { a } y ^ { 2 }$$</p>
-<p>Each of the following tests is a necessary and sufficient condition for<br>the real symmetric matrix $A$ to be positive definite:</p>
-<ol>
-<li><p> $x ^ { \mathrm { T } } k x &gt; 0$ for all nonzero real vectors $x$ .</p>
-</li>
-<li><p> All the eigenvalues of $A$ satisfy $\lambda _ { i } &gt; 0$</p>
-</li>
-<li><p>All the upper left submatrices $A _ { k }$ have positive<br> determinants.</p>
-</li>
-<li><p> All the pivots (without row exchanges) satisfy $d _ { k } &gt; 0 .$</p>
-</li>
-<li><p>There is a matrix $R$ with independent columns such that<br> $A = R ^ { \mathrm { T } } R .$</p>
-</li>
+<p>The key is to recognize <span class="math inline">\(x ^ { \mathrm { T } } A x\)</span> as <span class="math inline">\(x ^ { \mathrm { T } } R ^ { \mathrm { T } } R x = ( R x ) ^ { \mathrm { T } } ( R x )\)</span></p>
+<p>symmetric matrix <span class="math inline">\(A\)</span> to be positive semidefinite:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(x ^ { \mathrm { T } } A x \geq 0\)</span> for all vectors <span class="math inline">\(x\)</span> (this defines positive semidefinite)</p></li>
+<li><p>All the eigenvalues of <span class="math inline">\(A\)</span> satisfy <span class="math inline">\(\lambda _ { i } \geq 0\)</span></p></li>
+<li><p>No principal submatrices have negative determinants.</p></li>
+<li><p>No pivots are negative.</p></li>
+<li><p>There is a matrix <span class="math inline">\(R ,\)</span> possibly with dependent columns, such that <span class="math inline">\(A = R ^ { \mathrm { T } } R\)</span></p></li>
 </ol>
-<p>The key is to recognize $x ^ { \mathrm { T } } A x$ as<br>$x ^ { \mathrm { T } } R ^ { \mathrm { T } } R x = ( R x ) ^ { \mathrm { T } } ( R x )$</p>
-<p>symmetric matrix $A$ to be positive semidefinite:</p>
-<ol>
-<li><p>$x ^ { \mathrm { T } } A x \geq 0$ for all vectors $x$ (this defines<br> positive semidefinite)</p>
-</li>
-<li><p> All the eigenvalues of $A$ satisfy $\lambda _ { i } \geq 0$</p>
-</li>
-<li><p> No principal submatrices have negative determinants.</p>
-</li>
-<li><p> No pivots are negative.</p>
-</li>
-<li><p>There is a matrix $R ,$ possibly with dependent columns, such that<br> $A = R ^ { \mathrm { T } } R$</p>
-</li>
-</ol>
-<p>$$5 u ^ { 2 } + 8 u v + v ^ { 2 } = \left( \frac { u } { \sqrt { 2 } } - \frac { v } { \sqrt { 2 } } \right) ^ { 2 } + 9 \left( \frac { u } { \sqrt { 2 } } + \frac { v } { \sqrt { 2 } } \right) ^ { 2 } = 1$$</p>
-<p>Any ellipsoid $x ^ { \mathrm { T } } A x = 1$ can be simplified in the<br>same way. The key step is to diago- nalize<br>$A = Q \Lambda Q ^ { \mathrm { T } } .$ We straightened the picture by<br>rotating the axes. Algebraically, the change to $y = Q ^ {T} x$ produces<br>a sum of squares:<br>$$x ^ { \mathrm { T } } A x = \left( x ^ { \mathrm { T } } Q \right) \Lambda \left( Q ^ { \mathrm { T } } x \right) = y ^ { \mathrm { T } } \Lambda y = \lambda _ { 1 } y _ { 1 } ^ { 2 } + \cdots + \lambda _ { n } y _ { n } ^ { 2 } = 1$$</p>
-<p>Suppose $A = Q \Lambda Q ^ { \mathrm { T } }$ with<br>$\lambda _ { i } &gt; 0 .$ Rotating $y = Q ^ { \mathrm { T } } x$<br>simplifies $x ^ { \mathrm { T } } A x = 1 :$<br>$$x ^ { \mathrm { T } } Q \Lambda Q ^ { \mathrm { T } } x = 1  \qquad y ^ { \mathrm { T } } \Lambda y = 1 ,\qquad \lambda _ { 1 } y _ { 1 } ^ { 2 } + \cdots + \lambda _ { n } y _ { n } ^ { 2 } = 1$$</p>
-<p>Congruence transformation $ A \rightarrow C ^ { \mathrm { T } } A C$ for<br>some nonsingular $C .$</p>
-<p>$C ^ {T } A C $ has the same number of positive eigenvalues, negative<br>eigenvalues, and zero eigenvalues as $A .$</p>
-<p>For any symmetric matrix $A ,$ the signs of the pivots agree with the<br>signs of the eigenvalues. The eigenvalue matrix $\Lambda$ and the pivot<br>matrix $D$ have the same number of positive entries, negative entries,<br>and zero entries.</p>
-<p>The graph of $$P ( x ) = \frac { 1 } { 2 } A x ^ { 2 } - b x$$ has zero<br>slope when $$\frac { d P } { d x } = A x - b = 0$$</p>
-<p>If $A$ is symmetric positive definite, then<br>$$P ( x ) = \frac { 1 } { 2 } x ^ { \mathrm { T } } A x - x ^ { T } b$$<br>reaches its minimum at the point where $A x = b .$ At that point<br>$$P _ { \min } = - \frac { 1 } { 2 } b ^ { \mathrm { T } } A ^ { - 1 } b$$</p>
-<p>$$P _ { \min } = \frac { 1 } { 2 } \left( A ^ { - 1 } b \right) ^ { \mathrm { T } } A \left( A ^ { - 1 } b \right) - \left( A ^ { - 1 } b \right) ^ { \mathrm { T } } b = - \frac { 1 } { 2 } b ^ { \mathrm { T } } A ^ { - 1 } b$$</p>
-<p>$$L ( x , y ) = P ( x ) + y ^ { \mathrm { T } } ( C x - d ) = \frac { 1 } { 2 } x ^ { \mathrm { T } } A x - x ^ { \mathrm { T } } b + x ^ { \mathrm { T } } C ^ { \mathrm { T } } y - y ^ { \mathrm { T } } d$$</p>
-<p>$$\quad P _ { C / \min } = P _ { \min } + \frac { 1 } { 2 } y ^ { \mathrm { T } } \left( C A ^ { - 1 } b - d \right) \geq P _ { \min }$$</p>
+<p><span class="math display">\[5 u ^ { 2 } + 8 u v + v ^ { 2 } = \left( \frac { u } { \sqrt { 2 } } - \frac { v } { \sqrt { 2 } } \right) ^ { 2 } + 9 \left( \frac { u } { \sqrt { 2 } } + \frac { v } { \sqrt { 2 } } \right) ^ { 2 } = 1\]</span></p>
+<p>Any ellipsoid <span class="math inline">\(x ^ { \mathrm { T } } A x = 1\)</span> can be simplified in the same way. The key step is to diago- nalize <span class="math inline">\(A = Q \Lambda Q ^ { \mathrm { T } } .\)</span> We straightened the picture by rotating the axes. Algebraically, the change to <span class="math inline">\(y = Q ^ {T} x\)</span> produces a sum of squares: <span class="math display">\[x ^ { \mathrm { T } } A x = \left( x ^ { \mathrm { T } } Q \right) \Lambda \left( Q ^ { \mathrm { T } } x \right) = y ^ { \mathrm { T } } \Lambda y = \lambda _ { 1 } y _ { 1 } ^ { 2 } + \cdots + \lambda _ { n } y _ { n } ^ { 2 } = 1\]</span></p>
+<p>Suppose <span class="math inline">\(A = Q \Lambda Q ^ { \mathrm { T } }\)</span> with <span class="math inline">\(\lambda _ { i } &gt; 0 .\)</span> Rotating <span class="math inline">\(y = Q ^ { \mathrm { T } } x\)</span> simplifies <span class="math inline">\(x ^ { \mathrm { T } } A x = 1 :\)</span> <span class="math display">\[x ^ { \mathrm { T } } Q \Lambda Q ^ { \mathrm { T } } x = 1  \qquad y ^ { \mathrm { T } } \Lambda y = 1 ,\qquad \lambda _ { 1 } y _ { 1 } ^ { 2 } + \cdots + \lambda _ { n } y _ { n } ^ { 2 } = 1\]</span></p>
+<p>Congruence transformation $ A C ^ {  } A C$ for some nonsingular <span class="math inline">\(C .\)</span></p>
+<p>$C ^ {T } A C $ has the same number of positive eigenvalues, negative eigenvalues, and zero eigenvalues as <span class="math inline">\(A .\)</span></p>
+<p>For any symmetric matrix <span class="math inline">\(A ,\)</span> the signs of the pivots agree with the signs of the eigenvalues. The eigenvalue matrix <span class="math inline">\(\Lambda\)</span> and the pivot matrix <span class="math inline">\(D\)</span> have the same number of positive entries, negative entries, and zero entries.</p>
+<p>The graph of <span class="math display">\[P ( x ) = \frac { 1 } { 2 } A x ^ { 2 } - b x\]</span> has zero slope when <span class="math display">\[\frac { d P } { d x } = A x - b = 0\]</span></p>
+<p>If <span class="math inline">\(A\)</span> is symmetric positive definite, then <span class="math display">\[P ( x ) = \frac { 1 } { 2 } x ^ { \mathrm { T } } A x - x ^ { T } b\]</span> reaches its minimum at the point where <span class="math inline">\(A x = b .\)</span> At that point <span class="math display">\[P _ { \min } = - \frac { 1 } { 2 } b ^ { \mathrm { T } } A ^ { - 1 } b\]</span></p>
+<p><span class="math display">\[P _ { \min } = \frac { 1 } { 2 } \left( A ^ { - 1 } b \right) ^ { \mathrm { T } } A \left( A ^ { - 1 } b \right) - \left( A ^ { - 1 } b \right) ^ { \mathrm { T } } b = - \frac { 1 } { 2 } b ^ { \mathrm { T } } A ^ { - 1 } b\]</span></p>
+<p><span class="math display">\[L ( x , y ) = P ( x ) + y ^ { \mathrm { T } } ( C x - d ) = \frac { 1 } { 2 } x ^ { \mathrm { T } } A x - x ^ { \mathrm { T } } b + x ^ { \mathrm { T } } C ^ { \mathrm { T } } y - y ^ { \mathrm { T } } d\]</span></p>
+<p><span class="math display">\[\quad P _ { C / \min } = P _ { \min } + \frac { 1 } { 2 } y ^ { \mathrm { T } } \left( C A ^ { - 1 } b - d \right) \geq P _ { \min }\]</span></p>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/15/2020-11-05-linear%20algebra%201/" data-id="ckpxcsx41000vm4uqcn9dhxoy" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-  
-    <article id="post-2020-11-05-学习之道" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/15/2020-11-05-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" class="article-date">
-  <time class="dt-published" datetime="2021-06-15T01:11:30.142Z" itemprop="datePublished">2021-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Reading-Notes/">Reading Notes</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/06/15/2020-11-05-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/">学习之道</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/15/2020-11-05-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/15/2020-11-05-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" class="post-title-link" itemprop="url">学习之道</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-06-15 09:11:30 / Modified: 09:12:14" itemprop="dateCreated datePublished" datetime="2021-06-15T09:11:30+08:00">2021-06-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Reading-Notes/" itemprop="url" rel="index"><span itemprop="name">Reading Notes</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h2 id="帮助掌握知识的方法"><a href="#帮助掌握知识的方法" class="headerlink" title="帮助掌握知识的方法"></a>帮助掌握知识的方法</h2><p>《学习之道》细读其实是一本不错的指导书，文中有很多理论方法，当然也有不少示例支持。在第十八章，作者总结了学习中的好方法与误区，个人认为它们或多或少，在学习的不同层次也都有一定的道理。</p>
-<blockquote>
-<p>明智地对待大脑地优势与弱点<br>越是迫不及待地想要得到答案，越是事与愿违</p>
-</blockquote>
-<p>这里依然有一句我十分赞同的话：</p>
-<blockquote>
-<p>对掌握数学和科学至关重要的一点，是要让透彻理解地组块成为自己根深蒂固且久经磨练的一部分。</p>
-</blockquote>
-<p>下面是作者在本书的一些看法以及我认为自己应该具备的一些技巧：</p>
-<ol>
-<li>运用回想。读完一页书，看向别处并回想主要观点，<strong>少做标记</strong>，没记住之前不要划重点，要先回忆。<blockquote>
-<p>作者在此是要强调回忆的能力十分重要，即得到自己心中的想法。</p>
-</blockquote>
-</li>
-<li>自我测试</li>
-<li>对问题进行组块（结构化）</li>
-<li>间隔与重复，<strong>多维度</strong>地记忆与解题</li>
-<li>发散思维与专注思维的交替，往往有助于解题</li>
-<li>困难的事情最先做</li>
-<li>解释性地提问与类比（如何理解）<br>可以说：</li>
-</ol>
-<p><strong>认识理解-&gt;结构化组块-&gt;记忆-&gt;解题应用</strong></p>
-<p>另外，还有一些自己已经意识到的学习误区：</p>
-<ol>
-<li>被动重复阅读<blockquote>
-<p>除非能闭卷回忆起要点，证明读过的材料进入大脑，否则重复阅读就是浪费时间</p>
-</blockquote>
-</li>
-<li>过多的重点标记</li>
-<li>瞟一眼解题方法，就觉得胸有成竹<blockquote>
-<p>不看答案也能一步步解决问题</p>
-</blockquote>
-</li>
-<li>清楚解法，却停留在同一题型(备考时实际上并没有备考)</li>
-<li>做题前忽视读课本</li>
-<li>有疑问点却不找老师和同学核对或解决<blockquote>
-<p>“让我们担心的是那些不来提问的学生”</p>
-</blockquote>
-</li>
-<li>分心，却以为自己已学会（专注，备考时）</li>
-</ol>
+          <h2 id="帮助掌握知识的方法">帮助掌握知识的方法</h2>
+<p>《学习之道》细读其实是一本不错的指导书，文中有很多理论方法，当然也有不少示例支持。在第十八章，作者总结了学习中的好方法与误区，个人认为它们或多或少，在学习的不同层次也都有一定的道理。 &gt;明智地对待大脑地优势与弱点 &gt;越是迫不及待地想要得到答案，越是事与愿违</p>
+<p>这里依然有一句我十分赞同的话： &gt;对掌握数学和科学至关重要的一点，是要让透彻理解地组块成为自己根深蒂固且久经磨练的一部分。</p>
+<p>下面是作者在本书的一些看法以及我认为自己应该具备的一些技巧： 1. 运用回想。读完一页书，看向别处并回想主要观点，<strong>少做标记</strong>，没记住之前不要划重点，要先回忆。 &gt;作者在此是要强调回忆的能力十分重要，即得到自己心中的想法。 2. 自我测试 3. 对问题进行组块（结构化） 4. 间隔与重复，<strong>多维度</strong>地记忆与解题 5. 发散思维与专注思维的交替，往往有助于解题 6. 困难的事情最先做 7. 解释性地提问与类比（如何理解） 可以说： <strong>认识理解-&gt;结构化组块-&gt;记忆-&gt;解题应用</strong></p>
+<p>另外，还有一些自己已经意识到的学习误区： 1. 被动重复阅读 &gt;除非能闭卷回忆起要点，证明读过的材料进入大脑，否则重复阅读就是浪费时间 2. 过多的重点标记 3. 瞟一眼解题方法，就觉得胸有成竹 &gt;不看答案也能一步步解决问题 4. 清楚解法，却停留在同一题型(备考时实际上并没有备考) 5. 做题前忽视读课本 6. 有疑问点却不找老师和同学核对或解决 &gt;“让我们担心的是那些不来提问的学生” 7. 分心，却以为自己已学会（专注，备考时）</p>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/15/2020-11-05-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" data-id="ckpxcsx3j0004m4uq1h3i4r0v" data-title="学习之道" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
   
-    <article id="post-2020-11-14-Writing1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/15/2020-11-14-Writing1/" class="article-date">
-  <time class="dt-published" datetime="2021-06-15T01:11:30.133Z" itemprop="datePublished">2021-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/English/">English</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="Words-and-Phrases"><a href="#Words-and-Phrases" class="headerlink" title="Words and Phrases"></a>Words and Phrases</h2><ul>
-<li><p><strong>There is no doubt that</strong> education and learning process has changed since the introduction of computers.  </p>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/15/2020-11-14-Writing1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/15/2020-11-14-Writing1/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-15 09:11:30" itemprop="dateCreated datePublished" datetime="2021-06-15T09:11:30+08:00">2021-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-14 17:39:48" itemprop="dateModified" datetime="2021-06-14T17:39:48+08:00">2021-06-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/English/" itemprop="url" rel="index"><span itemprop="name">English</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="words-and-phrases">Words and Phrases</h2>
+<ul>
+<li><strong>There is no doubt that</strong> education and learning process has changed since the introduction of computers.<br />
 </li>
-<li><p>Connectivity has expedited the data avaliablility.  </p>
+<li>Connectivity has expedited the data avaliablility.<br />
 </li>
-<li><p>Nobody can argue with the fact that…</p>
-</li>
-<li><p>…contributes to a better grasping of new knowledge  </p>
-</li>
-<li><p>the acquisition of knowledge</p>
-</li>
-<li><p>in the foreseeable future</p>
-</li>
-<li><p>the expertise of a teacher…</p>
-</li>
-<li><p>there will be bo replacement for the human interaction</p>
-</li>
-<li><p>…have proved to be helpful in…</p>
-</li>
-<li><p>provokes an amazing feeling of pride in their country</p>
-</li>
-<li><p>commerce, patriotic, imperative, devastating, financial deficit</p>
-</li>
-<li><p>play an indispensable role in…</p>
-</li>
+<li><p>Nobody can argue with the fact that...</p></li>
+<li><p>...contributes to a better grasping of new knowledge</p></li>
+<li><p>the acquisition of knowledge</p></li>
+<li><p>in the foreseeable future</p></li>
+<li><p>the expertise of a teacher...</p></li>
+<li><p>there will be bo replacement for the human interaction</p></li>
+<li><p>...have proved to be helpful in...</p></li>
+<li><p>provokes an amazing feeling of pride in their country</p></li>
+<li><p>commerce, patriotic, imperative, devastating, financial deficit</p></li>
+<li><p>play an indispensable role in...</p></li>
 </ul>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/15/2020-11-14-Writing1/" data-id="ckpxcsx3n0008m4uq7xahdzz5" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-  
-    <article id="post-2020-11-06-别想摆脱书" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/15/2020-11-06-%E5%88%AB%E6%83%B3%E6%91%86%E8%84%B1%E4%B9%A6/" class="article-date">
-  <time class="dt-published" datetime="2021-06-15T01:11:30.127Z" itemprop="datePublished">2021-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Reading-Notes/">Reading_Notes</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/06/15/2020-11-06-%E5%88%AB%E6%83%B3%E6%91%86%E8%84%B1%E4%B9%A6/">别想摆脱书——艾柯卡里埃尔对话录</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/15/2020-11-06-%E5%88%AB%E6%83%B3%E6%91%86%E8%84%B1%E4%B9%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/15/2020-11-06-%E5%88%AB%E6%83%B3%E6%91%86%E8%84%B1%E4%B9%A6/" class="post-title-link" itemprop="url">别想摆脱书——艾柯卡里埃尔对话录</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-15 09:11:30" itemprop="dateCreated datePublished" datetime="2021-06-15T09:11:30+08:00">2021-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-14 17:39:48" itemprop="dateModified" datetime="2021-06-14T17:39:48+08:00">2021-06-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Reading-Notes/" itemprop="url" rel="index"><span itemprop="name">Reading_Notes</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="课堂笔记——什么是阅读"><a href="#课堂笔记——什么是阅读" class="headerlink" title="课堂笔记——什么是阅读"></a>课堂笔记——什么是阅读</h1><h2 id="流量时代下的阅读探索"><a href="#流量时代下的阅读探索" class="headerlink" title="流量时代下的阅读探索"></a>流量时代下的阅读探索</h2><p>公众号本质上来说是一种流量时代的<strong>产品</strong>。既然是产品，便要考虑受众以及效益，尤其是经济效益。在当今时代，传播本身已然成为了一种独立的载体，不同的传播媒介对信息扩散的广度，速度，深度影响千差万别。因此，在流量时代，若有这样一种方法，可以快速植入简单而清晰的观点信息，那么这将会产生倍于其他方式的效益。</p>
-<h2 id="阅读与书籍"><a href="#阅读与书籍" class="headerlink" title="阅读与书籍"></a>阅读与书籍</h2><p>阅读是思想上的抗阻运动。阅读产生思想上的碰撞，拓宽了新的思考边界。书籍包括以下层面：</p>
+          <h1 id="课堂笔记什么是阅读">课堂笔记——什么是阅读</h1>
+<h2 id="流量时代下的阅读探索">流量时代下的阅读探索</h2>
+<p>公众号本质上来说是一种流量时代的<strong>产品</strong>。既然是产品，便要考虑受众以及效益，尤其是经济效益。在当今时代，传播本身已然成为了一种独立的载体，不同的传播媒介对信息扩散的广度，速度，深度影响千差万别。因此，在流量时代，若有这样一种方法，可以快速植入简单而清晰的观点信息，那么这将会产生倍于其他方式的效益。</p>
+<h2 id="阅读与书籍">阅读与书籍</h2>
+<p>阅读是思想上的抗阻运动。阅读产生思想上的碰撞，拓宽了新的思考边界。书籍包括以下层面：</p>
 <ul>
-<li><p>  作者的问题意识</p>
-</li>
-<li><p>  思想片段的完整呈现</p>
-</li>
-<li><p>  研究和书写的过程</p>
-</li>
-<li><p>  内在联系与完整性</p>
-</li>
-<li><p>  使某一个问题在思想网络中呈现</p>
-</li>
+<li><p>作者的问题意识</p></li>
+<li><p>思想片段的完整呈现</p></li>
+<li><p>研究和书写的过程</p></li>
+<li><p>内在联系与完整性</p></li>
+<li><p>使某一个问题在思想网络中呈现</p></li>
 </ul>
 <p>在旧媒体中，编辑的作用很重要，但在如今的新媒体缺失了这一环节。因为知识是有形态的，人需要辨别，但人更愿意表达态度而不是解释背后的原因。</p>
-<h1 id="书永远不死"><a href="#书永远不死" class="headerlink" title="书永远不死"></a>书永远不死</h1><p><strong>原文：</strong>在某个特定时刻，人类发明了书写。我们可以把书写视为手的延伸，这样一来，书写就是近乎天然的。它是直接与身体相连的交流技术。你一旦发明了它，就不可能再放弃它。这就好比发明轮子一般。今天的轮子与史前的轮子一模一样。</p>
+<h1 id="书永远不死">书永远不死</h1>
+<p><strong>原文：</strong>在某个特定时刻，人类发明了书写。我们可以把书写视为手的延伸，这样一来，书写就是近乎天然的。它是直接与身体相连的交流技术。你一旦发明了它，就不可能再放弃它。这就好比发明轮子一般。今天的轮子与史前的轮子一模一样。</p>
 <ul>
-<li><p>  书写是手的延申</p>
-</li>
-<li><p>  一旦发明，就不可再放弃</p>
-</li>
+<li><p>书写是手的延申</p></li>
+<li><p>一旦发明，就不可再放弃</p></li>
 </ul>
 <p>人类发明书写是自然的，因为书写这个动作来自于手的运动延申，因此书写与自己的身体直接相连，相互交流。一旦发明了书写，就与自己的身体绑定，自身不变，书写就不会消失。</p>
-<p><strong>原文：</strong>要么书始终是阅读的载体，要么存在某种与书（甚至那些在印刷术<br>发明以前的书）相似的东西，两者必有其一。五百多年来，对书这一阅<br>读载体的各种变化，并没有改变书的用途或结构。书就如勺子、斧头、<br>轮子或剪刀，一经造出，就不可能有进一步改善。你不能把一把勺子做<br>得更像勺子。</p>
+<p><strong>原文：</strong>要么书始终是阅读的载体，要么存在某种与书（甚至那些在印刷术 发明以前的书）相似的东西，两者必有其一。五百多年来，对书这一阅 读载体的各种变化，并没有改变书的用途或结构。书就如勺子、斧头、 轮子或剪刀，一经造出，就不可能有进一步改善。你不能把一把勺子做 得更像勺子。</p>
 <ul>
-<li><p>  书具有不变性，阅读一定有关于书或与之相似的东西</p>
-</li>
-<li><p>  书作为载体，几百年存在各种变化，但不改变书的用途或结构</p>
-</li>
+<li><p>书具有不变性，阅读一定有关于书或与之相似的东西</p></li>
+<li><p>书作为载体，几百年存在各种变化，但不改变书的用途或结构</p></li>
 </ul>
 <p>书或者始终承载着阅读的“责任”，几百年来书这一载体改变了许多，但其结构与用途功能是不变的，这是它的本质上的功能性，而不是其外在或是材料等等。书可以说是最原始的工具，其地位类似于勺子，斧子，剪刀，即身体的延申。勺子斧子可以有很多不同的种类，外形，但其功能一经造出便是注定不变的。</p>
 <p><strong>原文：</strong>在许多领域，电子书极大方便了使用。我只是一直怀疑：即便电子书在技术上最好地满足了各种阅读需求，用它来读《战争与和平》就最合适吗？我们以后会知道的。无论如何，我们将会无法阅读印在木浆纸上的托尔斯泰和任何印在纸上的书，原因很简单：这些书已经开始在图书馆里腐坏。</p>
 <ul>
-<li><p>  电子书极大方便了人们的阅读</p>
-</li>
-<li><p>  电子书不一定在所有领域都适合</p>
-</li>
-<li><p>  纸质书的材料是其限制，导致其无法长久保存</p>
-</li>
+<li><p>电子书极大方便了人们的阅读</p></li>
+<li><p>电子书不一定在所有领域都适合</p></li>
+<li><p>纸质书的材料是其限制，导致其无法长久保存</p></li>
 </ul>
 <p>电子书在部分领域适合阅读，比如大量文书工作，但有可能不适合阅读大部头著作，比如战争与和平。但是确定无疑的是任何印在纸上的文字，都有在某一天腐坏消失的可能性。</p>
 <p>新的发明越是满足人们对娱乐和教育的需求，书也越将重获尊严与权威。</p>
@@ -571,110 +820,146 @@
 <p>人类的读写能力越来越高，为了适应现今复杂的生活，人必须学习更多的知识，掌握更多的单词意思，接受新的符号，新的大量信息。</p>
 <p>此部分讨论了为什么我们说书永远不死，会在人类文明中一直延续下去。因为书写作为人手部动作的一部分，与人类文明的发展不可分割。只要人类具有读写的能力，书作为阅读与写作的载体，都会承担着其责任。</p>
 <p>另外，电子书作为一种新型的书的形式，与之前几百年所谓的书有形式上的不同，但实际上起的作用都是一样的。不同的书籍形式也体现着不同的功能性。</p>
-<h1 id="永久载体最暂时"><a href="#永久载体最暂时" class="headerlink" title="永久载体最暂时"></a>永久载体最暂时</h1><p><strong>原文：</strong>没有电，一切都会消失，无可弥补。反过来，当人类的一切视听遗产都消失了，我们还可以在白天读书，在夜里点根蜡烛继续。20世纪让图像自己动起来，有自己的历史，并带有录音——只不过，我们的载体依然极不可靠。</p>
+<h1 id="永久载体最暂时">永久载体最暂时</h1>
+<p><strong>原文：</strong>没有电，一切都会消失，无可弥补。反过来，当人类的一切视听遗产都消失了，我们还可以在白天读书，在夜里点根蜡烛继续。20世纪让图像自己动起来，有自己的历史，并带有录音——只不过，我们的载体依然极不可靠。</p>
 <ul>
-<li><p>  电力是当代视听载体，甚至文字书写载体的支柱</p>
-</li>
-<li><p>  书籍作为人身体的自然延伸，可以脱离现代发明而存在并延续</p>
-</li>
-<li><p>  现在的图像，录音等等皆不可靠</p>
-</li>
+<li><p>电力是当代视听载体，甚至文字书写载体的支柱</p></li>
+<li><p>书籍作为人身体的自然延伸，可以脱离现代发明而存在并延续</p></li>
+<li><p>现在的图像，录音等等皆不可靠</p></li>
 </ul>
 <p>既然现在的各种发明创造，皆是依赖于电力的发展，而电力并不是所谓自然的。所以，相比书籍本身作为载体，其他的现代发明皆不是可靠的。</p>
 <p>必须强调，由于这些新载体的过时在不断加速，我们被迫重新调整我们工作、存储乃至思考的方式。</p>
 <p><strong>原文：</strong>这种加速造成记忆的删除。这无疑是人类文明面临的一个最棘手的问题。一方面，我们发明了各种保存记忆的工具，各种记录设备、各种传递知识的方法——当然，与过去时代相比这是极大的改善，那时人类只能借助记忆术，也就是记忆的技艺，因为他们需要的知识不可能像今天这样随手可得，人们唯有依靠自己的记忆。</p>
 <ul>
-<li><p>  磁盘，硬盘，电脑等等新出现的载体的发明是不断加速的，这给我们带来了新的挑战</p>
-</li>
-<li><p>  加速发明新的载体导致了人记忆力的消退</p>
-</li>
-<li><p>  各种保存记忆的工具发明是一种进步，是一种改善，但确实削弱了人关于记忆的技艺</p>
-</li>
+<li><p>磁盘，硬盘，电脑等等新出现的载体的发明是不断加速的，这给我们带来了新的挑战</p></li>
+<li><p>加速发明新的载体导致了人记忆力的消退</p></li>
+<li><p>各种保存记忆的工具发明是一种进步，是一种改善，但确实削弱了人关于记忆的技艺</p></li>
 </ul>
 <p>这给我们一些启示，目前永久的载体，比如硬盘等等，其实对我们而言是一种记忆工具而已。保持这种发展是一种进步，但应意识到人自身的作用。人自身的能力与书籍本身有关联。书写的能力，记忆的能力的提升是这个时代的永久载体无法保证的。</p>
 <p><strong>原文：</strong>我们已经谈到，现代的载体形式很快就会过时。为什么要冒险跟这些有可能变成空白、无法辨认的东西纠缠不休呢？我们刚才科学地证明了，书优越于文化产业近年来投入市场的任何产品。因此，倘若我必须挽救某些方便携带又能有效抵御时间侵害的东西，那么我选择书。</p>
 <p>现代的各种载体说是永久，其实是暂时的（过时的），因为更新迭代的速度太快，它们很快就会变成收藏品，无法播放或辨认。但有一件事是不变的，目前所有投入市场的文化产品，只有书籍本身可以经受住时间的考验。</p>
-<p><strong>原文：</strong>在我看来，图像世界，尤其是电影，再好不过地说明了科技飞速发<br>展所带来的问题。我们出生在这样一个世纪，人类有史以来第一次发明<br>了各种新的语言。我们的对话若是在一百二十年以前进行，那么我们将<br>只能谈戏剧和书籍。收音机、电影、录音、电视、电脑绘图和连环漫画<br>等在当时并不存在。然而，每次新的科技产生，必会力证自己超越以往<br>所有发明与生俱来的规则和限制。新科技期待自己睥睨一切，独一无<br>二。好像它会自动带给新用户一种天然的能力，无需他们学习如何使<br>用，随时就可以上手似的，好像那种天分是本来就有的，好像它随时准<br>备着肃清以往的科技，把那些胆敢拒绝它的人变成过时的文盲。</p>
+<p><strong>原文：</strong>在我看来，图像世界，尤其是电影，再好不过地说明了科技飞速发 展所带来的问题。我们出生在这样一个世纪，人类有史以来第一次发明 了各种新的语言。我们的对话若是在一百二十年以前进行，那么我们将 只能谈戏剧和书籍。收音机、电影、录音、电视、电脑绘图和连环漫画 等在当时并不存在。然而，每次新的科技产生，必会力证自己超越以往 所有发明与生俱来的规则和限制。新科技期待自己睥睨一切，独一无 二。好像它会自动带给新用户一种天然的能力，无需他们学习如何使 用，随时就可以上手似的，好像那种天分是本来就有的，好像它随时准 备着肃清以往的科技，把那些胆敢拒绝它的人变成过时的文盲。</p>
 <p>科技发展带来了海量的新信息与新符号，新秩序。所以新的科技有这样一种特性，它仿佛通过对信息载体的影响，无形中操控着时代的语言风格，信息走向，以至于每一个人的学习，生活。而且科技的更新换代的速度远远超出人的想象，每次新的更新，都会或多或少超越之前的规则与限制。</p>
 <p>现今的所谓电子载体，相比于纸质书籍，说是一种进步也是一种分化。各种保存记忆工具的诞生仿佛无形中退化了人的记忆能力。这些更“先进”的载体也并不长远，因为在现在科技迅速发展的时代背景下，这些载体显得如此难以长远保存。但显然书籍本身经得住考验。</p>
-<h1 id="技术更新"><a href="#技术更新" class="headerlink" title="技术更新"></a>技术更新</h1><p><strong>原文：</strong>科技更新的速度迫使我们以一种难以忍受的节奏不断重建我们的思维习惯。每两年必须更新一次电脑，因为这些机器就是这么设计生产出来的：过时到了一定期限，维修比直接替换更昂贵。每年必须更换一台车，因为新款车更有安全保障，有各种电子噱头，等等。每种新科技都要求人们更新思维模式，不断作出新的努力，而更新的周期也越来越短。</p>
+<h1 id="技术更新">技术更新</h1>
+<p><strong>原文：</strong>科技更新的速度迫使我们以一种难以忍受的节奏不断重建我们的思维习惯。每两年必须更新一次电脑，因为这些机器就是这么设计生产出来的：过时到了一定期限，维修比直接替换更昂贵。每年必须更换一台车，因为新款车更有安全保障，有各种电子噱头，等等。每种新科技都要求人们更新思维模式，不断作出新的努力，而更新的周期也越来越短。</p>
 <ul>
-<li><p>  科技的更新周期越来越短，不断重塑我们的思维，给人以更大的思维挑战</p>
-</li>
-<li><p>  科技的更新使我们必须作出新的努力，这就提出了更高的要求</p>
-</li>
+<li><p>科技的更新周期越来越短，不断重塑我们的思维，给人以更大的思维挑战</p></li>
+<li><p>科技的更新使我们必须作出新的努力，这就提出了更高的要求</p></li>
 </ul>
 <p>17世纪出版的科学著作正好是一个优秀科学工作者可能掌握的数量，而在我们今天，同一个科学工作者甚至不可能了解在他的研究领域里发表的所有论文的摘要。</p>
 <p><strong>原文：</strong>科学的发展日新月异，内容越来越繁杂，这就要求科学工作更加有条理，有选择性。不像几个世纪之前的科学家那样，围在一个小圈子互相交流，讨论。现今的科学研究，更要求判断力，信息搜索能力，略读能力。实际上这也是对非科学工作者的要求。</p>
 <p>这里的问题不是集体记忆的丧失。在我看来，这更像是现在的不稳定。我们不再活在一个平和的现在之中，我们只是没完没了地为未来努力做准备。</p>
 <p>如今不断变化的生活节奏打乱了人们的记忆，增加了记忆的不确定性。不可能回到以前那种平和，一切尽在掌握的生活了，取而代之的是越来越不稳定的“准备”之中，为之后的未来，努力做准备。</p>
-<h1 id="认知"><a href="#认知" class="headerlink" title="认知"></a>认知</h1><p>知识塞满我们的脑袋，却不总是有用。认识则是把一种知识转化为生活经验。</p>
+<h1 id="认知">认知</h1>
+<p>知识塞满我们的脑袋，却不总是有用。认识则是把一种知识转化为生活经验。</p>
 <p>档案馆和图书馆就如一些冰冷的屋子，我们把记忆储存在里面，以免文化空间充斥着所有这些杂物，同时又不至于彻底放弃这些记忆。在未来，只要愿意，我们总是可以再把它们找回来。</p>
 <p>知识不代表人的智慧。知识是无生命的，不流动的，而人的智慧与学习的过程是流动而有方向的。认识本身就是将没有活力的知识转化。</p>
 <p>既然我们的仿生体知道一切，绝对的一切，我们还需学习什么呢？综合的技艺。是的。还有学习本身。因为学习是学来的。对，学习掌控那些无法核实的信息。这显然是教师们面临的难题。</p>
 <ul>
-<li><p>  现今电子时代，一切知识都记录在数据之中，电脑知道一切</p>
-</li>
-<li><p>  综合的技艺是学习本身，即新时代要求我们学会学习</p>
-</li>
-<li><p>  关键在于掌控无法核实的信息，即<em>信息辨别能力</em></p>
-</li>
+<li><p>现今电子时代，一切知识都记录在数据之中，电脑知道一切</p></li>
+<li><p>综合的技艺是学习本身，即新时代要求我们学会学习</p></li>
+<li><p>关键在于掌控无法核实的信息，即<em>信息辨别能力</em></p></li>
 </ul>
 <p>更一般来说，现在我们面临的问题，不是学到多少知识，记住多少，而是像强化学习那样，不断完善自己的学习体系，因为学习本身也随着知识的更替，时代的发展而改变。另外，如何系统地整理自己地知识也是一大难题，因为知识的复杂程度以及数据量与日俱增，那种知识的边缘被无限的扩张，以至于人们深处其中看不到尽头。由此人在求知的遥远路途中会逐渐迷茫。</p>
-<h1 id="书的伟大"><a href="#书的伟大" class="headerlink" title="书的伟大"></a>书的伟大</h1><p><strong>原文：</strong>每一次阅读显然都在改变一本书本身，就像我们所经历的每一件事都在影响着我们。一本伟大的书永远活着，和我们一起成长和衰老，但从不会死去。时间滋养、改变它；那些无意义的书则从历史的一边掠过，就此消失。</p>
+<h1 id="书的伟大">书的伟大</h1>
+<p><strong>原文：</strong>每一次阅读显然都在改变一本书本身，就像我们所经历的每一件事都在影响着我们。一本伟大的书永远活着，和我们一起成长和衰老，但从不会死去。时间滋养、改变它；那些无意义的书则从历史的一边掠过，就此消失。</p>
 <p>书本身有它的故事性，每一次阅读都带来了某个人思想上的转变，从而带来对书籍认识的转变。伟大的书所带来的这种影响是正反馈的，每一次阅读都会有不一样的感受。而无意义的书则不被人所接受。正如有些人所说，好书经读，每一遍阅读都会有新的收获，但对我而言还不是很适应这一规律。</p>
-<h1 id="书籍的形式"><a href="#书籍的形式" class="headerlink" title="书籍的形式"></a>书籍的形式</h1><p><strong>原文：</strong>有人声称存在两种书：作者所写的书和读者拥有的书。对我来说，一本书的拥有者也值得关注。</p>
+<h1 id="书籍的形式">书籍的形式</h1>
+<p><strong>原文：</strong>有人声称存在两种书：作者所写的书和读者拥有的书。对我来说，一本书的拥有者也值得关注。</p>
 <p>书被作者写成之后，便不属于任何一个人。</p>
 <p><strong>原文：</strong>使用电脑让我怀念草稿，尤其那些对话场景的手稿。我怀念涂抹的杠子，删改的字句，最初的混乱，向各个方向发射的箭头，它们标志着生活、运动和依然困惑的探索。还有就是：书稿的整体视觉。我用六页纸写一幕电影场景，喜欢把写好的六页纸放到面前，衡量节奏，用眼睛估算可能的长度。</p>
 <p>十五年前，有个美国写作学校反对使用电脑，理由是不同完成状态的文本一旦出现在屏幕上，就像已经打印出来一般，具有某种真实的神圣性。这样一来就很难批评和修改这些文本。屏幕赋予了它们出版物的权威和地位。相反，另一个学校则跟你一样认为，电脑提供了无穷无尽的修改可能。</p>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/15/2020-11-06-%E5%88%AB%E6%83%B3%E6%91%86%E8%84%B1%E4%B9%A6/" data-id="ckpxcsx3k0005m4uq5hom5jp3" data-title="别想摆脱书——艾柯卡里埃尔对话录" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
   
-    <article id="post-2020-11-17-Listening1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/15/2020-11-17-Listening1/" class="article-date">
-  <time class="dt-published" datetime="2021-06-15T01:11:30.124Z" itemprop="datePublished">2021-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/English/">English</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="一些单词"><a href="#一些单词" class="headerlink" title="一些单词"></a>一些单词</h2><ul>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/15/2020-11-17-Listening1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/15/2020-11-17-Listening1/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-15 09:11:30" itemprop="dateCreated datePublished" datetime="2021-06-15T09:11:30+08:00">2021-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-14 17:39:48" itemprop="dateModified" datetime="2021-06-14T17:39:48+08:00">2021-06-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/English/" itemprop="url" rel="index"><span itemprop="name">English</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="一些单词">一些单词</h2>
+<ul>
 <li>aeroplane airplane</li>
-<li>analogue </li>
+<li>analogue</li>
 <li>artifact</li>
-<li>catalogue </li>
-<li>counsellor </li>
+<li>catalogue</li>
+<li>counsellor</li>
 <li>enroll</li>
 <li>glamour</li>
 <li>jewelry</li>
 <li>maneuver</li>
 <li>labour</li>
 <li>mold</li>
-<li>naught </li>
+<li>naught</li>
 <li>parlor 客厅</li>
-<li>savior </li>
-<li>savour 兴味，玩味<h2 id="必须连写的词"><a href="#必须连写的词" class="headerlink" title="必须连写的词"></a>必须连写的词</h2></li>
+<li>savior</li>
+<li>savour 兴味，玩味 ## 必须连写的词</li>
 <li>bookkeeper</li>
 <li>crossroads</li>
 <li>extracurricular</li>
@@ -686,10 +971,7 @@
 <li>headphones</li>
 <li>healthcare</li>
 <li>greenhouse</li>
-<li>greyhound</li>
-</ul>
-<p><strong>micro over inter mid 作前缀与后面的词连在一起</strong></p>
-<ul>
+<li>greyhound <strong>micro over inter mid 作前缀与后面的词连在一起</strong></li>
 <li>motor car</li>
 <li>motor racing</li>
 <li>motorbike</li>
@@ -702,10 +984,7 @@
 <li>videotape</li>
 <li>waterskiing</li>
 <li>close-up</li>
-<li>self-sufficient<h2 id="带连词符的词"><a href="#带连词符的词" class="headerlink" title="带连词符的词"></a>带连词符的词</h2></li>
-</ul>
-<p><strong>mini non self well 与后面的词经常使用连词符</strong></p>
-<ul>
+<li>self-sufficient ## 带连词符的词 <strong>mini non self well 与后面的词经常使用连词符</strong></li>
 <li>highly-trained</li>
 <li>note-taking</li>
 <li>man-made</li>
@@ -716,36 +995,79 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/15/2020-11-17-Listening1/" data-id="ckpxcsx3q000cm4uq67pv1wpm" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
   
-    <article id="post-2020-11-15-规训与惩罚" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/15/2020-11-15-%E8%A7%84%E8%AE%AD%E4%B8%8E%E6%83%A9%E7%BD%9A/" class="article-date">
-  <time class="dt-published" datetime="2021-06-15T01:11:30.121Z" itemprop="datePublished">2021-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Reading-Notes/">Reading_Notes</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="酷刑"><a href="#酷刑" class="headerlink" title="酷刑"></a>酷刑</h1><h2 id="犯人的肉体"><a href="#犯人的肉体" class="headerlink" title="犯人的肉体"></a>犯人的肉体</h2><blockquote>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/15/2020-11-15-%E8%A7%84%E8%AE%AD%E4%B8%8E%E6%83%A9%E7%BD%9A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/15/2020-11-15-%E8%A7%84%E8%AE%AD%E4%B8%8E%E6%83%A9%E7%BD%9A/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-15 09:11:30" itemprop="dateCreated datePublished" datetime="2021-06-15T09:11:30+08:00">2021-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-14 17:39:48" itemprop="dateModified" datetime="2021-06-14T17:39:48+08:00">2021-06-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Reading-Notes/" itemprop="url" rel="index"><span itemprop="name">Reading_Notes</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="酷刑">酷刑</h1>
+<h2 id="犯人的肉体">犯人的肉体</h2>
+<blockquote>
 <p>因此，惩罚将愈益成为刑事程序中最隐蔽的部分。这样便产生了几个后果：它脱离了人们日常感受的领域，进入抽象意识的领域；它的效力被视为源于它的必然性，而不是源于可见的强烈程度；受惩罚的确定性，而不是公开惩罚的可怕场面，应该能够阻止犯罪；惩罚的示范力学改变了惩罚机制。</p>
 </blockquote>
 <blockquote>
@@ -763,286 +1085,506 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/15/2020-11-15-%E8%A7%84%E8%AE%AD%E4%B8%8E%E6%83%A9%E7%BD%9A/" data-id="ckpxcsx3m0007m4uq8chlehyf" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
   
-    <article id="post-2021-6-14-machine learning in python " class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/15/2021-6-14-machine%20learning%20in%20python%20/" class="article-date">
-  <time class="dt-published" datetime="2021-06-15T01:11:30.117Z" itemprop="datePublished">2021-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine_Learning</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>There are some codes for [[machine learning]] course on the Kaggle.</p>
-<h2 id="basic-data-exploration"><a href="#basic-data-exploration" class="headerlink" title="basic data exploration"></a>basic data exploration</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pandas is used in operate dataframe</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># numpy is used to calculate numbers with special functions</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/15/2021-6-14-machine%20learning%20in%20python%20/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/15/2021-6-14-machine%20learning%20in%20python%20/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-15 09:11:30" itemprop="dateCreated datePublished" datetime="2021-06-15T09:11:30+08:00">2021-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-14 17:39:48" itemprop="dateModified" datetime="2021-06-14T17:39:48+08:00">2021-06-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index"><span itemprop="name">Machine_Learning</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>There are some codes for [[machine learning]] course on the Kaggle.</p>
+<h2 id="basic-data-exploration">basic data exploration</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pandas is used in operate dataframe</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># numpy is used to calculate numbers with special functions</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
 <p>The most important part of the Pandas library is the [[DataFrame]]. A DataFrame holds the type of data you might think of as a table.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># read the data and store data in DataFrame titled melbourne_data</span></span><br><span class="line">melbourne_data = pd.read_csv(melbourne_file_path)</span><br><span class="line"><span class="comment"># print a summary of the data in Melbourne data</span></span><br><span class="line">melbourne_data.describe()</span><br></pre></td></tr></table></figure>
-
-<h2 id="To-choose-variables-columns"><a href="#To-choose-variables-columns" class="headerlink" title="To choose variables/columns"></a>To choose variables/columns</h2><p>We’ll need to see a list of all columns in the dataset. That is done with the <strong>columns/features</strong> property of the DataFrame.</p>
+<h2 id="to-choose-variablescolumns">To choose variables/columns</h2>
+<p>We'll need to see a list of all columns in the dataset. That is done with the <strong>columns/features</strong> property of the DataFrame.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">melbourne_data.columns</span><br><span class="line"><span class="comment"># dropna drops missing values (think of na as &quot;not available&quot;)</span></span><br><span class="line">melbourne_data = melbourne_data.dropna(axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Selecting-The-Prediction-Target"><a href="#Selecting-The-Prediction-Target" class="headerlink" title="Selecting The Prediction Target."></a>Selecting The Prediction Target.</h2><p>You can pull out a variable with <strong>dot-notation</strong>. This single column is stored in a <strong>Series</strong>, which is broadly like a DataFrame with only a single column of data.</p>
+<h2 id="selecting-the-prediction-target.">Selecting The Prediction Target.</h2>
+<p>You can pull out a variable with <strong>dot-notation</strong>. This single column is stored in a <strong>Series</strong>, which is broadly like a DataFrame with only a single column of data.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">y = melbourne_data.Price</span><br><span class="line"><span class="comment"># choose features</span></span><br><span class="line">melbourne_features=[<span class="string">&#x27;Rooms&#x27;</span>,<span class="string">&#x27;Bathroom&#x27;</span>]</span><br><span class="line">X = melbourne_data[melbourne_features]</span><br></pre></td></tr></table></figure>
-
-<h2 id="Delete-missing-value-columns"><a href="#Delete-missing-value-columns" class="headerlink" title="Delete missing value columns"></a>Delete missing value columns</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Get names of columns with missing values</span></span><br><span class="line">cols_with_missing = [col <span class="keyword">for</span> col <span class="keyword">in</span> X_train.columns</span><br><span class="line">                     <span class="keyword">if</span> X_train[col].isnull().<span class="built_in">any</span>()]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Drop columns in training and validation data</span></span><br><span class="line">reduced_X_train = X_train.drop(cols_with_missing, axis=<span class="number">1</span>)</span><br><span class="line">reduced_X_valid = X_valid.drop(cols_with_missing, axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
+<h2 id="delete-missing-value-columns">Delete missing value columns</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Get names of columns with missing values</span></span><br><span class="line">cols_with_missing = [col <span class="keyword">for</span> col <span class="keyword">in</span> X_train.columns</span><br><span class="line">                     <span class="keyword">if</span> X_train[col].isnull().<span class="built_in">any</span>()]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Drop columns in training and validation data</span></span><br><span class="line">reduced_X_train = X_train.drop(cols_with_missing, axis=<span class="number">1</span>)</span><br><span class="line">reduced_X_valid = X_valid.drop(cols_with_missing, axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
 <p>This uses <code>drop</code> function to delete columns.</p>
-<h2 id="machine-learning-model"><a href="#machine-learning-model" class="headerlink" title="machine learning model"></a>machine learning model</h2><p>Example of [[Building Model]] with [[scikit-learn]],</p>
+<h2 id="machine-learning-model">machine learning model</h2>
+<p>Example of [[Building Model]] with [[scikit-learn]],</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line"><span class="comment"># Define model. Specify a number for random_state to ensure same results each run</span></span><br><span class="line">melbourne_model = DecisionTreeRegressor(random_state=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># Fit model</span></span><br><span class="line">melbourne_model.fit(X, y)</span><br></pre></td></tr></table></figure>
-
 <p>Specifying a number for <code>random_state</code> ensures you get the same results in each run.</p>
 <p>We now have a fitted model that we can use to make predictions.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Making predictions for the following 5 houses:&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(X.head())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The predictions are&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(melbourne_model.predict(X.head()))</span><br></pre></td></tr></table></figure>
-
-<h2 id="model-validation"><a href="#model-validation" class="headerlink" title="[[model validation]]"></a>[[model validation]]</h2><p>There are many metrics for summarizing model quality, but we’ll start with one called <strong>Mean Absolute Error</strong> (also called <strong>MAE</strong>), and error=actual−predicted.<br>Once we have a model, here is how we calculate the mean absolute error:</p>
+<h2 id="model-validation">[[model validation]]</h2>
+<p>There are many metrics for summarizing model quality, but we'll start with one called <strong>Mean Absolute Error</strong> (also called <strong>MAE</strong>), and error=actual−predicted. Once we have a model, here is how we calculate the mean absolute error:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_absolute_error</span><br><span class="line">predicted_home_prices = melbourne_model.predict(X)</span><br><span class="line">mean_absolute_error(y, predicted_home_prices)</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>[[validation data]]</li>
 <li>[[training data]]</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># split the data</span></span><br><span class="line">train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = <span class="number">0</span>)</span><br><span class="line"><span class="comment"># Define model</span></span><br><span class="line">melbourne_model = DecisionTreeRegressor()</span><br><span class="line"><span class="comment"># Fit model</span></span><br><span class="line">melbourne_model.fit(train_X, train_y)</span><br><span class="line"><span class="comment"># get predicted prices on validation data</span></span><br><span class="line">val_predictions = melbourne_model.predict(val_X)</span><br><span class="line"><span class="built_in">print</span>(mean_absolute_error(val_y, val_predictions))</span><br></pre></td></tr></table></figure>
-
-<h2 id="other-topics"><a href="#other-topics" class="headerlink" title="other topics"></a>other topics</h2><p>[[overfitting and underfitting]]<br>[[random forest]]<br>If you keep modeling, you can learn more models with even better performance, but many of those are sensitive to getting the right parameters.</p>
+<h2 id="other-topics">other topics</h2>
+<p>[[overfitting and underfitting]][[random forest]] If you keep modeling, you can learn more models with even better performance, but many of those are sensitive to getting the right parameters.</p>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/15/2021-6-14-machine%20learning%20in%20python%20/" data-id="ckpxcsx3p000bm4uq5nxo8ob2" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
-
   
-    <article id="post-2021-6-14-overfitting and underfitting" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/15/2021-6-14-overfitting%20and%20underfitting/" class="article-date">
-  <time class="dt-published" datetime="2021-06-15T01:11:30.110Z" itemprop="datePublished">2021-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Machine-Learning/">Machine_Learning</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Here’s the takeaway: Models can suffer from either:</p>
-<ul>
-<li>  <strong>Overfitting:</strong> capturing spurious patterns that won’t recur in the future, leading to less accurate predictions, or</li>
-<li>  <strong>Underfitting:</strong> failing to capture relevant patterns, again leading to less accurate predictions.</li>
-</ul>
-<p><strong>Overfitting</strong> is a model matches the training data almost perfectly, but does poorly in validation and other new data. </p>
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/15/2021-6-14-overfitting%20and%20underfitting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/15/2021-6-14-overfitting%20and%20underfitting/" class="post-title-link" itemprop="url">Untitled</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-15 09:11:30" itemprop="dateCreated datePublished" datetime="2021-06-15T09:11:30+08:00">2021-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-14 17:39:48" itemprop="dateModified" datetime="2021-06-14T17:39:48+08:00">2021-06-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index"><span itemprop="name">Machine_Learning</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Here's the takeaway: Models can suffer from either: - <strong>Overfitting:</strong> capturing spurious patterns that won't recur in the future, leading to less accurate predictions, or - <strong>Underfitting:</strong> failing to capture relevant patterns, again leading to less accurate predictions.</p>
+<p><strong>Overfitting</strong> is a model matches the training data almost perfectly, but does poorly in validation and other new data.</p>
 <p>When a model fails to capture important distinctions and patterns in the data, so it performs poorly even in training data, that is called <strong>underfitting</strong>. Result predictions may be far off for most houses, even in the training data.</p>
 <p>The criterion to distinguish the fitting property is <strong>MAE</strong>.</p>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/15/2021-6-14-overfitting%20and%20underfitting/" data-id="ckpxcsx3r000fm4uq2mw780zc" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/14/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2021-06-14T14:16:25.330Z" itemprop="datePublished">2021-06-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Introduction/">Introduction</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
     
     
-      <header class="article-header">
-        
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/06/14/hello-world/">Hello World</a>
-    </h1>
+  
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/14/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Music.jpg">
+      <meta itemprop="name" content="Wang Jinghui">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang Jinghui's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/14/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-06-14 22:16:25" itemprop="dateCreated datePublished" datetime="2021-06-14T22:16:25+08:00">2021-06-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-06-15 09:05:26" itemprop="dateModified" datetime="2021-06-15T09:05:26+08:00">2021-06-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Introduction/" itemprop="url" rel="index"><span itemprop="name">Introduction</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/14/hello-world/" data-id="ckpxcsx40000um4uq62fi8mpe" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-
-  
-
-
-  <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
-</section>
-        
-          <aside id="sidebar">
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Introduction/">Introduction</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linear-Algebra/">Linear_Algebra</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine_Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Notes/">Reading Notes</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Notes/">Reading_Notes</a></li></ul>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/06/15/2020-11-04-%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%AC%E4%B8%89%E7%AB%A0/">经济学第三章</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/15/2020-11-05-linear%20algebra%201/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/15/2020-11-05-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/">学习之道</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/15/2020-11-14-Writing1/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/15/2020-11-06-%E5%88%AB%E6%83%B3%E6%91%86%E8%84%B1%E4%B9%A6/">别想摆脱书——艾柯卡里埃尔对话录</a>
-          </li>
-        
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
       </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2021 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Wang Jinghui"
+      src="/images/Music.jpg">
+  <p class="site-author-name" itemprop="name">Wang Jinghui</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/SpaceInCode" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;SpaceInCode" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wangjhemail@gmail.com" title="E-Mail → mailto:wangjhemail@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
   </div>
-</footer>
+
+
+
+      </div>
 
     </div>
-    <nav id="mobile-nav">
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Jinghui</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
   
-</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
     
 
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
 
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
 </body>
 </html>

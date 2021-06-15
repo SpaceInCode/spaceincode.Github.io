@@ -1,421 +1,681 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="If the columns of $ A$ are linearly independent, then $Ax&#x3D;b$ has exactlyone solution for every $b$. It’s false. That is because there may be a case that $rank(A)&lt;m$ , whichmeans the vector $b$ coul">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Helvetica:300,300italic,400,400italic,700,700italic|Consola:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="If the columns of $ A$ are linearly independent, then \(Ax&#x3D;b\) has exactly one solution for every \(b\). It’s false. That is because there may be a case that \(rank(A)&lt;m\) , which means the vector">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Wang Jinghui&#39;s Blog">
 <meta property="og:url" content="http://example.com/2021/06/15/2020-11-05-linear%20algebra%201/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="If the columns of $ A$ are linearly independent, then $Ax&#x3D;b$ has exactlyone solution for every $b$. It’s false. That is because there may be a case that $rank(A)&lt;m$ , whichmeans the vector $b$ coul">
+<meta property="og:site_name" content="Wang Jinghui&#39;s Blog">
+<meta property="og:description" content="If the columns of $ A$ are linearly independent, then \(Ax&#x3D;b\) has exactly one solution for every \(b\). It’s false. That is because there may be a case that \(rank(A)&lt;m\) , which means the vector">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-15T01:11:30.151Z">
 <meta property="article:modified_time" content="2021-06-14T09:39:48.000Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Wang Jinghui">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<link rel="canonical" href="http://example.com/2021/06/15/2020-11-05-linear%20algebra%201/">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-  
-<meta name="generator" content="Hexo 5.4.0"></head>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
+  <title> | Wang Jinghui's Blog
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Wang Jinghui's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Ideas, Notes and Self-development</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="en">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta">
+  
+  <ul class="breadcrumb">
+          
+            <li><a href="/2021/">2021</a></li>
+            <li><a href="/2021/06/">06</a></li>
+            <li><a href="/2021/06/15/">15</a></li>
+            <li><a href="/2021/06/15/2020-11-05-linear%20algebra%201/">2020-11-05-LINEAR ALGEBRA 1</a></li>
+            <li><a href="/2021/06/15/2020-11-05-linear%20algebra%201//"></a></li>
+  </ul>
+
+</div>
+
 </header>
 
-      <div class="outer">
-        <section id="main"><article id="page-2020-11-05-linear algebra 1" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/06/15/2020-11-05-linear%20algebra%201/" class="article-date">
-  <time class="dt-published" datetime="2021-06-15T01:11:30.151Z" itemprop="datePublished">2021-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Linear-Algebra/">Linear_Algebra</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>If the columns of $ A$ are linearly independent, then $Ax=b$ has exactly<br>one solution for every $b$.</p>
-<p>It’s false. That is because there may be a case that $rank(A)&lt;m$ , which<br>means the vector $b$ couldn’t be expressed by $A$.</p>
-<p>Given $n$ vectors $a_i$ with $m$ components, what are the shapes of<br>$A,Q,R$ ?</p>
-<p>The expression is $$A_{m\times n} = Q_{m\times n}R_{n\times n}$$</p>
-<p>Suppose that $A=A_{m\times n}$, $B=B_{s\times t}$, $C=C_{s\times t}$ are<br>matrices, then $$rank \left[<br>    \begin{array}{cc}<br>    A &amp; O \<br>    C &amp; B \<br>    \end{array}<br>    \right]<br>    \geq rank(A)+rank(B)$$</p>
-<p>It’s true. Because if the rank of $A$ equals $1$ , the rank of $B$<br>equals $2$, this satisfies the expression.</p>
-<p>(Assume that $m=n=s=t=2$)</p>
+      
+      
+      <div class="post-body">
+          <p>If the columns of $ A$ are linearly independent, then <span class="math inline">\(Ax=b\)</span> has exactly one solution for every <span class="math inline">\(b\)</span>.</p>
+<p>It’s false. That is because there may be a case that <span class="math inline">\(rank(A)&lt;m\)</span> , which means the vector <span class="math inline">\(b\)</span> couldn’t be expressed by <span class="math inline">\(A\)</span>.</p>
+<p>Given <span class="math inline">\(n\)</span> vectors <span class="math inline">\(a_i\)</span> with <span class="math inline">\(m\)</span> components, what are the shapes of <span class="math inline">\(A,Q,R\)</span> ?</p>
+<p>The expression is <span class="math display">\[A_{m\times n} = Q_{m\times n}R_{n\times n}\]</span></p>
+<p>Suppose that <span class="math inline">\(A=A_{m\times n}\)</span>, <span class="math inline">\(B=B_{s\times t}\)</span>, <span class="math inline">\(C=C_{s\times t}\)</span> are matrices, then <span class="math display">\[rank \left[
+    \begin{array}{cc}
+    A &amp; O \\
+    C &amp; B \\
+    \end{array}
+    \right]
+    \geq rank(A)+rank(B)\]</span></p>
+<p>It’s true. Because if the rank of <span class="math inline">\(A\)</span> equals <span class="math inline">\(1\)</span> , the rank of <span class="math inline">\(B\)</span> equals <span class="math inline">\(2\)</span>, this satisfies the expression.</p>
+<p>(Assume that <span class="math inline">\(m=n=s=t=2\)</span>)</p>
 <p>Give transformation to find the transform matrix.</p>
-<p>We know that<br>$\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)=(\eta_1 \eta_2 \cdots \eta_n)$</p>
-<p>Hence<br>$$A=(\eta_1 \eta_2 \cdots \eta_n)^{-1} (\mathscr{A}\varepsilon_1 \mathscr{A}\varepsilon_2 \cdots \mathscr{A}\varepsilon_n)$$<br>Therefore, we got $A$.</p>
-<p>If $A$ is an $m$ by $n$ matrix and $rank(A)=n$, show that $A^{T}A$ is<br>invertible. Is $P=A(A^{T}A)^{-1}A^T $ invertible? Explain why.</p>
-<p>Since $N(A^T A)=N(A), dimC(A^T)+dimN(A)=n$, also we have<br>$rankA=dimC(A^T)$,</p>
-<p>Since $rankA=0,\Rightarrow dimN(A)=0, \Rightarrow dimN(A^T A)=0$,</p>
-<p>Therefore, $A^T A$ is invertible.</p>
-<p>Suppose $A$ is $m$ by $n$, $B$ is $n$ by $p$, and $AB = 0$ . Prove<br>$rankA+rankB\leq n$</p>
-<p>We have $dimA=n$, and also $dim(C(A^T))+dim(N(A))=n, rankA=dimC(A^T)$<br>And $$AB=0, C(B)\subset N(A), \Rightarrow dimC(B)\leq dimN(A)$$</p>
-<p>Therefore, we have $rankA+rankB\leq n$.</p>
-<p>Show that an upper triangular matrix multipling another gives an upper<br>triangular matrix.</p>
-<p>$$\begin{aligned}<br>\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)A\<br>\mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)&amp;=(\eta_1 \eta_2 \cdots \eta_n)B\<br>(\eta_1 \eta_2 \cdots \eta_n)&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)X\end{aligned}$$</p>
-<p>It can be proved that: $$\begin{aligned}<br>\mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)<br>&amp;=[\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)]X\&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)AX \&amp;=(\eta_1 \eta_2 \cdots \eta_n)X^{-1}AX\end{aligned}$$<br>We get $B=X^{-1}AX$</p>
-<p>Additionally, we add<br>$$\mathscr{A}([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]x)=\mathscr{A}(\alpha)=[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]Ax$$<br>$$\mathscr{A}(\alpha)=Ax$$<br>If we let<br>$[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]=I$, $A$ is<br>transforming effect. $x$ is the cofficient corrospond to the basis.<br>$[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]$ is the basis before<br>transformation.</p>
-<p>When we do some proves, it is easy to use the basis reprensenting all<br>the matrices or vectors in space, which means we have to introduce the<br>normal expression of them. Basis elements<br>$$A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j=1}^{n}\limits a_{ij}\alpha_i\beta_j  \Rightarrow A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j=1}^{n}\limits a_{ij} e_i e_j^T$$<br>After we choose the basis as identity basis. If $A=\pm A^T$, we have</p>
-<p>$$A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j&gt;i}^{n}\limits a_{ij}( e_i e_j^T \pm e_j e_i^T)$$</p>
+<p>We know that <span class="math inline">\(\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)=(\eta_1 \eta_2 \cdots \eta_n)\)</span></p>
+<p>Hence <span class="math display">\[A=(\eta_1 \eta_2 \cdots \eta_n)^{-1} (\mathscr{A}\varepsilon_1 \mathscr{A}\varepsilon_2 \cdots \mathscr{A}\varepsilon_n)\]</span> Therefore, we got <span class="math inline">\(A\)</span>.</p>
+<p>If <span class="math inline">\(A\)</span> is an <span class="math inline">\(m\)</span> by <span class="math inline">\(n\)</span> matrix and <span class="math inline">\(rank(A)=n\)</span>, show that <span class="math inline">\(A^{T}A\)</span> is invertible. Is $P=A(A<sup>{T}A)</sup>{-1}A^T $ invertible? Explain why.</p>
+<p>Since <span class="math inline">\(N(A^T A)=N(A), dimC(A^T)+dimN(A)=n\)</span>, also we have <span class="math inline">\(rankA=dimC(A^T)\)</span>,</p>
+<p>Since <span class="math inline">\(rankA=0,\Rightarrow dimN(A)=0, \Rightarrow dimN(A^T A)=0\)</span>,</p>
+<p>Therefore, <span class="math inline">\(A^T A\)</span> is invertible.</p>
+<p>Suppose <span class="math inline">\(A\)</span> is <span class="math inline">\(m\)</span> by <span class="math inline">\(n\)</span>, <span class="math inline">\(B\)</span> is <span class="math inline">\(n\)</span> by <span class="math inline">\(p\)</span>, and <span class="math inline">\(AB = 0\)</span> . Prove <span class="math inline">\(rankA+rankB\leq n\)</span></p>
+<p>We have <span class="math inline">\(dimA=n\)</span>, and also <span class="math inline">\(dim(C(A^T))+dim(N(A))=n, rankA=dimC(A^T)\)</span> And <span class="math display">\[AB=0, C(B)\subset N(A), \Rightarrow dimC(B)\leq dimN(A)\]</span></p>
+<p>Therefore, we have <span class="math inline">\(rankA+rankB\leq n\)</span>.</p>
+<p>Show that an upper triangular matrix multipling another gives an upper triangular matrix.</p>
+<p><span class="math display">\[\begin{aligned}
+\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)A\\
+\mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)&amp;=(\eta_1 \eta_2 \cdots \eta_n)B\\
+(\eta_1 \eta_2 \cdots \eta_n)&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)X\end{aligned}\]</span></p>
+<p>It can be proved that: <span class="math display">\[\begin{aligned}
+\mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)
+&amp;=[\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)]X\\&amp;=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)AX \\&amp;=(\eta_1 \eta_2 \cdots \eta_n)X^{-1}AX\end{aligned}\]</span> We get <span class="math inline">\(B=X^{-1}AX\)</span></p>
+<p>Additionally, we add <span class="math display">\[\mathscr{A}([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]x)=\mathscr{A}(\alpha)=[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]Ax\]</span> <span class="math display">\[\mathscr{A}(\alpha)=Ax\]</span> If we let <span class="math inline">\([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]=I\)</span>, <span class="math inline">\(A\)</span> is transforming effect. <span class="math inline">\(x\)</span> is the cofficient corrospond to the basis. <span class="math inline">\([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]\)</span> is the basis before transformation.</p>
+<p>When we do some proves, it is easy to use the basis reprensenting all the matrices or vectors in space, which means we have to introduce the normal expression of them. Basis elements <span class="math display">\[A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j=1}^{n}\limits a_{ij}\alpha_i\beta_j  \Rightarrow A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j=1}^{n}\limits a_{ij} e_i e_j^T\]</span> After we choose the basis as identity basis. If <span class="math inline">\(A=\pm A^T\)</span>, we have</p>
+<p><span class="math display">\[A_{m\times n}=\sum_{i=1}^{m}\limits\sum_{j&gt;i}^{n}\limits a_{ij}( e_i e_j^T \pm e_j e_i^T)\]</span></p>
 <p>The four possibilities for linear equations depend on the rank.</p>
-<hr>
-<p>   $r=m$   and   $r=n$   Square and invertible   $Ax=b$         $1$ solution<br>   $r=m$   and   $r&lt;n$      Short and wide       $Ax=b$      $\infty$ solutions<br>   $r&lt;m$   and   $r=n$       Tall and thin       $Ax=b$      $0$ or $1$ solution<br>   $r&lt;m$   and   $r&lt;n$       Not full rank       $Ax=b$   $0$ or $\infty$ solutions</p>
-<hr>
-<p>$ Ax=b $ is solvable if and only if $ y^T b=0 $ whenever $y^T A=0  $</p>
-<p>$Ax=b$ is solvable if and only if $b\in C(A)$. Also $C(A)\perp N(A^T)$,<br>and $b\in N(A^T)$ if and only if $ y^T b=0 $ whenever $y^T A=0  $</p>
-<p>$$P_Q(b)=Q(Q^TQ)^{-1}Q^T=(\sum\limits_{i=1}^{n} \frac{q_iq_i^T}{q_i^Tq_i})b$$</p>
-<p>If eigenvectors $x_1, x_2, \cdots x_k$ correspond to different<br>eigenvalues $\lambda_1, \lambda_2 \cdots \lambda_k$ , then<br>$x_1, x_2, \cdots x_k$ is linearly independent.</p>
-<p>Suppose $x_1, x_2, \cdots x_k$ is linearly dependent. Let $n$ be the<br>smallest positive integer such that $x_1, x_2, \cdots x_n$ is<br>independent.</p>
-<p>$\exists a_1,a_2 \cdots a_n$ not all $0$, such that $$\begin{aligned}<br> a_1x_1+a_2x_2+\cdots a_nx_n=0\end{aligned}$$ Apply both sides<br>,$a_1\lambda_1 x_1+a_2 \lambda_2 x_2+\cdots +a_n\lambda_nx_n=0$, which<br>minus $\lambda_n \cdot (1)$<br>$$\Rightarrow a_1(\lambda_1-\lambda_n) x_1+a_2 (\lambda_2-\lambda_n) x_2+\cdots +a_n(\lambda_{n-1}-\lambda_n)x_n=0$$<br>$x_1 , x_2, \cdots x_n $ is independent<br>$\Rightarrow a_1=a_2=\cdots=a_{n-1}=0$.</p>
-<p>Back to the (1), $a_nx_n=0\Rightarrow a_n=0$<br>$$\Rightarrow a_1=a_2=\cdots=a_{n-1}=a_n=0 \Rightarrow$$ A Contradiction$$</p>
-<p>Different Expressions:<br>$$|A|=\sum\limits_{j=1}^{n}(-1)^{i+1}a_{ij}|M_{ij}|<br>=\sum_{j} (-1)^{\tau (j_1j_2\cdots j_n)} a_{1 j_1} a_{2 j_2} \cdots  a_{n j_n}$$<br>There is a big fomula:<br>$$|A|=\sum_{j} det(P)  a_{1 j_1} a_{2 j_2} \cdots  a_{n j_n}$$ Also we<br>have a relation:$\displaystyle A^{-1}=\frac{ C^T}{|A|}$$</p>
-<p>For a difference equation, connected to eigenvalues:<br>$$A=Q\Lambda Q^T \Rightarrow A^k = Q\Lambda ^k Q^T$$</p>
-<p>$p(x)=\frac{1}{2} x^T Ax-b^Tx$, so we<br>have$\nabla p_1(x)=Ax, \nabla p_2(x)=b.$ Therefore,<br>$$\nabla p(x)=Ax-b=0 \Rightarrow Ax=b$$</p>
-<p>When $Ax=b$, for any $y\in {\mathbb{R}}$, we have<br>$$p(y)-p(x)=\frac{1}{2} y^T Ay-b^Ty-(\frac{1}{2} x^T Ax-b^Tx)=<br> \frac{1}{2} (y-x)^T A(y-x)\geqslant 0 $$ </p>
-<p> if and only if $A$ is positive<br>definite.</p>
-<p>$$L(x,y)=p(x)+y^T(Cx-d)=\frac{1}{2} x^T Ax-b^Tx+x^T C^Ty-y^T d,$$<br>and<br>$y=(y_1, y_2, \cdots y_n) \in {\mathbb{R}}$ is given vector(<em>Lagrange<br>multipliers</em>). So, it get the minimum value if and only if :<br>$$\begin{aligned}<br>\frac{\partial L}{\partial x}=0 : Ax+C^T y=b \qquad<br>\frac{\partial L}{\partial y}=0 : Cx=d\end{aligned}$$</p>
-<p>Consider $\displaystyle R(x)=\frac{x^TAx}{x^Tx}$, and we will solve<br>$\min R(x)$. So we have :<br>$$\lambda_{\min}(A)\leqslant R(x)=\frac{x^TAx}{x^Tx}=\frac{(Qy)^TA(Qy)}{(Qy)^T(Qy)}=<br>    \frac{y^T \Lambda y}{y^Ty}\leqslant \lambda_{\max}(A)$$ Therefore,<br>we have<br>$$\lambda_{\min}(A)\leqslant R(x)={ x^TAx|  |x|=1 } \leqslant \lambda_{\max}(A)$$</p>
-<p>$A_{m\times n}=U_{m\times m}\Sigma_{m\times n} V_{n\times n}^T$, and<br>$AV=U\Sigma$, is called SVD. We also have:<br>$$\begin{aligned}<br>A^TA=(V\Sigma^T U^T)U\Sigma V^T=V\Sigma^T \Sigma U &amp;\qquad<br>AA^T=(U\Sigma V^T)V\Sigma^T U^T=U\Sigma\Sigma^T U^T\<br>A[V_r|V_{n-r}]=[U_r|U_{n-r}]\Sigma&amp;= [\sigma_1u_1, \sigma_2u_2 \cdots \sigma_ru_r , 0 \cdots 0]\end{aligned}$$<br>and from this, we also have:<br>$$\begin{aligned}<br>V_{n-r} \rightarrow N(A) &amp;\qquad U_{m-r}\rightarrow N(A^T) \qquad<br>A^+ = U\Sigma^+ V^T\<br>V_r \rightarrow C(A^T)&amp;\qquad U_r \rightarrow C(A) \qquad x^+=A^+ b\end{aligned}$$</p>
-<p>If $A_{s\times n}, B_{n\times m}$, show that<br>$rank(AB)\geqslant rank(A)+rank(B)-n$.</p>
-<p>Since<br>$rank(A)+rank(B)=rank\begin{bmatrix}<br>    A &amp; O \<br>    O &amp; B<br>    \end{bmatrix}\geqslant rank\begin{bmatrix}<br>    A &amp; I \<br>    O &amp; B<br>    \end{bmatrix} $.<br>    Also we have elementary transformations:<br>$$\begin{bmatrix}<br>        A &amp; I \<br>        O &amp; B<br>    \end{bmatrix}\longrightarrow\begin{bmatrix}<br>    A &amp; I \<br>    -AB &amp; O<br>    \end{bmatrix}\longrightarrow\begin{bmatrix}<br>    O&amp; I \<br>    -AB &amp; O<br>    \end{bmatrix}$$ Therefore, $rank\begin{bmatrix}<br>    A &amp; I \<br>    O &amp; B<br>    \end{bmatrix}=rank\begin{bmatrix}<br>    O&amp; I \<br>    -AB &amp; O<br>    \end{bmatrix}=rank(AB)+rank(I)=rank(AB)+n$$</p>
-<p>Let $R(A)=r_1, R(B)=r_2, R(AB)=r,$ We assume that<br>$b_1, b_2 \cdots b_{r_2}$ is the basic solutions of the column vectors<br>of $B$, so there must exists the largest number which satisfies<br>$Ab_j=0, j\in {1,2\cdots r_2}$ where $b_1, b_2 \cdots b_{r_2}$ is<br>$r_2-r$. Otherwise, it is contradictary to $R(AB)=r$.</p>
-<p>It also means the $b_j$ of $Ab_j=0$ is in the $N(A)$, which means<br>$dim(N(A))=n-r_1$. Therefore, $r_2-r\leqslant n-r_1 \Rightarrow<br>    rank(AB)\geqslant rank(A)+rank(B)-n$.</p>
-<h1 id="Linear-Calculation"><a href="#Linear-Calculation" class="headerlink" title="Linear Calculation"></a>Linear Calculation</h1><p>A $n$ by $n$ matrix multiplies an $n$ -dimensional vector and produces<br>an $m$ -dimensional vector.</p>
-<p>$( E A$ times $x )$ equals $( E \operatorname { times } A x ) .$ We just<br>write $E A x$<br>$$A B = A \left[ \begin{array} { l } { b _ { 1 } } \ { b _ { 2 } } \ { b _ { 3 } } \end{array} \right] = \left[ \begin{array} { c } { A b _ { 1 } } \ { A b _ { 2 } } \ { A b _ { 3 } } \end{array} \right]$$<br>the number of columns in A has to equal the number of rows in $B .$ Then<br>$A$ can be multiplied into each column of $B .$</p>
-<p>Each column of $A B$ is the product of a matrix and a column: column $j$<br>of $A B = A$ times (column $j$ of $B )$</p>
-<p>Each row of $A B$ is the product of a row and a matrix: row $i$ of<br>$A B = ($ row $i$ of $A )$ times $B$</p>
-<p>Matrix multiplication is associative: $( A B ) C = A ( B C ) .$ Just<br>write $A B C .$</p>
-<p>Triangular factorization $A = L U$ with no exchanges of rows. $L$ is<br>lower triangular, with 1’s on the diagonal. The multipliers<br>$\ell _ { i j } ($ taken from elimination $)$ are below the diagonal.<br>$U$ is the upper triangular matrix which appeats after forward<br>elimination, The diagonal entries of $U$ are the pivots.</p>
-<p>$$\left[ \begin{array} { c c c } { 1 } &amp; { 0 } &amp; { 0 } \ { \ell _ { 21 } } &amp; { 1 } &amp; { 0 } \ { \ell _ { 31 } } &amp; { \ell _ { 32 } } &amp; { 1 } \end{array} \right] \left[ \begin{array} { l l } { \text { row } 1 \text { of } U } \ { \text { row } 2 \text { of } U } \ { \text { row } 3 \text { of } U } \end{array} \right] =\mathrm{ original }A$$</p>
-<p>$P A = L U$ $P ^ { - 1 }$ is always the same as<br>$P ^ { \mathrm { T } }$. With the rows reordered in advance, $P A$ can<br>be factored into $L U$</p>
-<p>The inverse exists if and only if elimination produces n pivots (row<br>exchanges allowed). Elimination solves $A x = b$ without explicitly<br>finding $A ^ { - 1 } .$</p>
-<p>Suppose there is a nonzero vector $x$ such that $A x = 0 .$ Then $A$<br>cannot have an inverse. To repeat: No matrix can bring 0 back to $x$ .<br>If $A$ is invertible, then $A x = 0$ can only have the zero solution<br>$x = 0$</p>
-<p>$$\left[ \begin{array} { l l } { a } &amp; { b } \ { c } &amp; { d } \end{array} \right] ^ { - 1 } = \frac { 1 } { a d - b c } \left[ \begin{array} { c c } { d } &amp; { - b } \ { - c } &amp; { a } \end{array} \right]$$</p>
-<p>$x = A ^ { - 1 } b$ separates into $L c = b $ and $ U x = c$ Invertible<br>$=$ Nonsingular ($n$ pivots)</p>
-<p>The transpose of $A ^ { - 1 }$ is<br>$\left( A ^ { - 1 } \right) ^ { \mathrm { T } } = \left( A ^ { \mathrm { T } } \right) ^ { - 1 }$</p>
-<p>Suppose $A = A ^ {T }$ can be factored into $A = L D U$ without row<br>exchanges. Then $U$ is the transpose of $L$ . The symmetric<br>factorization becomes $A = L D L ^ { T }$</p>
-<p>The number of free variables consist of the basic solutions of $N(A)$.<br>The expression is normally:<br>$$N(A)= \left\lbrace x|x=k_1x_1+k_2x_2+k_3x_3 \right\rbrace$$</p>
-<p>For a rectangular matrix, there dosen’t exist full inverse matrix.<br>However, there exist one-side matrix.</p>
-<ol>
-<li><p>Full row rank. $r=m\leqslant n$. There exists a right-side inverse<br> matrix.</p>
-</li>
-<li><p>Full column rank. $r=n\leqslant m$. There exists a left-side inverse<br> matrix.</p>
-</li>
+<table>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(r=m\)</span></td>
+<td align="center">and</td>
+<td align="center"><span class="math inline">\(r=n\)</span></td>
+<td align="center">Square and invertible</td>
+<td align="center"><span class="math inline">\(Ax=b\)</span></td>
+<td align="center"><span class="math inline">\(1\)</span> solution</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(r=m\)</span></td>
+<td align="center">and</td>
+<td align="center"><span class="math inline">\(r&lt;n\)</span></td>
+<td align="center">Short and wide</td>
+<td align="center"><span class="math inline">\(Ax=b\)</span></td>
+<td align="center"><span class="math inline">\(\infty\)</span> solutions</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(r&lt;m\)</span></td>
+<td align="center">and</td>
+<td align="center"><span class="math inline">\(r=n\)</span></td>
+<td align="center">Tall and thin</td>
+<td align="center"><span class="math inline">\(Ax=b\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span> solution</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(r&lt;m\)</span></td>
+<td align="center">and</td>
+<td align="center"><span class="math inline">\(r&lt;n\)</span></td>
+<td align="center">Not full rank</td>
+<td align="center"><span class="math inline">\(Ax=b\)</span></td>
+<td align="center"><span class="math inline">\(0\)</span> or <span class="math inline">\(\infty\)</span> solutions</td>
+</tr>
+</tbody>
+</table>
+<p>$ Ax=b $ is solvable if and only if $ y^T b=0 $ whenever $y^T A=0 $</p>
+<p><span class="math inline">\(Ax=b\)</span> is solvable if and only if <span class="math inline">\(b\in C(A)\)</span>. Also <span class="math inline">\(C(A)\perp N(A^T)\)</span>, and <span class="math inline">\(b\in N(A^T)\)</span> if and only if $ y^T b=0 $ whenever $y^T A=0 $</p>
+<p><span class="math display">\[P_Q(b)=Q(Q^TQ)^{-1}Q^T=(\sum\limits_{i=1}^{n} \frac{q_iq_i^T}{q_i^Tq_i})b\]</span></p>
+<p>If eigenvectors <span class="math inline">\(x_1, x_2, \cdots x_k\)</span> correspond to different eigenvalues <span class="math inline">\(\lambda_1, \lambda_2 \cdots \lambda_k\)</span> , then <span class="math inline">\(x_1, x_2, \cdots x_k\)</span> is linearly independent.</p>
+<p>Suppose <span class="math inline">\(x_1, x_2, \cdots x_k\)</span> is linearly dependent. Let <span class="math inline">\(n\)</span> be the smallest positive integer such that <span class="math inline">\(x_1, x_2, \cdots x_n\)</span> is independent.</p>
+<p><span class="math inline">\(\exists a_1,a_2 \cdots a_n\)</span> not all <span class="math inline">\(0\)</span>, such that <span class="math display">\[\begin{aligned}
+ a_1x_1+a_2x_2+\cdots a_nx_n=0\end{aligned}\]</span> Apply both sides ,<span class="math inline">\(a_1\lambda_1 x_1+a_2 \lambda_2 x_2+\cdots +a_n\lambda_nx_n=0\)</span>, which minus <span class="math inline">\(\lambda_n \cdot (1)\)</span> <span class="math display">\[\Rightarrow a_1(\lambda_1-\lambda_n) x_1+a_2 (\lambda_2-\lambda_n) x_2+\cdots +a_n(\lambda_{n-1}-\lambda_n)x_n=0\]</span> $x_1 , x_2, x_n $ is independent <span class="math inline">\(\Rightarrow a_1=a_2=\cdots=a_{n-1}=0\)</span>.</p>
+<p>Back to the (1), <span class="math inline">\(a_nx_n=0\Rightarrow a_n=0\)</span> <span class="math display">\[\Rightarrow a_1=a_2=\cdots=a_{n-1}=a_n=0 \Rightarrow\]</span> A Contradiction$$</p>
+<p>Different Expressions: <span class="math display">\[|A|=\sum\limits_{j=1}^{n}(-1)^{i+1}a_{ij}|M_{ij}|
+=\sum_{j} (-1)^{\tau (j_1j_2\cdots j_n)} a_{1 j_1} a_{2 j_2} \cdots  a_{n j_n}\]</span> There is a big fomula: <span class="math display">\[|A|=\sum_{j} det(P)  a_{1 j_1} a_{2 j_2} \cdots  a_{n j_n}\]</span> Also we have a relation:<span class="math inline">\(\displaystyle A^{-1}=\frac{ C^T}{|A|}\)</span>$</p>
+<p>For a difference equation, connected to eigenvalues: <span class="math display">\[A=Q\Lambda Q^T \Rightarrow A^k = Q\Lambda ^k Q^T\]</span></p>
+<p><span class="math inline">\(p(x)=\frac{1}{2} x^T Ax-b^Tx\)</span>, so we have<span class="math inline">\(\nabla p_1(x)=Ax, \nabla p_2(x)=b.\)</span> Therefore, <span class="math display">\[\nabla p(x)=Ax-b=0 \Rightarrow Ax=b\]</span></p>
+<p>When <span class="math inline">\(Ax=b\)</span>, for any <span class="math inline">\(y\in {\mathbb{R}}\)</span>, we have <span class="math display">\[p(y)-p(x)=\frac{1}{2} y^T Ay-b^Ty-(\frac{1}{2} x^T Ax-b^Tx)=
+ \frac{1}{2} (y-x)^T A(y-x)\geqslant 0 \]</span></p>
+<p>if and only if <span class="math inline">\(A\)</span> is positive definite.</p>
+<p><span class="math display">\[L(x,y)=p(x)+y^T(Cx-d)=\frac{1}{2} x^T Ax-b^Tx+x^T C^Ty-y^T d,\]</span> and <span class="math inline">\(y=(y_1, y_2, \cdots y_n) \in {\mathbb{R}}\)</span> is given vector(<em>Lagrange multipliers</em>). So, it get the minimum value if and only if : <span class="math display">\[\begin{aligned}
+\frac{\partial L}{\partial x}=0 : Ax+C^T y=b \qquad
+\frac{\partial L}{\partial y}=0 : Cx=d\end{aligned}\]</span></p>
+<p>Consider <span class="math inline">\(\displaystyle R(x)=\frac{x^TAx}{x^Tx}\)</span>, and we will solve <span class="math inline">\(\min R(x)\)</span>. So we have : <span class="math display">\[\lambda_{\min}(A)\leqslant R(x)=\frac{x^TAx}{x^Tx}=\frac{(Qy)^TA(Qy)}{(Qy)^T(Qy)}=
+    \frac{y^T \Lambda y}{y^Ty}\leqslant \lambda_{\max}(A)\]</span> Therefore, we have <span class="math display">\[\lambda_{\min}(A)\leqslant R(x)=\{ x^TAx|  \|x\|=1 \} \leqslant \lambda_{\max}(A)\]</span></p>
+<p><span class="math inline">\(A_{m\times n}=U_{m\times m}\Sigma_{m\times n} V_{n\times n}^T\)</span>, and <span class="math inline">\(AV=U\Sigma\)</span>, is called SVD. We also have: <span class="math display">\[\begin{aligned}
+A^TA=(V\Sigma^T U^T)U\Sigma V^T=V\Sigma^T \Sigma U &amp;\qquad
+AA^T=(U\Sigma V^T)V\Sigma^T U^T=U\Sigma\Sigma^T U^T\\
+A[V_r|V_{n-r}]=[U_r|U_{n-r}]\Sigma&amp;= [\sigma_1u_1, \sigma_2u_2 \cdots \sigma_ru_r , 0 \cdots 0]\end{aligned}\]</span> and from this, we also have: <span class="math display">\[\begin{aligned}
+V_{n-r} \rightarrow N(A) &amp;\qquad U_{m-r}\rightarrow N(A^T) \qquad
+A^+ = U\Sigma^+ V^T\\
+V_r \rightarrow C(A^T)&amp;\qquad U_r \rightarrow C(A) \qquad x^+=A^+ b\end{aligned}\]</span></p>
+<p>If <span class="math inline">\(A_{s\times n}, B_{n\times m}\)</span>, show that <span class="math inline">\(rank(AB)\geqslant rank(A)+rank(B)-n\)</span>.</p>
+Since $rank(A)+rank(B)=rank
+<span class="math display">\[\begin{bmatrix}
+    A &amp; O \\
+    O &amp; B
+    \end{bmatrix}\]</span>
+rank
+<span class="math display">\[\begin{bmatrix}
+    A &amp; I \\
+    O &amp; B
+    \end{bmatrix}\]</span>
+<p>$. Also we have elementary transformations: <span class="math display">\[\begin{bmatrix}
+        A &amp; I \\
+        O &amp; B
+    \end{bmatrix}\longrightarrow\begin{bmatrix}
+    A &amp; I \\
+    -AB &amp; O
+    \end{bmatrix}\longrightarrow\begin{bmatrix}
+    O&amp; I \\
+    -AB &amp; O
+    \end{bmatrix}\]</span> Therefore, <span class="math inline">\(rank\begin{bmatrix}  A &amp; I \\  O &amp; B  \end{bmatrix}=rank\begin{bmatrix}  O&amp; I \\  -AB &amp; O  \end{bmatrix}=rank(AB)+rank(I)=rank(AB)+n\)</span>$</p>
+<p>Let <span class="math inline">\(R(A)=r_1, R(B)=r_2, R(AB)=r,\)</span> We assume that <span class="math inline">\(b_1, b_2 \cdots b_{r_2}\)</span> is the basic solutions of the column vectors of <span class="math inline">\(B\)</span>, so there must exists the largest number which satisfies <span class="math inline">\(Ab_j=0, j\in \{1,2\cdots r_2\}\)</span> where <span class="math inline">\(b_1, b_2 \cdots b_{r_2}\)</span> is <span class="math inline">\(r_2-r\)</span>. Otherwise, it is contradictary to <span class="math inline">\(R(AB)=r\)</span>.</p>
+<p>It also means the <span class="math inline">\(b_j\)</span> of <span class="math inline">\(Ab_j=0\)</span> is in the <span class="math inline">\(N(A)\)</span>, which means <span class="math inline">\(dim(N(A))=n-r_1\)</span>. Therefore, <span class="math inline">\(r_2-r\leqslant n-r_1 \Rightarrow  rank(AB)\geqslant rank(A)+rank(B)-n\)</span>.</p>
+<h1 id="linear-calculation">Linear Calculation</h1>
+<p>A <span class="math inline">\(n\)</span> by <span class="math inline">\(n\)</span> matrix multiplies an <span class="math inline">\(n\)</span> -dimensional vector and produces an <span class="math inline">\(m\)</span> -dimensional vector.</p>
+<p><span class="math inline">\(( E A\)</span> times <span class="math inline">\(x )\)</span> equals <span class="math inline">\(( E \operatorname { times } A x ) .\)</span> We just write <span class="math inline">\(E A x\)</span> <span class="math display">\[A B = A \left[ \begin{array} { l } { b _ { 1 } } \\ { b _ { 2 } } \\ { b _ { 3 } } \end{array} \right] = \left[ \begin{array} { c } { A b _ { 1 } } \\ { A b _ { 2 } } \\ { A b _ { 3 } } \end{array} \right]\]</span> the number of columns in A has to equal the number of rows in <span class="math inline">\(B .\)</span> Then <span class="math inline">\(A\)</span> can be multiplied into each column of <span class="math inline">\(B .\)</span></p>
+<p>Each column of <span class="math inline">\(A B\)</span> is the product of a matrix and a column: column <span class="math inline">\(j\)</span> of <span class="math inline">\(A B = A\)</span> times (column <span class="math inline">\(j\)</span> of <span class="math inline">\(B )\)</span></p>
+<p>Each row of <span class="math inline">\(A B\)</span> is the product of a row and a matrix: row <span class="math inline">\(i\)</span> of <span class="math inline">\(A B = (\)</span> row <span class="math inline">\(i\)</span> of <span class="math inline">\(A )\)</span> times <span class="math inline">\(B\)</span></p>
+<p>Matrix multiplication is associative: <span class="math inline">\(( A B ) C = A ( B C ) .\)</span> Just write <span class="math inline">\(A B C .\)</span></p>
+<p>Triangular factorization <span class="math inline">\(A = L U\)</span> with no exchanges of rows. <span class="math inline">\(L\)</span> is lower triangular, with 1’s on the diagonal. The multipliers <span class="math inline">\(\ell _ { i j } (\)</span> taken from elimination <span class="math inline">\()\)</span> are below the diagonal. <span class="math inline">\(U\)</span> is the upper triangular matrix which appeats after forward elimination, The diagonal entries of <span class="math inline">\(U\)</span> are the pivots.</p>
+<p><span class="math display">\[\left[ \begin{array} { c c c } { 1 } &amp; { 0 } &amp; { 0 } \\ { \ell _ { 21 } } &amp; { 1 } &amp; { 0 } \\ { \ell _ { 31 } } &amp; { \ell _ { 32 } } &amp; { 1 } \end{array} \right] \left[ \begin{array} { l l } { \text { row } 1 \text { of } U } \\ { \text { row } 2 \text { of } U } \\ { \text { row } 3 \text { of } U } \end{array} \right] =\mathrm{ original }A\]</span></p>
+<p><span class="math inline">\(P A = L U\)</span> <span class="math inline">\(P ^ { - 1 }\)</span> is always the same as <span class="math inline">\(P ^ { \mathrm { T } }\)</span>. With the rows reordered in advance, <span class="math inline">\(P A\)</span> can be factored into <span class="math inline">\(L U\)</span></p>
+<p>The inverse exists if and only if elimination produces n pivots (row exchanges allowed). Elimination solves <span class="math inline">\(A x = b\)</span> without explicitly finding <span class="math inline">\(A ^ { - 1 } .\)</span></p>
+<p>Suppose there is a nonzero vector <span class="math inline">\(x\)</span> such that <span class="math inline">\(A x = 0 .\)</span> Then <span class="math inline">\(A\)</span> cannot have an inverse. To repeat: No matrix can bring 0 back to <span class="math inline">\(x\)</span> . If <span class="math inline">\(A\)</span> is invertible, then <span class="math inline">\(A x = 0\)</span> can only have the zero solution <span class="math inline">\(x = 0\)</span></p>
+<p><span class="math display">\[\left[ \begin{array} { l l } { a } &amp; { b } \\ { c } &amp; { d } \end{array} \right] ^ { - 1 } = \frac { 1 } { a d - b c } \left[ \begin{array} { c c } { d } &amp; { - b } \\ { - c } &amp; { a } \end{array} \right]\]</span></p>
+<p><span class="math inline">\(x = A ^ { - 1 } b\)</span> separates into $L c = b $ and $ U x = c$ Invertible <span class="math inline">\(=\)</span> Nonsingular (<span class="math inline">\(n\)</span> pivots)</p>
+<p>The transpose of <span class="math inline">\(A ^ { - 1 }\)</span> is <span class="math inline">\(\left( A ^ { - 1 } \right) ^ { \mathrm { T } } = \left( A ^ { \mathrm { T } } \right) ^ { - 1 }\)</span></p>
+<p>Suppose <span class="math inline">\(A = A ^ {T }\)</span> can be factored into <span class="math inline">\(A = L D U\)</span> without row exchanges. Then <span class="math inline">\(U\)</span> is the transpose of <span class="math inline">\(L\)</span> . The symmetric factorization becomes <span class="math inline">\(A = L D L ^ { T }\)</span></p>
+<p>The number of free variables consist of the basic solutions of <span class="math inline">\(N(A)\)</span>. The expression is normally: <span class="math display">\[N(A)= \left\lbrace x|x=k_1x_1+k_2x_2+k_3x_3 \right\rbrace\]</span></p>
+<p>For a rectangular matrix, there dosen’t exist full inverse matrix. However, there exist one-side matrix.</p>
+<ol style="list-style-type: decimal">
+<li><p>Full row rank. <span class="math inline">\(r=m\leqslant n\)</span>. There exists a right-side inverse matrix.</p></li>
+<li><p>Full column rank. <span class="math inline">\(r=n\leqslant m\)</span>. There exists a left-side inverse matrix.</p></li>
 </ol>
-<h1 id="Linear-Space"><a href="#Linear-Space" class="headerlink" title="Linear Space"></a>Linear Space</h1><p>A <em>Vector space</em> is a set $V$ along with an additiont on $V$ and a<br>scalar multiplication on $V$ such that the following properties hold:</p>
-<ol>
-<li><p><strong>commutativity</strong><br> $u+v=v+u$ for all $u,v \in V$ ;</p>
-</li>
-<li><p><strong>associativity</strong><br> $(u+v)+w=u+(v+w) $ and $(ab)v=a(bv)$ for all $u,v,w  \in V $ and all<br> $a,b \in \textbf{F}$;</p>
-</li>
-<li><p><strong>addictive identity</strong><br> there exists an element $0\in V$ such that $v+0=v$ for all $v\in V$;</p>
-</li>
-<li><p><strong>addicyive inverse</strong><br> for every $v\in V$ ,there exists $w \in V$ such that $v+w=0$;</p>
-</li>
-<li><p> <strong>multiplicative identity</strong> $1v=v$ for all $v \in V$</p>
-</li>
-<li><p><strong>distributive properties</strong> $a(u+v)=au+av$ and $(a+b)v=av+bv$ for<br> all $a,b\in \textbf{F}$ and all $u,v\in V$.</p>
-</li>
+<h1 id="linear-space">Linear Space</h1>
+<p>A <em>Vector space</em> is a set <span class="math inline">\(V\)</span> along with an additiont on <span class="math inline">\(V\)</span> and a scalar multiplication on <span class="math inline">\(V\)</span> such that the following properties hold:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>commutativity</strong><br />
+<span class="math inline">\(u+v=v+u\)</span> for all <span class="math inline">\(u,v \in V\)</span> ;</p></li>
+<li><p><strong>associativity</strong><br />
+$(u+v)+w=u+(v+w) $ and <span class="math inline">\((ab)v=a(bv)\)</span> for all $u,v,w V $ and all <span class="math inline">\(a,b \in \textbf{F}\)</span>;</p></li>
+<li><p><strong>addictive identity</strong><br />
+there exists an element <span class="math inline">\(0\in V\)</span> such that <span class="math inline">\(v+0=v\)</span> for all <span class="math inline">\(v\in V\)</span>;</p></li>
+<li><p><strong>addicyive inverse</strong><br />
+for every <span class="math inline">\(v\in V\)</span> ,there exists <span class="math inline">\(w \in V\)</span> such that <span class="math inline">\(v+w=0\)</span>;</p></li>
+<li><p><strong>multiplicative identity</strong> <span class="math inline">\(1v=v\)</span> for all <span class="math inline">\(v \in V\)</span></p></li>
+<li><p><strong>distributive properties</strong> <span class="math inline">\(a(u+v)=au+av\)</span> and <span class="math inline">\((a+b)v=av+bv\)</span> for all <span class="math inline">\(a,b\in \textbf{F}\)</span> and all <span class="math inline">\(u,v\in V\)</span>.</p></li>
 </ol>
-<p>A subset $U$ of $V$ is called a <em>subspace</em> of $V$ if $U$ is also a<br>vector space (using the same addition and scalar multiplication as on<br>$V$).</p>
-<p>A <em>subspace</em> of a vector space is a nonempty subset that satisfies the<br>requirements for a vector space: Linear combinations stay in the<br>subspace.</p>
-<p>The system $A x = b$ is solvable if and only if the vector $b$ can be<br>expressed as a combination of the columns of $A .$ Then $b$ is in the<br>column space. We can describe all combinations of the two columns<br>geometrically: $A x = b$ can be solved if and only if b lies in the<br>plane that is spanned by the two column vectors.</p>
-<p>The nullspace of a matrix consists of all vectors $x$ such that<br>$A x = 0 .$ It is denoted by $N ( A ) .$ It is a subspace of<br>$\mathbf { R } ^ { n } ,$ just as the column space was a subspace of<br>$\mathbf { R } ^ { m } .$</p>
-<p>$A x _ { p } = b$ and $A x _ { n } = 0 \quad$ produce<br>$\quad A \left( x _ { p } + x _ { n } \right) = b$</p>
-<p>$$R x = \left[ \begin{array} { l l l l } { 1 } &amp; { 3 } &amp; { 0 } &amp; { - 1 } \ { 0 } &amp; { 0 } &amp; { 1 } &amp; { 1 } \ { 0 } &amp; { 0 } &amp; { 0 } &amp; { 0 } \end{array} \right] \left[ \begin{array} { l } { u } \ { v } \ { w } \ { y } \end{array} \right] = \left[ \begin{array} { l } { 0 } \ { 0 } \ { 0 } \end{array} \right]$$<br>The unknowns $u , v , w , y$ go into two groups. One group contains the<br>pivot variables, those that correspond to columns with pivots.</p>
-<p>If $A x = 0$ has more unknowns than equations $( n &gt; m ) ,$ it has at<br>least one special solution: There are more solutions than the trivial<br>$x = 0$</p>
-<p>$x _ { \mathrm{complete} } = x _ { \mathrm{particular} } + x _ {\mathrm{  nullspace }}$</p>
-<p>The columns of A are independent exactly when $N ( A ) = {$ zero vector<br>$}$</p>
-<h2 id="Basis"><a href="#Basis" class="headerlink" title="Basis"></a>Basis</h2><p>Suppose $c _ { 1 } v _ { 1 } + \cdots + c _ { k } v _ { k } = 0$ only<br>happens when $c _ { 1 } = \cdots = c _ { k } = 0 .$ Then the vectors<br>$v _ { 1 } , \ldots , v _ { k }$ are linearly independent. If any<br>$c ^ { \prime }$ are nonzero, the $v ^ { \prime } \mathrm { s }$ are<br>linearly dependent. One vector is a combination of the others.</p>
-<p>To check any set of vectors $v _ { 1 } , \ldots , v _ { n }$ for<br>independence, put them in the columns of $A .$ Then solve the system<br>$A c = 0 ;$ the vectors are dependent if there is a solution other than<br>$c = 0 .$ With no free variables ( rank is $n$) , there is no nullspace<br>except $c = 0 ;$ the vectors are independent. If the rank is less than<br>$n ,$ at least one free variable can be nonzero and the columns are<br>dependent.</p>
-<p>A set of n vectors in $\mathbf { R } ^ { m }$ must be linearly dependent<br>if $n &gt; m$</p>
-<p>A basis for $\mathrm { V }$ is a sequence of vectors having two<br>properties at once:</p>
-<ol>
-<li><p> The vectors are linearly independent (not too many vectors).</p>
-</li>
-<li><p> They span the space V (not too few vectors).</p>
-</li>
+<p>A subset <span class="math inline">\(U\)</span> of <span class="math inline">\(V\)</span> is called a <em>subspace</em> of <span class="math inline">\(V\)</span> if <span class="math inline">\(U\)</span> is also a vector space (using the same addition and scalar multiplication as on <span class="math inline">\(V\)</span>).</p>
+<p>A <em>subspace</em> of a vector space is a nonempty subset that satisfies the requirements for a vector space: Linear combinations stay in the subspace.</p>
+<p>The system <span class="math inline">\(A x = b\)</span> is solvable if and only if the vector <span class="math inline">\(b\)</span> can be expressed as a combination of the columns of <span class="math inline">\(A .\)</span> Then <span class="math inline">\(b\)</span> is in the column space. We can describe all combinations of the two columns geometrically: <span class="math inline">\(A x = b\)</span> can be solved if and only if b lies in the plane that is spanned by the two column vectors.</p>
+<p>The nullspace of a matrix consists of all vectors <span class="math inline">\(x\)</span> such that <span class="math inline">\(A x = 0 .\)</span> It is denoted by <span class="math inline">\(N ( A ) .\)</span> It is a subspace of <span class="math inline">\(\mathbf { R } ^ { n } ,\)</span> just as the column space was a subspace of <span class="math inline">\(\mathbf { R } ^ { m } .\)</span></p>
+<p><span class="math inline">\(A x _ { p } = b\)</span> and <span class="math inline">\(A x _ { n } = 0 \quad\)</span> produce <span class="math inline">\(\quad A \left( x _ { p } + x _ { n } \right) = b\)</span></p>
+<p><span class="math display">\[R x = \left[ \begin{array} { l l l l } { 1 } &amp; { 3 } &amp; { 0 } &amp; { - 1 } \\ { 0 } &amp; { 0 } &amp; { 1 } &amp; { 1 } \\ { 0 } &amp; { 0 } &amp; { 0 } &amp; { 0 } \end{array} \right] \left[ \begin{array} { l } { u } \\ { v } \\ { w } \\ { y } \end{array} \right] = \left[ \begin{array} { l } { 0 } \\ { 0 } \\ { 0 } \end{array} \right]\]</span> The unknowns <span class="math inline">\(u , v , w , y\)</span> go into two groups. One group contains the pivot variables, those that correspond to columns with pivots.</p>
+<p>If <span class="math inline">\(A x = 0\)</span> has more unknowns than equations <span class="math inline">\(( n &gt; m ) ,\)</span> it has at least one special solution: There are more solutions than the trivial <span class="math inline">\(x = 0\)</span></p>
+<p><span class="math inline">\(x _ { \mathrm{complete} } = x _ { \mathrm{particular} } + x _ {\mathrm{ nullspace }}\)</span></p>
+<p>The columns of A are independent exactly when <span class="math inline">\(N ( A ) = \{\)</span> zero vector <span class="math inline">\(\}\)</span></p>
+<h2 id="basis">Basis</h2>
+<p>Suppose <span class="math inline">\(c _ { 1 } v _ { 1 } + \cdots + c _ { k } v _ { k } = 0\)</span> only happens when <span class="math inline">\(c _ { 1 } = \cdots = c _ { k } = 0 .\)</span> Then the vectors <span class="math inline">\(v _ { 1 } , \ldots , v _ { k }\)</span> are linearly independent. If any <span class="math inline">\(c ^ { \prime }\)</span> are nonzero, the <span class="math inline">\(v ^ { \prime } \mathrm { s }\)</span> are linearly dependent. One vector is a combination of the others.</p>
+<p>To check any set of vectors <span class="math inline">\(v _ { 1 } , \ldots , v _ { n }\)</span> for independence, put them in the columns of <span class="math inline">\(A .\)</span> Then solve the system <span class="math inline">\(A c = 0 ;\)</span> the vectors are dependent if there is a solution other than <span class="math inline">\(c = 0 .\)</span> With no free variables ( rank is <span class="math inline">\(n\)</span>) , there is no nullspace except <span class="math inline">\(c = 0 ;\)</span> the vectors are independent. If the rank is less than <span class="math inline">\(n ,\)</span> at least one free variable can be nonzero and the columns are dependent.</p>
+<p>A set of n vectors in <span class="math inline">\(\mathbf { R } ^ { m }\)</span> must be linearly dependent if <span class="math inline">\(n &gt; m\)</span></p>
+<p>A basis for <span class="math inline">\(\mathrm { V }\)</span> is a sequence of vectors having two properties at once:</p>
+<ol style="list-style-type: decimal">
+<li><p>The vectors are linearly independent (not too many vectors).</p></li>
+<li><p>They span the space V (not too few vectors).</p></li>
 </ol>
-<p>Any two bases for a vector space $\mathbf { V }$ contain the same number<br>of vec- tors. This number, which is shared by all bases and expresses<br>the number of $\cdot$ degrees of freedom” of the space, is the dimension<br>of $\mathbf { V } .$</p>
-<p>If $v _ { 1 } , \ldots , v _ { m }$ and $w _ { 1 } , \ldots , w _ { n }$<br>are both bases for the same vector space, then $m = n .$ The number of<br>vectors is the same.</p>
-<p>Suppose there are more $w ^ { \prime }$ s than<br>$v ^ { \prime } \mathrm { s } ( n &gt; m ) .$ We will arrive at a<br>contradiction. Since the $v ^ { \prime }$ s form a basis, they must span<br>the space. Every $w _ { j }$ can be written as a combination of the v’s:<br>If $w _ { 1 } = a _ { 11 } v _ { 1 } + \cdots + a _ { m 1 } v _ { m } ,$<br>this is the first column of a matrix multiplication $V A :$<br>$$W = \left[ \begin{array} { l l l l } { w _ { 1 } } &amp; { w _ { 2 } } &amp; { \cdots } &amp; { w _ { n } } \end{array} \right] = \left[ \begin{array} { c c c } { v _ { 1 } } &amp; { \cdots } &amp; { v _ { m } } \end{array} \right] \left[ \begin{array} { c } { a _ { 11 } } \ { \vdots } \ { a _ { m 1 } } \end{array} \right] = V A$$<br>We don’t know each $a _ { i j } ,$ but we know the shape of $A$ (it is<br>$m$ by $n ) .$ The second vector $w _ { 2 }$ is also a combination of<br>the $v ^ { \prime }$ . The coefficients in that combination fill the<br>second column of $A .$ The key is that $A$ has a row for every $v$ and a<br>column for every $w . A$ is a short, wide matrix, since $n &gt; m .$ There<br>is a nonzero solution to $A x = 0 .$ Then $VA x = 0$ which is $Wx = 0 .$<br>A combination of the $w$ ’s gives zero! The $w ^ { \prime }$ s could not<br>be a basis $-$ so we cannot have $n &gt; m$</p>
-<p>If $m &gt; n$ we exchange the $v ^ { \prime }$ s and $w ^ { \prime }$ and<br>repeat the same steps. The only way to avoid a contradiction is to have<br>$m = n .$ This completes the proof that $m = n .$ To repeat: The<br>dimension of a space is the number of vectors in every basis.</p>
-<p>The row space of $A$ has the same dimension $r$ as the row space of<br>$U ,$ and it has the same bases, because the row spaces of $A$ and $U ($<br>and $R )$ are the same.</p>
-<p>The dimension of the column space $C ( A )$ equals the rank $r ,$ which<br>also equals the dimension of the row space: The number of independent<br>columns equals the number of independent rows. A basis for $C ( A )$ is<br>formed by the $r$ columns of $A$ that correspond, in $U ,$ to the<br>columns containing pivots.</p>
-<p>Roughly speaking, an inverse exists only when the rank is as large as<br>possible.</p>
-<h1 id="Important"><a href="#Important" class="headerlink" title="Important"></a>Important</h1><h2 id="Eigenvalues"><a href="#Eigenvalues" class="headerlink" title="Eigenvalues"></a>Eigenvalues</h2><p>Suppose the $n$ by $n$ matrix $A$ has $n$ linearly independent<br>eigenvectors. If these eigenvectors are the columns of a matrix $S ,$<br>then $S ^ { - 1 } A S$ is a diagonal matrix $\Lambda .$ The eigenvalues<br>of $A$ are on the diagonal of $\Lambda $</p>
+<p>Any two bases for a vector space <span class="math inline">\(\mathbf { V }\)</span> contain the same number of vec- tors. This number, which is shared by all bases and expresses the number of <span class="math inline">\(\cdot\)</span> degrees of freedom&quot; of the space, is the dimension of <span class="math inline">\(\mathbf { V } .\)</span></p>
+<p>If <span class="math inline">\(v _ { 1 } , \ldots , v _ { m }\)</span> and <span class="math inline">\(w _ { 1 } , \ldots , w _ { n }\)</span> are both bases for the same vector space, then <span class="math inline">\(m = n .\)</span> The number of vectors is the same.</p>
+<p>Suppose there are more <span class="math inline">\(w ^ { \prime }\)</span> s than <span class="math inline">\(v ^ { \prime } \mathrm { s } ( n &gt; m ) .\)</span> We will arrive at a contradiction. Since the <span class="math inline">\(v ^ { \prime }\)</span> s form a basis, they must span the space. Every <span class="math inline">\(w _ { j }\)</span> can be written as a combination of the v’s: If <span class="math inline">\(w _ { 1 } = a _ { 11 } v _ { 1 } + \cdots + a _ { m 1 } v _ { m } ,\)</span> this is the first column of a matrix multiplication <span class="math inline">\(V A :\)</span> <span class="math display">\[W = \left[ \begin{array} { l l l l } { w _ { 1 } } &amp; { w _ { 2 } } &amp; { \cdots } &amp; { w _ { n } } \end{array} \right] = \left[ \begin{array} { c c c } { v _ { 1 } } &amp; { \cdots } &amp; { v _ { m } } \end{array} \right] \left[ \begin{array} { c } { a _ { 11 } } \\ { \vdots } \\ { a _ { m 1 } } \end{array} \right] = V A\]</span> We don’t know each <span class="math inline">\(a _ { i j } ,\)</span> but we know the shape of <span class="math inline">\(A\)</span> (it is <span class="math inline">\(m\)</span> by <span class="math inline">\(n ) .\)</span> The second vector <span class="math inline">\(w _ { 2 }\)</span> is also a combination of the <span class="math inline">\(v ^ { \prime }\)</span> . The coefficients in that combination fill the second column of <span class="math inline">\(A .\)</span> The key is that <span class="math inline">\(A\)</span> has a row for every <span class="math inline">\(v\)</span> and a column for every <span class="math inline">\(w . A\)</span> is a short, wide matrix, since <span class="math inline">\(n &gt; m .\)</span> There is a nonzero solution to <span class="math inline">\(A x = 0 .\)</span> Then <span class="math inline">\(VA x = 0\)</span> which is <span class="math inline">\(Wx = 0 .\)</span> A combination of the <span class="math inline">\(w\)</span> ’s gives zero! The <span class="math inline">\(w ^ { \prime }\)</span> s could not be a basis <span class="math inline">\(-\)</span> so we cannot have <span class="math inline">\(n &gt; m\)</span></p>
+<p>If <span class="math inline">\(m &gt; n\)</span> we exchange the <span class="math inline">\(v ^ { \prime }\)</span> s and <span class="math inline">\(w ^ { \prime }\)</span> and repeat the same steps. The only way to avoid a contradiction is to have <span class="math inline">\(m = n .\)</span> This completes the proof that <span class="math inline">\(m = n .\)</span> To repeat: The dimension of a space is the number of vectors in every basis.</p>
+<p>The row space of <span class="math inline">\(A\)</span> has the same dimension <span class="math inline">\(r\)</span> as the row space of <span class="math inline">\(U ,\)</span> and it has the same bases, because the row spaces of <span class="math inline">\(A\)</span> and <span class="math inline">\(U (\)</span> and <span class="math inline">\(R )\)</span> are the same.</p>
+<p>The dimension of the column space <span class="math inline">\(C ( A )\)</span> equals the rank <span class="math inline">\(r ,\)</span> which also equals the dimension of the row space: The number of independent columns equals the number of independent rows. A basis for <span class="math inline">\(C ( A )\)</span> is formed by the <span class="math inline">\(r\)</span> columns of <span class="math inline">\(A\)</span> that correspond, in <span class="math inline">\(U ,\)</span> to the columns containing pivots.</p>
+<p>Roughly speaking, an inverse exists only when the rank is as large as possible.</p>
+<h1 id="important">Important</h1>
+<h2 id="eigenvalues">Eigenvalues</h2>
+<p>Suppose the <span class="math inline">\(n\)</span> by <span class="math inline">\(n\)</span> matrix <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> linearly independent eigenvectors. If these eigenvectors are the columns of a matrix <span class="math inline">\(S ,\)</span> then <span class="math inline">\(S ^ { - 1 } A S\)</span> is a diagonal matrix <span class="math inline">\(\Lambda .\)</span> The eigenvalues of <span class="math inline">\(A\)</span> are on the diagonal of $$</p>
 <p><strong>Any matrix with distinct eigenvalues can be diagonalized.</strong></p>
-<p>Not all matrices possess $n$ linearly independent eigenvectors, so not<br>all matrices are diagonalizable.</p>
-<p>Diagonalizability of A depends on enough eigenvectors.<br>Invertibility of A depends on nonzero eigenvalues.<br>Diagonalization can fail only if there are repeated eigenvalues.</p>
-<p>Diagonalizable matrices share the same eigenvector matrix $S$ if and<br>only if $A B = B A$</p>
-<ol>
-<li><p> Every symmetric matrix (and Hermitian matrix) has real eigenvalues.</p>
-</li>
-<li><p> Its eigenvectors can be chosen to be orthonormal.</p>
-</li>
+<p>Not all matrices possess <span class="math inline">\(n\)</span> linearly independent eigenvectors, so not all matrices are diagonalizable.</p>
+<p>Diagonalizability of A depends on enough eigenvectors.<br />
+Invertibility of A depends on nonzero eigenvalues.<br />
+Diagonalization can fail only if there are repeated eigenvalues.</p>
+<p>Diagonalizable matrices share the same eigenvector matrix <span class="math inline">\(S\)</span> if and only if <span class="math inline">\(A B = B A\)</span></p>
+<ol style="list-style-type: decimal">
+<li><p>Every symmetric matrix (and Hermitian matrix) has real eigenvalues.</p></li>
+<li><p>Its eigenvectors can be chosen to be orthonormal.</p></li>
 </ol>
-<h2 id="complex"><a href="#complex" class="headerlink" title="complex"></a>complex</h2><p>A real symmetric matrix can be factored into<br>$A = Q \Lambda Q ^ { \mathrm { T } } .$ Its orthonormal eigenvectors are<br>in the orthogonal matrix $Q$ and its eigenvalues are in $\Lambda .$</p>
+<h2 id="complex">complex</h2>
+<p>A real symmetric matrix can be factored into <span class="math inline">\(A = Q \Lambda Q ^ { \mathrm { T } } .\)</span> Its orthonormal eigenvectors are in the orthogonal matrix <span class="math inline">\(Q\)</span> and its eigenvalues are in <span class="math inline">\(\Lambda .\)</span></p>
 <p>A complex matrix with orthonormal columns is called a unitary matrix.</p>
-<p>If $A$ is Hermitian then $K = i A$ is skew-Hermitian.</p>
-<p>Suppose that $B = M ^ { - 1 } A M .$ Then $A$ and $B$ have the same<br>eigenvalues. Every eigenvector $x$ of $A$ corresponds to an eigenvector<br>$M ^ { - 1 } x$ of $B .$</p>
-<p>The matrices $A$ and $B$ that represent the same linear transformation<br>$T$ with respect to two different bases (the $v ^ { \prime }$ s and the<br>$V ^ { \prime }$ s) are similar:</p>
-<p>There is a unitary matrix $M = U$ such that $U ^ { - 1 } A U = T$ is<br>triangular. The eigenvalues of $A$ appear along the diagonal of this<br>similar matrix $T .$</p>
-<p><strong>Spectral Theorem</strong> Every real symmetric $A$ can be diagonalized by an<br>orthogonal matrix $Q .$ Every Hermitian matrix can be diagonalized by a<br>unitary $U :$<br>$$\begin{aligned} Q ^ { - 1 } A Q = \Lambda \quad&amp; \text { or } \quad A = Q \Lambda Q ^ { \mathrm { T } } \ U ^ { - 1 } A U = \Lambda\quad &amp; \text { or } \quad A = U \Lambda U ^ { \mathrm { H } } \end{aligned}$$<br>The columns of $Q ($ or $U )$ contain orthonormal eigenvectors of $A$</p>
-<h2 id="Normal"><a href="#Normal" class="headerlink" title="Normal"></a>Normal</h2><p>The matrix $N$ is normal if it commutes with<br>$$N N ^ { \mathrm { H } } = N ^ { \mathrm { H } } N .$$<br> For such matrices, and no others, the triangular $T = U ^ { - 1 } N U$ is the<br>diagonal $\Lambda$ Normal matrices are exactly those that have a<br>complete set of orthonormal eigenvectors.</p>
-<ol>
-<li><p>$A$ is diagonalizable: The columns of $S$ are eigenvectors and<br> $S ^ { - 1 } A S = \Lambda$</p>
-</li>
-<li><p>$A$ is arbitrary: The columns of M include “generalized<br> eigenvectors” of $A ,$ and the Jordan form $M ^ { - 1 } A M = J$ is<br> block diagonal.</p>
-</li>
-<li><p>$A$ is arbitrary: The unitary $U$ can be chosen so that<br> $U ^ { - 1 } A U = T$ is triangular.</p>
-</li>
-<li><p>$A$ is normal, $A A ^ { \mathrm { H } } = A ^ { \mathrm { H } } A :$<br> then $U$ can be chosen so that $U ^ { - 1 } A U = \Lambda$ <em>Special<br> cases of normal matrices, all with orthonormal eigenvectors:</em></p>
-<ol>
-<li><p>If $A = A ^ { H }$ is Hermitian, then all $\lambda _ { i }$ are<br> real.</p>
-</li>
-<li><p>If $A = A ^ { T }$ is real symmetric, then $\Lambda$ is real and<br> $U = Q$ is orthogonal.</p>
-</li>
-<li><p>If $A = - A ^ { H }$ is skew-Hermitian, then all<br> $\lambda _ { i }$ are purely imaginary.</p>
-</li>
-<li><p>If $A$ is orthogonal or unitary, then all<br> $\left| \lambda _ { i } \right| = 1$ are on the unit circle.</p>
-</li>
+<p>If <span class="math inline">\(A\)</span> is Hermitian then <span class="math inline">\(K = i A\)</span> is skew-Hermitian.</p>
+<p>Suppose that <span class="math inline">\(B = M ^ { - 1 } A M .\)</span> Then <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same eigenvalues. Every eigenvector <span class="math inline">\(x\)</span> of <span class="math inline">\(A\)</span> corresponds to an eigenvector <span class="math inline">\(M ^ { - 1 } x\)</span> of <span class="math inline">\(B .\)</span></p>
+<p>The matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> that represent the same linear transformation <span class="math inline">\(T\)</span> with respect to two different bases (the <span class="math inline">\(v ^ { \prime }\)</span> s and the <span class="math inline">\(V ^ { \prime }\)</span> s) are similar:</p>
+<p>There is a unitary matrix <span class="math inline">\(M = U\)</span> such that <span class="math inline">\(U ^ { - 1 } A U = T\)</span> is triangular. The eigenvalues of <span class="math inline">\(A\)</span> appear along the diagonal of this similar matrix <span class="math inline">\(T .\)</span></p>
+<p><strong>Spectral Theorem</strong> Every real symmetric <span class="math inline">\(A\)</span> can be diagonalized by an orthogonal matrix <span class="math inline">\(Q .\)</span> Every Hermitian matrix can be diagonalized by a unitary <span class="math inline">\(U :\)</span> <span class="math display">\[\begin{aligned} Q ^ { - 1 } A Q = \Lambda \quad&amp; \text { or } \quad A = Q \Lambda Q ^ { \mathrm { T } } \\ U ^ { - 1 } A U = \Lambda\quad &amp; \text { or } \quad A = U \Lambda U ^ { \mathrm { H } } \end{aligned}\]</span> The columns of <span class="math inline">\(Q (\)</span> or <span class="math inline">\(U )\)</span> contain orthonormal eigenvectors of <span class="math inline">\(A\)</span></p>
+<h2 id="normal">Normal</h2>
+<p>The matrix <span class="math inline">\(N\)</span> is normal if it commutes with <span class="math display">\[N N ^ { \mathrm { H } } = N ^ { \mathrm { H } } N .\]</span> For such matrices, and no others, the triangular <span class="math inline">\(T = U ^ { - 1 } N U\)</span> is the diagonal <span class="math inline">\(\Lambda\)</span> Normal matrices are exactly those that have a complete set of orthonormal eigenvectors.</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(A\)</span> is diagonalizable: The columns of <span class="math inline">\(S\)</span> are eigenvectors and <span class="math inline">\(S ^ { - 1 } A S = \Lambda\)</span></p></li>
+<li><p><span class="math inline">\(A\)</span> is arbitrary: The columns of M include “generalized eigenvectors” of <span class="math inline">\(A ,\)</span> and the Jordan form <span class="math inline">\(M ^ { - 1 } A M = J\)</span> is block diagonal.</p></li>
+<li><p><span class="math inline">\(A\)</span> is arbitrary: The unitary <span class="math inline">\(U\)</span> can be chosen so that <span class="math inline">\(U ^ { - 1 } A U = T\)</span> is triangular.</p></li>
+<li><p><span class="math inline">\(A\)</span> is normal, <span class="math inline">\(A A ^ { \mathrm { H } } = A ^ { \mathrm { H } } A :\)</span> then <span class="math inline">\(U\)</span> can be chosen so that <span class="math inline">\(U ^ { - 1 } A U = \Lambda\)</span> <em>Special cases of normal matrices, all with orthonormal eigenvectors:</em></p>
+<ol style="list-style-type: decimal">
+<li><p>If <span class="math inline">\(A = A ^ { H }\)</span> is Hermitian, then all <span class="math inline">\(\lambda _ { i }\)</span> are real.</p></li>
+<li><p>If <span class="math inline">\(A = A ^ { T }\)</span> is real symmetric, then <span class="math inline">\(\Lambda\)</span> is real and <span class="math inline">\(U = Q\)</span> is orthogonal.</p></li>
+<li><p>If <span class="math inline">\(A = - A ^ { H }\)</span> is skew-Hermitian, then all <span class="math inline">\(\lambda _ { i }\)</span> are purely imaginary.</p></li>
+<li><p>If <span class="math inline">\(A\)</span> is orthogonal or unitary, then all <span class="math inline">\(\left| \lambda _ { i } \right| = 1\)</span> are on the unit circle.</p></li>
+</ol></li>
 </ol>
-</li>
+<h1 id="positive-definite">Positive definite</h1>
+<p>$ a x ^ { 2 } + 2 b x y + c y ^ { 2 }$ is positive definite if and only if <span class="math inline">\(a &gt; 0\)</span> and <span class="math inline">\(a c &gt; b ^ { 2 } .\)</span> Any <span class="math inline">\(f ( x , y )\)</span> has a minimum at a point where <span class="math inline">\(\partial F / \partial x = \partial F / \partial y = 0\)</span> with</p>
+<p><span class="math display">\[\frac { \partial ^ { 2 } F } { \partial x ^ { 2 } } &gt; 0 \quad \qquad \left[ \frac { \partial ^ { 2 }F  } { \partial x ^ { 2 } } \right] \left[ \frac { \partial  ^ { 2 }F } { \partial y ^ { 2 } } \right] &gt; \left[ \frac { \partial ^ { 2 } F } { \partial x \partial y } \right] ^ { 2 }\]</span></p>
+<p><span class="math display">\[F ( x ) = F ( 0 ) + x ^ { \mathrm { T } } ( \text{ grad } F ) + \frac { 1 } { 2 } x ^ { \mathrm { T } } A x +\text{higher order terms}\]</span></p>
+<p>At a stationary point, <span class="math inline">\(\nabla F = \left( \partial F / \partial x _ { 1 } , \ldots , \partial F / \partial x _ { n } \right)\)</span> is a vector of zeros.</p>
+<p><span class="math display">\[a x ^ { 2 } + 2 b x y + c y ^ { 2 } = a \left( x + \frac { b } { a } y \right) ^ { 2 } + \frac { a c - b ^ { 2 } } { a } y ^ { 2 }\]</span></p>
+<p>Each of the following tests is a necessary and sufficient condition for the real symmetric matrix <span class="math inline">\(A\)</span> to be positive definite:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(x ^ { \mathrm { T } } k x &gt; 0\)</span> for all nonzero real vectors <span class="math inline">\(x\)</span> .</p></li>
+<li><p>All the eigenvalues of <span class="math inline">\(A\)</span> satisfy <span class="math inline">\(\lambda _ { i } &gt; 0\)</span></p></li>
+<li><p>All the upper left submatrices <span class="math inline">\(A _ { k }\)</span> have positive determinants.</p></li>
+<li><p>All the pivots (without row exchanges) satisfy <span class="math inline">\(d _ { k } &gt; 0 .\)</span></p></li>
+<li><p>There is a matrix <span class="math inline">\(R\)</span> with independent columns such that <span class="math inline">\(A = R ^ { \mathrm { T } } R .\)</span></p></li>
 </ol>
-<h1 id="Positive-definite"><a href="#Positive-definite" class="headerlink" title="Positive definite"></a>Positive definite</h1><p>$ a x ^ { 2 } + 2 b x y + c y ^ { 2 }$ is positive definite if and only<br>if $a &gt; 0$ and $a c &gt; b ^ { 2 } .$ Any $f ( x , y )$ has a minimum at a<br>point where $\partial F / \partial x = \partial F / \partial y = 0$ with</p>
-<p>$$\frac { \partial ^ { 2 } F } { \partial x ^ { 2 } } &gt; 0 \quad \qquad \left[ \frac { \partial ^ { 2 }F  } { \partial x ^ { 2 } } \right] \left[ \frac { \partial  ^ { 2 }F } { \partial y ^ { 2 } } \right] &gt; \left[ \frac { \partial ^ { 2 } F } { \partial x \partial y } \right] ^ { 2 }$$</p>
-<p>$$F ( x ) = F ( 0 ) + x ^ { \mathrm { T } } ( \text{ grad } F ) + \frac { 1 } { 2 } x ^ { \mathrm { T } } A x +\text{higher order terms}$$</p>
-<p>At a stationary point,<br>$\nabla F = \left( \partial F / \partial x _ { 1 } , \ldots , \partial F / \partial x _ { n } \right)$<br>is a vector of zeros.</p>
-<p>$$a x ^ { 2 } + 2 b x y + c y ^ { 2 } = a \left( x + \frac { b } { a } y \right) ^ { 2 } + \frac { a c - b ^ { 2 } } { a } y ^ { 2 }$$</p>
-<p>Each of the following tests is a necessary and sufficient condition for<br>the real symmetric matrix $A$ to be positive definite:</p>
-<ol>
-<li><p> $x ^ { \mathrm { T } } k x &gt; 0$ for all nonzero real vectors $x$ .</p>
-</li>
-<li><p> All the eigenvalues of $A$ satisfy $\lambda _ { i } &gt; 0$</p>
-</li>
-<li><p>All the upper left submatrices $A _ { k }$ have positive<br> determinants.</p>
-</li>
-<li><p> All the pivots (without row exchanges) satisfy $d _ { k } &gt; 0 .$</p>
-</li>
-<li><p>There is a matrix $R$ with independent columns such that<br> $A = R ^ { \mathrm { T } } R .$</p>
-</li>
+<p>The key is to recognize <span class="math inline">\(x ^ { \mathrm { T } } A x\)</span> as <span class="math inline">\(x ^ { \mathrm { T } } R ^ { \mathrm { T } } R x = ( R x ) ^ { \mathrm { T } } ( R x )\)</span></p>
+<p>symmetric matrix <span class="math inline">\(A\)</span> to be positive semidefinite:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(x ^ { \mathrm { T } } A x \geq 0\)</span> for all vectors <span class="math inline">\(x\)</span> (this defines positive semidefinite)</p></li>
+<li><p>All the eigenvalues of <span class="math inline">\(A\)</span> satisfy <span class="math inline">\(\lambda _ { i } \geq 0\)</span></p></li>
+<li><p>No principal submatrices have negative determinants.</p></li>
+<li><p>No pivots are negative.</p></li>
+<li><p>There is a matrix <span class="math inline">\(R ,\)</span> possibly with dependent columns, such that <span class="math inline">\(A = R ^ { \mathrm { T } } R\)</span></p></li>
 </ol>
-<p>The key is to recognize $x ^ { \mathrm { T } } A x$ as<br>$x ^ { \mathrm { T } } R ^ { \mathrm { T } } R x = ( R x ) ^ { \mathrm { T } } ( R x )$</p>
-<p>symmetric matrix $A$ to be positive semidefinite:</p>
-<ol>
-<li><p>$x ^ { \mathrm { T } } A x \geq 0$ for all vectors $x$ (this defines<br> positive semidefinite)</p>
-</li>
-<li><p> All the eigenvalues of $A$ satisfy $\lambda _ { i } \geq 0$</p>
-</li>
-<li><p> No principal submatrices have negative determinants.</p>
-</li>
-<li><p> No pivots are negative.</p>
-</li>
-<li><p>There is a matrix $R ,$ possibly with dependent columns, such that<br> $A = R ^ { \mathrm { T } } R$</p>
-</li>
-</ol>
-<p>$$5 u ^ { 2 } + 8 u v + v ^ { 2 } = \left( \frac { u } { \sqrt { 2 } } - \frac { v } { \sqrt { 2 } } \right) ^ { 2 } + 9 \left( \frac { u } { \sqrt { 2 } } + \frac { v } { \sqrt { 2 } } \right) ^ { 2 } = 1$$</p>
-<p>Any ellipsoid $x ^ { \mathrm { T } } A x = 1$ can be simplified in the<br>same way. The key step is to diago- nalize<br>$A = Q \Lambda Q ^ { \mathrm { T } } .$ We straightened the picture by<br>rotating the axes. Algebraically, the change to $y = Q ^ {T} x$ produces<br>a sum of squares:<br>$$x ^ { \mathrm { T } } A x = \left( x ^ { \mathrm { T } } Q \right) \Lambda \left( Q ^ { \mathrm { T } } x \right) = y ^ { \mathrm { T } } \Lambda y = \lambda _ { 1 } y _ { 1 } ^ { 2 } + \cdots + \lambda _ { n } y _ { n } ^ { 2 } = 1$$</p>
-<p>Suppose $A = Q \Lambda Q ^ { \mathrm { T } }$ with<br>$\lambda _ { i } &gt; 0 .$ Rotating $y = Q ^ { \mathrm { T } } x$<br>simplifies $x ^ { \mathrm { T } } A x = 1 :$<br>$$x ^ { \mathrm { T } } Q \Lambda Q ^ { \mathrm { T } } x = 1  \qquad y ^ { \mathrm { T } } \Lambda y = 1 ,\qquad \lambda _ { 1 } y _ { 1 } ^ { 2 } + \cdots + \lambda _ { n } y _ { n } ^ { 2 } = 1$$</p>
-<p>Congruence transformation $ A \rightarrow C ^ { \mathrm { T } } A C$ for<br>some nonsingular $C .$</p>
-<p>$C ^ {T } A C $ has the same number of positive eigenvalues, negative<br>eigenvalues, and zero eigenvalues as $A .$</p>
-<p>For any symmetric matrix $A ,$ the signs of the pivots agree with the<br>signs of the eigenvalues. The eigenvalue matrix $\Lambda$ and the pivot<br>matrix $D$ have the same number of positive entries, negative entries,<br>and zero entries.</p>
-<p>The graph of $$P ( x ) = \frac { 1 } { 2 } A x ^ { 2 } - b x$$ has zero<br>slope when $$\frac { d P } { d x } = A x - b = 0$$</p>
-<p>If $A$ is symmetric positive definite, then<br>$$P ( x ) = \frac { 1 } { 2 } x ^ { \mathrm { T } } A x - x ^ { T } b$$<br>reaches its minimum at the point where $A x = b .$ At that point<br>$$P _ { \min } = - \frac { 1 } { 2 } b ^ { \mathrm { T } } A ^ { - 1 } b$$</p>
-<p>$$P _ { \min } = \frac { 1 } { 2 } \left( A ^ { - 1 } b \right) ^ { \mathrm { T } } A \left( A ^ { - 1 } b \right) - \left( A ^ { - 1 } b \right) ^ { \mathrm { T } } b = - \frac { 1 } { 2 } b ^ { \mathrm { T } } A ^ { - 1 } b$$</p>
-<p>$$L ( x , y ) = P ( x ) + y ^ { \mathrm { T } } ( C x - d ) = \frac { 1 } { 2 } x ^ { \mathrm { T } } A x - x ^ { \mathrm { T } } b + x ^ { \mathrm { T } } C ^ { \mathrm { T } } y - y ^ { \mathrm { T } } d$$</p>
-<p>$$\quad P _ { C / \min } = P _ { \min } + \frac { 1 } { 2 } y ^ { \mathrm { T } } \left( C A ^ { - 1 } b - d \right) \geq P _ { \min }$$</p>
+<p><span class="math display">\[5 u ^ { 2 } + 8 u v + v ^ { 2 } = \left( \frac { u } { \sqrt { 2 } } - \frac { v } { \sqrt { 2 } } \right) ^ { 2 } + 9 \left( \frac { u } { \sqrt { 2 } } + \frac { v } { \sqrt { 2 } } \right) ^ { 2 } = 1\]</span></p>
+<p>Any ellipsoid <span class="math inline">\(x ^ { \mathrm { T } } A x = 1\)</span> can be simplified in the same way. The key step is to diago- nalize <span class="math inline">\(A = Q \Lambda Q ^ { \mathrm { T } } .\)</span> We straightened the picture by rotating the axes. Algebraically, the change to <span class="math inline">\(y = Q ^ {T} x\)</span> produces a sum of squares: <span class="math display">\[x ^ { \mathrm { T } } A x = \left( x ^ { \mathrm { T } } Q \right) \Lambda \left( Q ^ { \mathrm { T } } x \right) = y ^ { \mathrm { T } } \Lambda y = \lambda _ { 1 } y _ { 1 } ^ { 2 } + \cdots + \lambda _ { n } y _ { n } ^ { 2 } = 1\]</span></p>
+<p>Suppose <span class="math inline">\(A = Q \Lambda Q ^ { \mathrm { T } }\)</span> with <span class="math inline">\(\lambda _ { i } &gt; 0 .\)</span> Rotating <span class="math inline">\(y = Q ^ { \mathrm { T } } x\)</span> simplifies <span class="math inline">\(x ^ { \mathrm { T } } A x = 1 :\)</span> <span class="math display">\[x ^ { \mathrm { T } } Q \Lambda Q ^ { \mathrm { T } } x = 1  \qquad y ^ { \mathrm { T } } \Lambda y = 1 ,\qquad \lambda _ { 1 } y _ { 1 } ^ { 2 } + \cdots + \lambda _ { n } y _ { n } ^ { 2 } = 1\]</span></p>
+<p>Congruence transformation $ A C ^ {  } A C$ for some nonsingular <span class="math inline">\(C .\)</span></p>
+<p>$C ^ {T } A C $ has the same number of positive eigenvalues, negative eigenvalues, and zero eigenvalues as <span class="math inline">\(A .\)</span></p>
+<p>For any symmetric matrix <span class="math inline">\(A ,\)</span> the signs of the pivots agree with the signs of the eigenvalues. The eigenvalue matrix <span class="math inline">\(\Lambda\)</span> and the pivot matrix <span class="math inline">\(D\)</span> have the same number of positive entries, negative entries, and zero entries.</p>
+<p>The graph of <span class="math display">\[P ( x ) = \frac { 1 } { 2 } A x ^ { 2 } - b x\]</span> has zero slope when <span class="math display">\[\frac { d P } { d x } = A x - b = 0\]</span></p>
+<p>If <span class="math inline">\(A\)</span> is symmetric positive definite, then <span class="math display">\[P ( x ) = \frac { 1 } { 2 } x ^ { \mathrm { T } } A x - x ^ { T } b\]</span> reaches its minimum at the point where <span class="math inline">\(A x = b .\)</span> At that point <span class="math display">\[P _ { \min } = - \frac { 1 } { 2 } b ^ { \mathrm { T } } A ^ { - 1 } b\]</span></p>
+<p><span class="math display">\[P _ { \min } = \frac { 1 } { 2 } \left( A ^ { - 1 } b \right) ^ { \mathrm { T } } A \left( A ^ { - 1 } b \right) - \left( A ^ { - 1 } b \right) ^ { \mathrm { T } } b = - \frac { 1 } { 2 } b ^ { \mathrm { T } } A ^ { - 1 } b\]</span></p>
+<p><span class="math display">\[L ( x , y ) = P ( x ) + y ^ { \mathrm { T } } ( C x - d ) = \frac { 1 } { 2 } x ^ { \mathrm { T } } A x - x ^ { \mathrm { T } } b + x ^ { \mathrm { T } } C ^ { \mathrm { T } } y - y ^ { \mathrm { T } } d\]</span></p>
+<p><span class="math display">\[\quad P _ { C / \min } = P _ { \min } + \frac { 1 } { 2 } y ^ { \mathrm { T } } \left( C A ^ { - 1 } b - d \right) \geq P _ { \min }\]</span></p>
 
+      </div>
+      
+      
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/15/2020-11-05-linear%20algebra%201/" data-id="ckpxcsx41000vm4uqcn9dhxoy" data-title="" class="article-share-link">Share</a>
-      
-      
-      
+    
+  <ul class="breadcrumb">
+          
+            <li><a href="/2021/">2021</a></li>
+            <li><a href="/2021/06/">06</a></li>
+            <li><a href="/2021/06/15/">15</a></li>
+            <li><a href="/2021/06/15/2020-11-05-linear%20algebra%201/">2020-11-05-LINEAR ALGEBRA 1</a></li>
+            <li><a href="/2021/06/15/2020-11-05-linear%20algebra%201//"></a></li>
+  </ul>
+
+    
+    
+    
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linear-calculation"><span class="nav-number">1.</span> <span class="nav-text">Linear Calculation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linear-space"><span class="nav-number">2.</span> <span class="nav-text">Linear Space</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#basis"><span class="nav-number">2.1.</span> <span class="nav-text">Basis</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#important"><span class="nav-number">3.</span> <span class="nav-text">Important</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#eigenvalues"><span class="nav-number">3.1.</span> <span class="nav-text">Eigenvalues</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#complex"><span class="nav-number">3.2.</span> <span class="nav-text">complex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#normal"><span class="nav-number">3.3.</span> <span class="nav-text">Normal</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#positive-definite"><span class="nav-number">4.</span> <span class="nav-text">Positive definite</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Wang Jinghui"
+      src="/images/Music.jpg">
+  <p class="site-author-name" itemprop="name">Wang Jinghui</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/SpaceInCode" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;SpaceInCode" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wangjhemail@gmail.com" title="E-Mail → mailto:wangjhemail@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wang Jinghui</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
     </footer>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2021/06/15/2020-11-04-%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%AC%E4%B8%89%E7%AB%A0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          经济学第三章
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2021/06/15/2020-11-05-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">学习之道</div>
-    </a>
-  
-</nav>
 
   
-</article>
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Introduction/">Introduction</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linear-Algebra/">Linear_Algebra</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Machine-Learning/">Machine_Learning</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Notes/">Reading Notes</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reading-Notes/">Reading_Notes</a></li></ul>
-    </div>
-  </div>
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
 
 
   
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
-    </div>
-  </div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/06/15/2020-11-04-%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%AC%AC%E4%B8%89%E7%AB%A0/">经济学第三章</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/15/2020-11-05-linear%20algebra%201/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/15/2020-11-05-%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%81%93/">学习之道</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/15/2020-11-14-Writing1/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/15/2020-11-06-%E5%88%AB%E6%83%B3%E6%91%86%E8%84%B1%E4%B9%A6/">别想摆脱书——艾柯卡里埃尔对话录</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
-</aside>
-        
-      </div>
-      <footer id="footer">
+
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
       
-      &copy; 2021 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
     
 
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
 
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
 </body>
 </html>
