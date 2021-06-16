@@ -111,12 +111,3 @@ sitemap:
   path: sitemap.xml
 baidusitemap:
   path: baidusitemap.xml
-
-# backup
-backup:
-    type: git
-    theme: next
-    message: Back up my blog
-    repository:
-       github: git@github.com:SpaceInCode/spaceincode.github.io.git,backup
-       coding: git@github.com:SpaceInCode/spaceincode.github.io.git,backup
