@@ -1,2 +1,1 @@
-## This is my blog.
-### Idea, Notes and Self-development
+## This is to back up my blog
