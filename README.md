@@ -1,1 +1,1 @@
-## This is to back up my blog
+## This is to back up my blog as well as my obsidian files.
