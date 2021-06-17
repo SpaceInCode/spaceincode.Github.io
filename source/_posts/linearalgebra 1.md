@@ -2,7 +2,7 @@
 layout: post
 title: linear algebra notes 1
 data: 2020-11-04
-description: Linear calculations
+description: Linear calculations and Basis
 categories: Linear Algebra 
 ---
 
