@@ -177,7 +177,7 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: 'PingFang SC', "Noto Sans SC", sans-serif;
+  font-family: "Noto Sans SC", sans-serif;
   font-size: 0.9em;
   line-height: 2;
 }
@@ -193,7 +193,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Oswald', 'PingFang SC', "Noto Sans SC", sans-serif;
+  font-family: 'Oswald', "Noto Sans SC", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -1010,7 +1010,7 @@ pre .javascript .function {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: 'PingFang SC', "Noto Sans SC", sans-serif;
+  font-family: "Noto Sans SC", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   margin: 0;
@@ -1218,7 +1218,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3240ff;
+  background: #6667a7;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
