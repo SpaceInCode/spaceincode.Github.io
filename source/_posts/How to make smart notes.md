@@ -1,3 +1,11 @@
+---
+title: how to make notes
+categories: Reading Notes
+tags: Methods
+date: 2021-06-25
+description: The methods of making note 
+---
+
 - # How to pay attention
 
   - Don't multitask. Pay attention to one task at a time.
