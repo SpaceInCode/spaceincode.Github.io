@@ -425,7 +425,7 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: PingFang SC
+    family: 
     size: 0.9
 
   # Font settings for site title (.site-title).
@@ -443,7 +443,7 @@ font:
   # Font settings for posts (.post-body).
   posts:
     external: true
-    family: 
+    family: PingFang SC
     size: 
 
   # Font settings for <code> and code blocks.
