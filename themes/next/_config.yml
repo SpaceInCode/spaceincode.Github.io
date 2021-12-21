@@ -425,8 +425,8 @@ font:
   # Global font settings used for all elements inside <body>.
   global:
     external: true
-    family: Heiti SC
-    size: 1.1
+    family: 
+    size: 
 
   # Font settings for site title (.site-title).
   title:
