@@ -36,7 +36,7 @@ melbourne_data.columns
 melbourne_data = melbourne_data.dropna(axis=0)
 ```
 
-## Selecting The Prediction Target.
+## Selecting The Prediction Target
 
 You can pull out a variable with **dot-notation**. This single column is stored in a **Series**, which is broadly like a DataFrame with only a single column of data.
 

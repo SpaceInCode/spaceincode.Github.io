@@ -7,28 +7,27 @@ categories: Linear Algebra
 ---
 
 
-Linear Space
-============
+## Linear Space
 
 A *Vector space* is a set $V$ along with an additiont on $V$ and a
 scalar multiplication on $V$ such that the following properties hold:
 
-1.  **commutativity**\
+1. **commutativity**\
     $u+v=v+u$ for all $u,v \in V$ ;
 
-2.  **associativity**\
+2. **associativity**\
     $(u+v)+w=u+(v+w) $ and $(ab)v=a(bv)$ for all $u,v,w  \in V $ and all
     $a,b \in \textbf{F}$;
 
-3.  **addictive identity**\
+3. **addictive identity**\
     there exists an element $0\in V$ such that $v+0=v$ for all $v\in V$;
 
-4.  **addicyive inverse**\
+4. **addicyive inverse**\
     for every $v\in V$ ,there exists $w \in V$ such that $v+w=0$;
 
-5.  **multiplicative identity** $1v=v$ for all $v \in V$
+5. **multiplicative identity** $1v=v$ for all $v \in V$
 
-6.  **distributive properties** $a(u+v)=au+av$ and $(a+b)v=av+bv$ for
+6. **distributive properties** $a(u+v)=au+av$ and $(a+b)v=av+bv$ for
     all $a,b\in \textbf{F}$ and all $u,v\in V$.
 
 A subset $U$ of $V$ is called a *subspace* of $V$ if $U$ is also a
@@ -50,8 +49,8 @@ $A x = 0 .$ It is denoted by $N ( A ) .$ It is a subspace of
 $\mathbf { R } ^ { n } ,$ just as the column space was a subspace of
 $\mathbf { R } ^ { m } .$
 
-$A x _ { p } = b$ and $A x _ { n } = 0 \quad$ produce
-$\quad A \left( x _ { p } + x _ { n } \right) = b$
+$A x _{ p } = b$ and $A x_ { n } = 0 \quad$ produce
+$\quad A \left( x _{ p } + x_ { n } \right) = b$
 
 $$R x = \left[ \begin{array} { l l l l } { 1 } & { 3 } & { 0 } & { - 1 } \\ { 0 } & { 0 } & { 1 } & { 1 } \\ { 0 } & { 0 } & { 0 } & { 0 } \end{array} \right] \left[ \begin{array} { l } { u } \\ { v } \\ { w } \\ { y } \end{array} \right] = \left[ \begin{array} { l } { 0 } \\ { 0 } \\ { 0 } \end{array} \right]$$
 The unknowns $u , v , w , y$ go into two groups. One group contains the
@@ -61,21 +60,20 @@ If $A x = 0$ has more unknowns than equations $( n > m ) ,$ it has at
 least one special solution: There are more solutions than the trivial
 $x = 0$
 
-$x _ { \mathrm{complete} } = x _ { \mathrm{particular} } + x _ {\mathrm{  nullspace }}$
+$x _{ \mathrm{complete} } = x_ { \mathrm{particular} } + x _ {\mathrm{  nullspace }}$
 
 The columns of A are independent exactly when $N ( A ) = \{$ zero vector
 $\}$
 
-Basis
------
+## Basis
 
-Suppose $c _ { 1 } v _ { 1 } + \cdots + c _ { k } v _ { k } = 0$ only
-happens when $c _ { 1 } = \cdots = c _ { k } = 0 .$ Then the vectors
-$v _ { 1 } , \ldots , v _ { k }$ are linearly independent. If any
+Suppose $c _{ 1 } v_ { 1 } + \cdots + c _{ k } v_ { k } = 0$ only
+happens when $c _{ 1 } = \cdots = c_ { k } = 0 .$ Then the vectors
+$v _{ 1 } , \ldots , v_ { k }$ are linearly independent. If any
 $c ^ { \prime }$ are nonzero, the $v ^ { \prime } \mathrm { s }$ are
 linearly dependent. One vector is a combination of the others.
 
-To check any set of vectors $v _ { 1 } , \ldots , v _ { n }$ for
+To check any set of vectors $v _{ 1 } , \ldots , v_ { n }$ for
 independence, put them in the columns of $A .$ Then solve the system
 $A c = 0 ;$ the vectors are dependent if there is a solution other than
 $c = 0 .$ With no free variables ( rank is $n$) , there is no nullspace
@@ -89,28 +87,28 @@ if $n > m$
 A basis for $\mathrm { V }$ is a sequence of vectors having two
 properties at once:
 
-1.  The vectors are linearly independent (not too many vectors).
+1. The vectors are linearly independent (not too many vectors).
 
-2.  They span the space V (not too few vectors).
+2. They span the space V (not too few vectors).
 
 Any two bases for a vector space $\mathbf { V }$ contain the same number
 of vec- tors. This number, which is shared by all bases and expresses
 the number of $\cdot$ degrees of freedom" of the space, is the dimension
 of $\mathbf { V } .$
 
-If $v _ { 1 } , \ldots , v _ { m }$ and $w _ { 1 } , \ldots , w _ { n }$
+If $v _{ 1 } , \ldots , v_ { m }$ and $w _{ 1 } , \ldots , w_ { n }$
 are both bases for the same vector space, then $m = n .$ The number of
 vectors is the same.
 
 Suppose there are more $w ^ { \prime }$ s than
 $v ^ { \prime } \mathrm { s } ( n > m ) .$ We will arrive at a
 contradiction. Since the $v ^ { \prime }$ s form a basis, they must span
-the space. Every $w _ { j }$ can be written as a combination of the v’s:
-If $w _ { 1 } = a _ { 11 } v _ { 1 } + \cdots + a _ { m 1 } v _ { m } ,$
+the space. Every $w _{ j }$ can be written as a combination of the v’s:
+If $w_ { 1 } = a _{ 11 } v_ { 1 } + \cdots + a _{ m 1 } v_ { m } ,$
 this is the first column of a matrix multiplication $V A :$
 $$W = \left[ \begin{array} { l l l l } { w _ { 1 } } & { w _ { 2 } } & { \cdots } & { w _ { n } } \end{array} \right] = \left[ \begin{array} { c c c } { v _ { 1 } } & { \cdots } & { v _ { m } } \end{array} \right] \left[ \begin{array} { c } { a _ { 11 } } \\ { \vdots } \\ { a _ { m 1 } } \end{array} \right] = V A$$
-We don’t know each $a _ { i j } ,$ but we know the shape of $A$ (it is
-$m$ by $n ) .$ The second vector $w _ { 2 }$ is also a combination of
+We don’t know each $a _{ i j } ,$ but we know the shape of $A$ (it is
+$m$ by $n ) .$ The second vector $w_ { 2 }$ is also a combination of
 the $v ^ { \prime }$ . The coefficients in that combination fill the
 second column of $A .$ The key is that $A$ has a row for every $v$ and a
 column for every $w . A$ is a short, wide matrix, since $n > m .$ There

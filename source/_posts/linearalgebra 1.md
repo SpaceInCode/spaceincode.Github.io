@@ -8,13 +8,13 @@ categories: Linear Algebra
 
 If the columns of $ A$ are linearly independent, then $Ax=b$ has exactly one solution for every $b$.
 
-It’s false. That is because there may be a case that $rank(A)<m$ , which means the vector $b$ couldn’t be expressed by $A$. 
+It’s false. That is because there may be a case that $rank(A)<m$ , which means the vector $b$ couldn’t be expressed by $A$.
 
 Given $n$ vectors $a_i$ with $m$ components, what are the shapes of $A,Q,R$ ?
 
 The expression is $$A_{m\times n} = Q_{m\times n}R_{n\times n}$$
 
-Suppose that $A=A_{m\times n}$, $B=B_{s\times t}$, $C=C_{s\times t}$ are matrices, then 
+Suppose that $A=A_{m\times n}$, $B=B_{s\times t}$, $C=C_{s\times t}$ are matrices, then
 $$
 rank \left[
     \begin{array}{cc}
@@ -48,7 +48,7 @@ Suppose $A$ is $m$ by $n$, $B$ is $n$ by $p$, and $AB = 0$. Prove
 $rankA+rankB\leq n$
 
 We have $dimA=n$, and also $dim(C(A^T))+dim(N(A))=n, rankA=dimC(A^T)$
-And 
+And
 
 $$
 AB=0, C(B)\subset N(A), \Rightarrow dimC(B)\leq dimN(A)
@@ -64,7 +64,7 @@ $$\begin{aligned}
 \mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)&=(\eta_1 \eta_2 \cdots \eta_n)B\\
 (\eta_1 \eta_2 \cdots \eta_n)&=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)X\end{aligned}$$
 
-It can be proved that: 
+It can be proved that:
 $$\begin{aligned}
 \mathscr{A}(\eta_1 \eta_2 \cdots \eta_n)
 &=[\mathscr{A}(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)]X\\&=(\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n)AX \\&=(\eta_1 \eta_2 \cdots \eta_n)X^{-1}AX\end{aligned}$$
@@ -73,7 +73,7 @@ We get $B=X^{-1}AX$
 
 Additionally, we add
 $$\mathscr{A}([\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]x)=\mathscr{A}(\alpha)=[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]Ax$$
-$$\mathscr{A}(\alpha)=Ax$$ 
+$$\mathscr{A}(\alpha)=Ax$$
 If we let $[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]=I$, $A$ is transforming effect. $x$ is the cofficient corrospond to the basis. $[\varepsilon_1 \varepsilon_2 \cdots \varepsilon_n]$ is the basis before transformation.
 
 When we do some proves, it is easy to use the basis reprensenting all the matrices or vectors in space, which means we have to introduce the normal expression of them. Basis elements
@@ -102,10 +102,10 @@ $x_1, x_2, \cdots x_k$ is linearly independent.
 
 Suppose $x_1, x_2, \cdots x_k$ is linearly dependent. Let $n$ be the smallest positive integer such that $x_1, x_2, \cdots x_n$ is independent.
 
-$\exists a_1,a_2 \cdots a_n$ not all $0$, such that 
+$\exists a_1,a_2 \cdots a_n$ not all $0$, such that
 $$\begin{aligned}
- a_1x_1+a_2x_2+\cdots a_nx_n=0\end{aligned}$$ 
- 
+ a_1x_1+a_2x_2+\cdots a_nx_n=0\end{aligned}$$
+
 Apply both sides
 ,$a_1\lambda_1 x_1+a_2 \lambda_2 x_2+\cdots +a_n\lambda_nx_n=0$, which
 minus $\lambda_n \cdot (1)$
@@ -134,12 +134,12 @@ $$\nabla p(x)=Ax-b=0 \Rightarrow Ax=b$$
 
 When $Ax=b$, for any $y\in {\mathbb{R}}$, we have
 $$p(y)-p(x)=\frac{1}{2} y^T Ay-b^Ty-(\frac{1}{2} x^T Ax-b^Tx)=
- \frac{1}{2} (y-x)^T A(y-x)\geqslant 0 $$ 
- 
+ \frac{1}{2} (y-x)^T A(y-x)\geqslant 0 $$
+
  if and only if $A$ is positive
 definite.
 
-$$L(x,y)=p(x)+y^T(Cx-d)=\frac{1}{2} x^T Ax-b^Tx+x^T C^Ty-y^T d,$$ 
+$$L(x,y)=p(x)+y^T(Cx-d)=\frac{1}{2} x^T Ax-b^Tx+x^T C^Ty-y^T d,$$
 and $y=(y_1, y_2, \cdots y_n) \in {\mathbb{R}}$ is given vector(*Lagrange multipliers*). So, it get the minimum value if and only if :
 
 $$\begin{aligned}
@@ -154,12 +154,12 @@ we have
 $$\lambda_{\min}(A)\leqslant R(x)=\{ x^TAx|  \|x\|=1 \} \leqslant \lambda_{\max}(A)$$
 
 $A_{m\times n}=U_{m\times m}\Sigma_{m\times n} V_{n\times n}^T$, and
-$AV=U\Sigma$, is called SVD. We also have: 
+$AV=U\Sigma$, is called SVD. We also have:
 $$\begin{aligned}
 A^TA=(V\Sigma^T U^T)U\Sigma V^T=V\Sigma^T \Sigma U &\qquad
 AA^T=(U\Sigma V^T)V\Sigma^T U^T=U\Sigma\Sigma^T U^T\\
 A[V_r|V_{n-r}]=[U_r|U_{n-r}]\Sigma&= [\sigma_1u_1, \sigma_2u_2 \cdots \sigma_ru_r , 0 \cdots 0]\end{aligned}$$
-and from this, we also have: 
+and from this, we also have:
 $$\begin{aligned}
 V_{n-r} \rightarrow N(A) &\qquad U_{m-r}\rightarrow N(A^T) \qquad
 A^+ = U\Sigma^+ V^T\\
@@ -168,7 +168,7 @@ V_r \rightarrow C(A^T)&\qquad U_r \rightarrow C(A) \qquad x^+=A^+ b\end{aligned}
 If $A_{s\times n}, B_{n\times m}$, show that
 $rank(AB)\geqslant rank(A)+rank(B)-n$.
 
-Since 
+Since
 $rank(A)+rank(B)=rank\begin{bmatrix}
     A & O \\
     O & B
@@ -204,11 +204,10 @@ $Ab_j=0, j\in \{1,2\cdots r_2\}$ where $b_1, b_2 \cdots b_{r_2}$ is
 $r_2-r$. Otherwise, it is contradictary to $R(AB)=r$.
 
 It also means the $b_j$ of $Ab_j=0$ is in the $N(A)$, which means
-$dim(N(A))=n-r_1$. Therefore, 
+$dim(N(A))=n-r_1$. Therefore,
 $r_2-r\leqslant n-r_1 \Rightarrow rank(AB)\geqslant rank(A)+rank(B)-n$.
 
-Linear Calculation
-==================
+## Linear Calculation
 
 A $n$ by $n$ matrix multiplies an $n$ -dimensional vector and produces
 an $m$ -dimensional vector.
@@ -268,8 +267,8 @@ $$N(A)= \left\lbrace x|x=k_1x_1+k_2x_2+k_3x_3 \right\rbrace$$
 For a rectangular matrix, there dosen’t exist full inverse matrix.
 However, there exist one-side matrix.
 
-1.  Full row rank. $r=m\leqslant n$. There exists a right-side inverse
+1. Full row rank. $r=m\leqslant n$. There exists a right-side inverse
     matrix.
 
-2.  Full column rank. $r=n\leqslant m$. There exists a left-side inverse
+2. Full column rank. $r=n\leqslant m$. There exists a left-side inverse
     matrix.

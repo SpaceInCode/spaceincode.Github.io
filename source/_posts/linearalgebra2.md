@@ -6,11 +6,9 @@ description: Eigenvalues
 categories: Linear Algebra 
 ---
 
-Important
-=========
+## Important
 
-Eigenvalues
------------
+## Eigenvalues
 
 Suppose the $n$ by $n$ matrix $A$ has $n$ linearly independent
 eigenvectors. If these eigenvectors are the columns of a matrix $S ,$
@@ -29,12 +27,11 @@ Diagonalization can fail only if there are repeated eigenvalues.
 Diagonalizable matrices share the same eigenvector matrix $S$ if and
 only if $A B = B A$
 
-1.  Every symmetric matrix (and Hermitian matrix) has real eigenvalues.
+1. Every symmetric matrix (and Hermitian matrix) has real eigenvalues.
 
-2.  Its eigenvectors can be chosen to be orthonormal.
+2. Its eigenvectors can be chosen to be orthonormal.
 
-complex
--------
+## complex
 
 A real symmetric matrix can be factored into
 $A = Q \Lambda Q ^ { \mathrm { T } } .$ Its orthonormal eigenvectors are
@@ -62,8 +59,7 @@ unitary $U :$
 $$\begin{aligned} Q ^ { - 1 } A Q = \Lambda \quad& \text { or } \quad A = Q \Lambda Q ^ { \mathrm { T } } \\ U ^ { - 1 } A U = \Lambda\quad & \text { or } \quad A = U \Lambda U ^ { \mathrm { H } } \end{aligned}$$
 The columns of $Q ($ or $U )$ contain orthonormal eigenvectors of $A$
 
-Normal
-------
+## Normal
 
 The matrix $N$ is normal if it commutes with
 $$N N ^ { \mathrm { H } } = N ^ { \mathrm { H } } N .$$
@@ -71,28 +67,28 @@ $$N N ^ { \mathrm { H } } = N ^ { \mathrm { H } } N .$$
 diagonal $\Lambda$ Normal matrices are exactly those that have a
 complete set of orthonormal eigenvectors.
 
-1.  $A$ is diagonalizable: The columns of $S$ are eigenvectors and
+1. $A$ is diagonalizable: The columns of $S$ are eigenvectors and
     $S ^ { - 1 } A S = \Lambda$
 
-2.  $A$ is arbitrary: The columns of M include “generalized
+2. $A$ is arbitrary: The columns of M include “generalized
     eigenvectors” of $A ,$ and the Jordan form $M ^ { - 1 } A M = J$ is
     block diagonal.
 
-3.  $A$ is arbitrary: The unitary $U$ can be chosen so that
+3. $A$ is arbitrary: The unitary $U$ can be chosen so that
     $U ^ { - 1 } A U = T$ is triangular.
 
-4.  $A$ is normal, $A A ^ { \mathrm { H } } = A ^ { \mathrm { H } } A :$
+4. $A$ is normal, $A A ^ { \mathrm { H } } = A ^ { \mathrm { H } } A :$
     then $U$ can be chosen so that $U ^ { - 1 } A U = \Lambda$ *Special
     cases of normal matrices, all with orthonormal eigenvectors:*
 
-    1.  If $A = A ^ { H }$ is Hermitian, then all $\lambda _ { i }$ are
+    1. If $A = A ^ { H }$ is Hermitian, then all $\lambda _ { i }$ are
         real.
 
-    2.  If $A = A ^ { T }$ is real symmetric, then $\Lambda$ is real and
+    2. If $A = A ^ { T }$ is real symmetric, then $\Lambda$ is real and
         $U = Q$ is orthogonal.
 
-    3.  If $A = - A ^ { H }$ is skew-Hermitian, then all
+    3. If $A = - A ^ { H }$ is skew-Hermitian, then all
         $\lambda _ { i }$ are purely imaginary.
 
-    4.  If $A$ is orthogonal or unitary, then all
+    4. If $A$ is orthogonal or unitary, then all
         $\left| \lambda _ { i } \right| = 1$ are on the unit circle.
