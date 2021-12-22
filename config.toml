@@ -1,7 +1,7 @@
 baseURL = "https://spaceincode.github.io/"
 languageCode = "en-us"
 
-title = "Wang JH's Site"
+title = "Wang Jing Hui"
 theme = "noteworthy"
 enableRobotsTXT = true
 paginate = 5 # Set the number of posts to show before overflowing to the next page.
@@ -21,11 +21,6 @@ disqusShortname = ""
 
 [author]
     name = "王竞辉"
-
-    bio = "前端开发"
-
-    job = "Front-end"
-
     location = "深圳"
 
 
@@ -77,7 +72,7 @@ disqusShortname = ""
 # Menu links along the sidebar navigation.
 [[menu.main]]
     identifier = "about"
-    name = "About"
+    name = "About me"
     url = "/about/"
     weight = 1 # Weight is an integer used to sort the menu items. The sorting goes from smallest to largest numbers. If weight is not defined for each menu entry, Hugo will sort the entries alphabetically.
 
@@ -88,8 +83,15 @@ disqusShortname = ""
     weight = 2
 
 [[menu.main]]
-    name = "Archives"
     identifier = "archives"
+    name = "Archives"
     url = "/archives/"
     weight = 3
+
+[[menu.main]]
+    identifier = "research"
+    name = "Research"
+    url = "/research/"
+    weight = 4
+
 
