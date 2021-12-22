@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wang JH&#39;s Site</title>
+    <link>https://spaceincode.github.io/</link>
+    <description>Recent content on Wang JH&#39;s Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Dec 2021 15:37:39 +0800</lastBuildDate><atom:link href="https://spaceincode.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://spaceincode.github.io/posts/my-first-post/</link>
+      <pubDate>Wed, 22 Dec 2021 15:37:39 +0800</pubDate>
+      
+      <guid>https://spaceincode.github.io/posts/my-first-post/</guid>
+      <description>Test of math </description>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax</title>
+      <link>https://spaceincode.github.io/posts/markdown-syntax/</link>
+      <pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://spaceincode.github.io/posts/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>和弦</title>
+      <link>https://spaceincode.github.io/posts/new-post/</link>
+      <pubDate>Mon, 20 Dec 2021 19:59:08 +0000</pubDate>
+      
+      <guid>https://spaceincode.github.io/posts/new-post/</guid>
+      <description>和弦作为基本语汇 音乐本身是一种语言。它没有高低之分，不同的声音也可以传达相同的意思。和语言作类比，音乐中的音符就相当于字，那么和弦和音程就相当于最基础的词汇。
+因为</description>
+    </item>
+    
+    <item>
+      <title>Placeholder Text</title>
+      <link>https://spaceincode.github.io/posts/placeholder-text/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://spaceincode.github.io/posts/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Math Typesetting</title>
+      <link>https://spaceincode.github.io/posts/math-typesetting/</link>
+      <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://spaceincode.github.io/posts/math-typesetting/</guid>
+      <description>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>https://spaceincode.github.io/posts/emoji-support/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://spaceincode.github.io/posts/emoji-support/</guid>
+      <description>Emoji can be enabled in a Hugo project in a number of ways.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://spaceincode.github.io/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://spaceincode.github.io/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://spaceincode.github.io/about/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://spaceincode.github.io/about/</guid>
+      <description>Written in Go, Hugo is an open source static site generator available under the Apache License 2.</description>
+    </item>
+    
+  </channel>
+</rss>
