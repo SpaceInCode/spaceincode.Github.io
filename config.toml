@@ -88,10 +88,5 @@ disqusShortname = ""
     url = "/archives/"
     weight = 3
 
-[[menu.main]]
-    identifier = "research"
-    name = "Research"
-    url = "/research/"
-    weight = 4
 
 
