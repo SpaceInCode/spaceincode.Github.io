@@ -6,6 +6,9 @@ title: "About"
 
 ## Introduction
 
+Currently I am a graduate student in SUSTech majoring Statistics. I am interested in the general rules and mathematical principles of complex networks and system theory, especially in real world. I am working in the lab of [Yanqing Hu](http://www.huyanqing.com/).
+
+I am also interested in some fields of Humanities and Social Science. Also I appreciate and learn classical music composition in my spare time.
 
 ## Education
 
@@ -16,4 +19,4 @@ title: "About"
 
 - Complex Network and System Theory
 - Data Science
-- Machine Learning
+- Machine Learning and related work
