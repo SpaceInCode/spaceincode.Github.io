@@ -1,13 +1,11 @@
 ---
-author: "Hugo Authors"
 title: "Placeholder Text"
-date: "2019-12-17"
+date: 2021-12-20 19:59:08
 description: "Lorem Ipsum Dolor Si Amet"
 tags: [
     "markdown",
     "text",
 ]
-type: "post"
 ---
 
 Lorem est tota propiore conpellat pectoribus de pectora summo. <!--more-->
