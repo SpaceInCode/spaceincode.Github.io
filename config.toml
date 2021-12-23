@@ -1,28 +1,26 @@
 baseURL = "https://spaceincode.github.io/"
 languageCode = "en-us"
 
-title = "Wang Jing Hui"
+title = "Wang Jinghui"
 theme = "noteworthy"
 enableRobotsTXT = true
 paginate = 5 # Set the number of posts to show before overflowing to the next page.
 summaryLength = 10 # Configure how long the post summary should be on the homepage.
 canonifyurls = true
 publishDir = "docs"
+contentdir = "content"
+layoutdir = "layouts"
 
 # Add your Google Analytics identifier: UA-XXXXXXXX-X
 googleAnalytics = ""
 
 # Add your Disqus shortname here.
 disqusShortname = ""
-
+hasCJKLanguage = true
 
 [taxonomies]
+  category = "categories"
   tag = "tags"
-
-[author]
-    name = "王竞辉"
-    location = "深圳"
-
 
 # Set to false to disallow raw HTML in markdown files
 [markup.goldmark.renderer]
@@ -31,8 +29,8 @@ disqusShortname = ""
 [params]
     math = true
     # Blog description at the top of the homepage. Supports markdown.
-    description = "Noteworthy is a minimalist Hugo theme, perfect for writers and bloggers."
-
+    description = "Idea, Creation and Self-development"
+    author = "Wang Jinghui"
     showReadMore = false
    
     # Set enableKofi to true to enable the Ko-fi support button. Add your Ko-fi ID to link to your account.
